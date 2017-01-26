@@ -12,28 +12,27 @@ Like a lot of mobile developers, I work all day on a MacBook Pro and use Paralle
 What won't work is a lightning to Ethernet dongle plugged into my Mac, because my Windows VM doesn't recognize that dongle.
 
 
-H1 Basic Setup
-
-Install the Visual Studio Remote Debugger on your Surface
+# Basic Setup
+- Install the Visual Studio Remote Debugger on your Surface
 
 
 When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio
 
 
-Start debugging connected, then move to disconnected.
-1.) Bridge adapters
-2.) Open browser on Surface to check for connectivity
-3.) Get the Surface's IP address (cmd > ipconfig)
-4.) Enter the IP address in the Remote Machine textbox in Visual Studio
-5.) Run on Remote device
+Start debugging connected:
+1. Bridge adapters
+2. Open browser on Surface to check for connectivity
+3. Get the Surface's IP address (cmd > ipconfig)
+4. Enter the IP address in the Remote Machine textbox in Visual Studio
+5. Run on Remote device
 
-Disconnect
-1.) Select adapters, right click, select Remove from Bridge
-2.) Wait for Surface to get new IP
-3.) Type it in the Remote Machine textbox in VS
+Disconnected:
+1. Select adapters, right click, select Remove from Bridge
+2. Wait for Surface to get new IP
+3. Type it in the Remote Machine textbox in VS
 
 Pro Tip:
- If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses. Undo (ctrl + z) works in that Remote Machine textbox.
+ If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses. Undo (Ctrl + Z) works in that Remote Machine textbox.
 
 
 
@@ -49,6 +48,11 @@ errors
 
 Error: Unable to connect to the Microsoft Visual Studio Remote Debugger named '10.211.55.5:4020'.  The Visual Studio Remote Debugger on the remote computer is running as a different user.
 Fix: on the Surface, in the menu for the VS 2015 Remote Debugger app, go to Tools > Options, and check the "Allow any user to debug" option, under the "No Authentication" radio button.
+
+
+*H1 Resources
+
+https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps 
 
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
