@@ -12,6 +12,10 @@ Like a lot of mobile developers, I work all day on a MacBook Pro and use Paralle
 What won't work is a lightning to Ethernet dongle plugged into my Mac, because my Windows VM doesn't recognize that dongle.
 
 
+H1 Basic Setup
+
+Install the Visual Studio Remote Debugger on your Surface
+
 
 When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio
 
