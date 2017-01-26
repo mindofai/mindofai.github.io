@@ -20,6 +20,7 @@ When Un-Bridging.  The Surface will show that the internet connection is lost ri
 
 
 Start debugging connected:
+
 1. Bridge adapters
 2. Open browser on Surface to check for connectivity
 3. Get the Surface's IP address (cmd > ipconfig)
@@ -27,6 +28,7 @@ Start debugging connected:
 5. Run on Remote device
 
 Disconnected:
+
 1. Select adapters, right click, select Remove from Bridge
 2. Wait for Surface to get new IP
 3. Type it in the Remote Machine textbox in VS
