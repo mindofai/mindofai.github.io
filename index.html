@@ -12,6 +12,8 @@ layout: default
         {{ post.excerpt }}
       </div>
 
+      <div class="posted-by">posted by {{ site.authors[post.author].display_name }} on {{ post.date | date: "%m/%d/%Y" }}</div>
+
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}

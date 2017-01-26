@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Wired Debugging on a Surface tablet? Yes you can!
+title: Wired Debugging on a Surface Tablet? Yes You Can!
 publish: true
 ---
 

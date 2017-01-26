@@ -9,6 +9,28 @@ layout: default
     {{ content }}
   </div>
 
+  {% assign author = site.authors[page.author] %}
+  <div class="post">
+    <div class="meta">
+      <br />
+      <div>
+        <table>
+          <tr>
+            <td style="vertical-align: middle">
+              <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+            </td>
+            <td style="vertical-align: middle">
+              <span class="author">&nbsp;{{ author.display_name }}</span>
+            </td>
+        </table>
+      </div>
+      <div>
+        <a href="https://www.twitter.com/{{ author.twitter }}"><i class="svg-icon twitter"></i></a>
+        <a href="https://github.com/{{ author.github }}"><i class="svg-icon github"></i></a>
+      </div>
+    </div>
+  </div>
+
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
