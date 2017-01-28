@@ -22,7 +22,8 @@ In order to debug over a wired connection, you'll need a few things:
 What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" style="width: 200px;"/>
 
-Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this: <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" style="width: 400px;"/>
+Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this: 
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" style="width: 400px;"/>
 
 
 # Debugging Online and Offline
@@ -66,7 +67,7 @@ Guiding Principles
  
 
 
-errors
+# Common Errors
 
 Error: Unable to connect to the Microsoft Visual Studio Remote Debugger named '10.211.55.5:4020'.  The Visual Studio Remote Debugger on the remote computer is running as a different user.
 Fix: on the Surface, in the menu for the VS 2015 Remote Debugger app, go to Tools > Options, and check the "Allow any user to debug" option, under the "No Authentication" radio button.
