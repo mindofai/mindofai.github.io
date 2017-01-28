@@ -14,7 +14,8 @@ One thing to note. Like a lot of mobile developers, I work all day on a MacBook 
 
 # Hardware Needed
 
-In order to debug over a wired connection, you'll need a few things. 
+In order to debug over a wired connection, you'll need a few things.
+ 
  - 2 USB to Ethernet dongles.  You can find them for pretty cheap on [Amazon](https://www.amazon.com/gp/product/B00ET4KHJ2/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1).
  - a length of cat 5 cable to connect the two dongles together.
 
@@ -62,10 +63,6 @@ Error: Unable to connect to the Microsoft Visual Studio Remote Debugger named '1
 Fix: on the Surface, in the menu for the VS 2015 Remote Debugger app, go to Tools > Options, and check the "Allow any user to debug" option, under the "No Authentication" radio button.
 
 
-*H1 Resources
-
-https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps 
-
-
-![_config.yml]({{ site.baseurl }}/images/config.png)
+# Resources
+- https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps 
 
