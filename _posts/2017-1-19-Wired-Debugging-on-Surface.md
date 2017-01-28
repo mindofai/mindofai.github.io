@@ -20,11 +20,9 @@ In order to debug over a wired connection, you'll need a few things.
  - a length of cat 5 cable to connect the two dongles together.
 
 What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.
-![_config.yml]({{ site.baseurl }}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg =300x)
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" style="width: 300px;"/>
 
-Connect the dongles together, and plug one into your laptop and other other into the Surface.
-![_config.yml]({{ site.baseurl }}/images/WiredSurfaceDebugging/WiredSetup.jpg =300x)
-
+Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this: <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" style="width: 300px;"/>
 
 When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio
 
