@@ -27,7 +27,7 @@ In order to debug over a wired connection, you'll need a few things:
 <br/><br/>
 
 <div>
-    <p style="float: right;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="300px"></p>
+    <p style="float: left;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="300px"></p>
     <p>Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this:</p>
 </div>
 
