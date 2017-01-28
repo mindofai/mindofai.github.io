@@ -20,8 +20,8 @@ In order to debug over a wired connection, you'll need a few things:
  - a length of cat 5 cable to connect the two dongles together.
 
 <div>
-    <p>What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</p>
     <p style="float: right;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="100px"></p>
+    <p>What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</p>
 </div>
 
 <br/><br/>
