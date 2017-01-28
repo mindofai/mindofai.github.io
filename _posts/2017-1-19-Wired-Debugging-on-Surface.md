@@ -4,16 +4,25 @@ title: Wired Debugging on a Surface Tablet? Yes You Can!
 publish: true
 ---
 
-From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  No.  Sorry.  It's not that kind of USB port.  You can't just stick anything in there, man.
+From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not that kind of USB port.  You can't just stick anything in there, man.
 
-Like a lot of mobile developers, I work all day on a MacBook Pro and use Parallels that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side.
+To debug on a Surface you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio.  Directions to do that is here: https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx
 
+The problem with this is that more and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy. 
 
-What won't work is a lightning to Ethernet dongle plugged into my Mac, because my Windows VM doesn't recognize that dongle.
+One thing to note. Like a lot of mobile developers, I work all day on a MacBook Pro and use Parallels that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side - so this is written from that perspective.
 
+# Hardware Needed
 
-# Basic Setup
-- Install the Visual Studio Remote Debugger on your Surface
+In order to debug over a wired connection, you'll need a few things. 
+ - 2 USB to Ethernet dongles.  You can find them for pretty cheap on [Amazon](https://www.amazon.com/gp/product/B00ET4KHJ2/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1).
+ - a length of cat 5 cable to connect the two dongles together.
+
+What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.
+![_config.yml]({{ site.baseurl }}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg)
+
+Connect the dongles together, and plug one into your laptop and other other into the Surface.
+![_config.yml]({{ site.baseurl }}/images/WiredSurfaceDebugging/WiredSetup.jpg)
 
 
 When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio
@@ -33,8 +42,9 @@ Disconnected:
 2. Wait for Surface to get new IP
 3. Type it in the Remote Machine textbox in VS
 
-Pro Tip:
- If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses. Undo (Ctrl + Z) works in that Remote Machine textbox.
+Pro Tips:
+- Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debuggin the app (SHOW SCREENSHOT). That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.
+- If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses. Undo (Ctrl + Z) works in that Remote Machine textbox.
 
 
 
