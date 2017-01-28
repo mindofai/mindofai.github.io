@@ -23,6 +23,9 @@ In order to debug over a wired connection, you'll need a few things:
     <p style="float: right;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150"></p>
     <p>What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</p>
 </div>
+
+<br /><br />
+
 <div>
     <p style="float: left;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="300px"></p>
     <p>Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this:</p>
@@ -83,5 +86,5 @@ Fix: on the Surface, in the menu for the VS 2015 Remote Debugger app, go to Tool
 
 
 # Resources
-- https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps 
+- [https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)
 
