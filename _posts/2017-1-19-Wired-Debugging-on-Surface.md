@@ -14,17 +14,25 @@ One thing to note. Like a lot of mobile developers, I work all day on a MacBook 
 
 # Hardware Needed
 
-In order to debug over a wired connection, you'll need a few things.
+In order to debug over a wired connection, you'll need a few things:
 
  - 2 USB to Ethernet dongles.  You can find them for pretty cheap on [Amazon](https://www.amazon.com/gp/product/B00ET4KHJ2/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1).
  - a length of cat 5 cable to connect the two dongles together.
 
 What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" style="width: 300px;"/>
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" style="width: 200px;"/>
 
-Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this: <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" style="width: 300px;"/>
+Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this: <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" style="width: 400px;"/>
 
-When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio
+
+# Debugging Online and Offline
+
+For our app, we need to be online the first time a user logs in and syncs data with the server, but then we want to disconnect from the internet to test offline scenarios after that first login. 
+
+The trickiest part was getting my laptop to share it's internet connection with the Surface over my wired ethernet connection.  There's a nice Windows feature that allows you to do that called Adapter Bridging.  Here's how to do it.
+
+Open Network Connections on Windows.
+
 
 
 Start debugging connected:
@@ -41,7 +49,10 @@ Disconnected:
 2. Wait for Surface to get new IP
 3. Type it in the Remote Machine textbox in VS
 
+
+
 Pro Tips:
+- When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio
 - Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debuggin the app (SHOW SCREENSHOT). That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.
 - If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses. Undo (Ctrl + Z) works in that Remote Machine textbox.
 
