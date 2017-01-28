@@ -26,7 +26,7 @@ In order to debug over a wired connection, you'll need a few things:
     <p>Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this:</p>
 </div>
 
-<br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
 
 # Debugging Online and Offline
 
