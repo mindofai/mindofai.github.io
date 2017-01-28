@@ -26,7 +26,7 @@ In order to debug over a wired connection, you'll need a few things:
 
 <div>
     <p>Connect the dongles together, and plug one into your laptop and other other into the Surface - something like this:</p>
-    <p style="float: right;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup" width="400px"></p>
+    <p style="float: right;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="400px"></p>
 </div>
 
 
@@ -34,9 +34,14 @@ In order to debug over a wired connection, you'll need a few things:
 
 For our app, we need to be online the first time a user logs in and syncs data with the server, but then we want to disconnect from the internet to test offline scenarios after that first login. 
 
-The trickiest part was getting my laptop to share it's internet connection with the Surface over my wired ethernet connection.  There's a nice Windows feature that allows you to do that called Adapter Bridging.  Here's how to do it.
+The trickiest part was getting my laptop to share it's internet connection with the Surface over my wired ethernet connection.  When you first connect your Surface to your laptop, if you turn off the Surface WiFi connection you'll see an icon indicating that there is no internet connection.  
 
-Open Network Connections on Windows.
+Thankfully, there's a nice Windows feature that allows you to do that called Adapter Bridging.  Here's how to do it:
+
+1. Open Network Connections on Windows
+2. Locate the adapter that is supplying your internet connection. With Parallels this is done by an Ethernet adapter
+3. Select both the adapter from step #2 and the one for your plugged in USB dongle
+4. Right click and select "Bridge Connections"
 
 
 
