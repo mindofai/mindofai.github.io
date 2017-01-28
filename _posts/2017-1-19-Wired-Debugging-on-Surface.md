@@ -19,10 +19,16 @@ In order to debug over a wired connection, you'll need a few things:
  - 2 USB to Ethernet dongles.  You can find them for pretty cheap on [Amazon](https://www.amazon.com/gp/product/B00ET4KHJ2/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1).
  - a length of cat 5 cable to connect the two dongles together.
 
-<div>
-    <p style="float: right;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150" align="middle"></p>
+<!--<div>
+    <p style="float: right;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150"></p>
     <p>What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</p>
+</div>-->
+
+<div>
+    <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150" style="vertical-align: middle;" />
+    <span style="vertical-align: middle;">What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</span>
 </div>
+
 <!--<div>
     <p style="float: left;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="300px"></p>
     Connect the dongles together, and plug one into your laptop and other other into the Surface.
