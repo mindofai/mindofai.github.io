@@ -31,13 +31,16 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 
 One downside of using the .NET Native tool chain is that it takes quite a bit longer for your Solution to build, so don't be concerned when you see that.
 
-Sometimes issues with .NET Native can be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package to find these.  Might be worth a quick NuGet download to try it if you're having issues.
+Sometimes issues with .NET Native can be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it if you're having runtime issues.
 
 
 # Issues
 
-Q: [Your App Name].UWP.pdb not loaded screen.  What should be done here?  Load?
-A: ?
+Q: Breakpoints not getting hit, and seeing the [Your App Name].UWP.pdb not loaded screen.  What should be done here?
+
+A: Go to Debug > Windows > Modules.  Look for entries named [Your app name].UWP.exe and see if symbols have been loaded. 
+
+[Your app name].dll	: "PDB file was not present when IL code was compiled to native."
 
 
 # Resources
