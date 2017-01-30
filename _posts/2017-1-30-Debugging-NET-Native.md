@@ -15,12 +15,14 @@ From MSDN
 The easiest way to do this is to create a new build configuration with code optimization disabled, that way you can simply switch to this new configuration when you need to debug a .NET Native build.
 
 - In the Solution Configurations dropdown, select Configuration Manager.
- - Under **Active solution configuration** dropdown, select the **<New...>** option
+ - Under **Active solution configuration** dropdown, select the <New...> option
   - Name this new configuration "Debug .NET Native" or something like that.
    - Copy settings from Release, click OK
  - You'll now see your new configuration in the config manager screen, but before you close this, make sure to check the Build and Deploy checkboxes for the UWP head project.  They're unchecked by default (I don't understand why)
 
+
 Then go to the Project Properties of your .UWP head project.  You'll need to toggle 2 boxes here:
+
 1. Uncheck **Optimize code**
 2. Check the **Compile with .NET Native tool chain**
 
