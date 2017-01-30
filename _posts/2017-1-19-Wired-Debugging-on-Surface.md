@@ -1,16 +1,18 @@
 ---
+publish: true
 layout: post
 title: Wired Debugging on a Surface Tablet? Yes You Can!
-publish: true
+author: tom
+tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
 ---
 
 From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not that kind of USB port.  You can't just stick anything in there, man.
 
-To debug on a Surface you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio.  Directions to do that is here: https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx
+To debug on a Surface you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio.  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
 The problem with this is that more and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy. 
 
-One thing to note. Like a lot of mobile developers, I work all day on a MacBook Pro and use Parallels that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side - so this is written from that perspective.
+One thing to note. Like a lot of mobile developers, I work all day on a MacBook Pro and use Parallels that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side - so this post is written from that perspective.
 
 # Hardware Needed
 
@@ -37,7 +39,7 @@ In order to debug over a wired connection, you'll need a few things:
 
 # Debugging Online and Offline
 
-For our app, we need to be online the first time a user logs in and syncs data with the server, but then we want to disconnect from the internet to test offline scenarios after that first login. 
+For our Xamarin.Forms app, we need to be online the first time a user logs in and syncs data with the server, but then we want to disconnect from the internet to test offline scenarios after that first login. 
 
 The trickiest part was getting my laptop to share it's internet connection with the Surface over my wired ethernet connection.  When you first connect your Surface to your laptop, if you turn off the Surface WiFi connection you'll see an icon indicating that there is no internet connection.  
 
