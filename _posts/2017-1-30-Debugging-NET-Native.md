@@ -27,7 +27,11 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 2. Check the **Compile with .NET Native tool chain**
 
 
+# Tips
+
 One downside of using the .NET Native tool chain is that it takes quite a bit longer for your Solution to build, so don't be concerned when you see that.
+
+Sometimes issues with .NET Native can be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package to find these.  Might be worth a quick NuGet download to try it if you're having issues.
 
 
 # Issues
@@ -37,5 +41,7 @@ A: ?
 
 
 # Resources
+
+I hesitate to share this link because it hasn't been updated since July 2015, but this is how I learned how to do this.  Please hit me up if you find a better/newer source
 - [https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/)
 
