@@ -14,12 +14,11 @@ From MSDN
 
 The easiest way to do this is to create a new build configuration with code optimization disabled, that way you can simply switch to this new configuration when you need to debug a .NET Native build.
 
-- In the Solution Configurations dropdown, select Configuration Manager.
- - Under **Active solution configuration** dropdown, select the <New...> option
-  - Name this new configuration "Debug .NET Native" or something like that.
-   - Copy settings from Release, click OK
- - You'll now see your new configuration in the config manager screen, but before you close this, make sure to check the Build and Deploy checkboxes for the UWP head project.  They're unchecked by default (I don't understand why)
-
+1. In the Solution Configurations dropdown, select Configuration Manager.
+2. Under **Active solution configuration** dropdown, select the <New...> option
+3. Name this new configuration "Debug .NET Native" or something like that.
+4. Copy settings from **Debug**, click OK.  (Don't use settings from the Release configuration)
+5. You'll now see your new configuration in the config manager screen, but before you close this, make sure to check the Build and Deploy checkboxes for the UWP head project.  They're unchecked by default (I don't understand why)
 
 Then go to the Project Properties of your .UWP head project.  You'll need to toggle 2 boxes here:
 
@@ -34,17 +33,10 @@ One downside of using the .NET Native tool chain is that it takes quite a bit lo
 Sometimes issues with .NET Native can be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it if you're having runtime issues.
 
 
-# Issues
-
-Q: Breakpoints not getting hit, and seeing the [Your App Name].UWP.pdb not loaded screen.  What should be done here?
-
-A: Go to Debug > Windows > Modules.  Look for entries named [Your app name].UWP.exe and see if symbols have been loaded. 
-
-[Your app name].dll	: "PDB file was not present when IL code was compiled to native."
 
 
 # Resources
 
-I hesitate to share this link because it hasn't been updated since July 2015, but this is how I learned how to do this.  Please hit me up if you find a better/newer source
+I hesitate to share this link because it hasn't been updated since July 2015, but this is how I learned how to do this.  Please hit me up if you find a better/newer source.
+One thing you should NOT do when following the directions in this link is copy the Release settings when creating a new Solution Configuration. As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and your breakpoints will not get hit.  You will probably also see a "[Your App Name].UWP.pdb not loaded" screen in Visual Studio when debugging.
 - [https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/)
-
