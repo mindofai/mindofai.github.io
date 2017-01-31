@@ -43,5 +43,6 @@ The first time I did this, I copied settings from the Release configuration and 
 # Resources
 
 I hesitate to share this link because it hasn't been updated since July 2015, but this is how I learned how to do this.  Please hit me up if you find a better/newer source.
+
 One thing you should NOT do when following the directions in this link is copy the Release settings when creating a new Solution Configuration. As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and your breakpoints will not get hit.  You will probably also see a "[Your App Name].UWP.pdb not loaded" screen in Visual Studio when debugging.
 - [https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/)
