@@ -12,13 +12,13 @@ From MSDN
 
 > If you run into an issue when testing the Release configuration that you need to debug it is important to note that the Release configuration is by default fully optimized code (e.g. code inlining will be applied in many places). These optimizations will have a significant impact on the debugging experience including unpredictable stepping and breakpoint behavior (due to code inlining) and the inability to inspect most variables due to memory optimizations. This means you will want to debug a non-optimized .NET Native build. 
 
-The easiest way to do this is to create a new build configuration with code optimization disabled, that way you can simply switch to this new configuration when you need to debug a .NET Native build.
+The easiest way to do this is to create a new build configuration with code optimization disabled, that way you can simply switch to this new configuration when you need to debug a .NET Native build.  Here's how to do that:
 
-1. In the Solution Configurations dropdown, select Configuration Manager.
-2. Under **Active solution configuration** dropdown, select the <New...> option
+1. In Visual Studio, go to the Solution Configurations dropdown and select **Configuration Manager**.
+2. In the **Active solution configuration** dropdown, select the "<New...>" option
 3. Name this new configuration "Debug .NET Native" or something like that.
 4. Copy settings from **Debug**, click OK.  (Don't use settings from the Release configuration)
-5. You'll now see your new configuration in the config manager screen, but before you close this, make sure to check the Build and Deploy checkboxes for the UWP head project.  They're unchecked by default (I don't understand why)
+5. You'll now see your new configuration in the config manager screen, but before you close this, make sure to check the **Build** and **Deploy** checkboxes for the UWP head project.  They're unchecked by default (I don't understand why)
 
 Then go to the Project Properties of your .UWP head project.  You'll need to toggle 2 boxes here:
 
@@ -31,8 +31,6 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 One downside of using the .NET Native tool chain is that it takes quite a bit longer for your Solution to build, so don't be concerned when you see that.
 
 Sometimes issues with .NET Native can be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it if you're having runtime issues.
-
-
 
 
 # Resources
