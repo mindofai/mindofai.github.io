@@ -11,7 +11,7 @@ From a mobile developer's perspective, debugging on a Surface tablet is weird.  
 Ah.... no.  Sorry.  It's not _that_ kind of USB port.  You can't just stick anything in there, man.
 
 To debug on a Surface (or devices that do not have Visual Studio installed) you must install the Visual Studio Remote Debugger client app on the device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/RemoteDebuggerClient.png" />  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/RemoteDebuggerClient.png" width="400" />  
 The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
 <br />
@@ -96,7 +96,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
   Turning this off seems to alleviate a lot of the hassle of trying to get the debugger to connect to the remote client app.  I debug on a private or wired network and only have the remote client running when I need to debug, so the lack of security doesn't concern me here.
   2. **Allow any user to debug**  
   I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.  
-  <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/AuthMode.png" />  
+  <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/AuthMode.png" width="300px" />  
   
 - If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses over and over in the Remote Machine textbox. Undo (Ctrl + Z) works inside that textbox.
 
