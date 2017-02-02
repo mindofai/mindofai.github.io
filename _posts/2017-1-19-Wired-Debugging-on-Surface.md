@@ -92,7 +92,9 @@ Disconnected:
 
 # Guiding Principles:
 
- - Don't live or die by what the "Remote Connections" dialog is able/unable to find. It's nice when it finds your device, but often it doesn't.  So if you've got things hooked up correctly, just type the IP + Port in the address box manually.
+ - Don't live or die by what the **Remote Connections** dialog is able/unable to find. It's nice when it finds your device, but often it doesn't.  So if you've got things hooked up correctly, just type the IP + Port in the address box manually.  
+ <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/ConnectionFound.png" width="200px">
+
  - You must have the Visual Studio 2015 Remote Debugger app running on the Surface at all times. That app will close automatically after a certain period of inactivity.
  
 
