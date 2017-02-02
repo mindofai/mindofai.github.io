@@ -61,6 +61,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 
 **Start debugging while online:**  
+
 1. Bridge adapters
   OR  
   You can always simply unplug the USB adapter dongle from the Surface and turn WiFi back on.
@@ -70,6 +71,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 5. Run on Remote device
 
 **Then offline:**  
+
 1. Select adapters, right click, select Remove from Bridge 
 2. Wait for Surface to get new IP
 3. Type it in the Remote Machine textbox in VS
