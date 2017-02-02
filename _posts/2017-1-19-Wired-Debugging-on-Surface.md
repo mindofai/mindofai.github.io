@@ -8,9 +8,11 @@ tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
 
 From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" />  
-Ah.... no.  Sorry.  It's not that kind of USB port.  You can't just stick anything in there, man.
+Ah.... no.  Sorry.  It's not _that_ kind of USB port.  You can't just stick anything in there, man.
 
-To debug on a Surface (or devices that do not have Visual Studio installed) you must install the Visual Studio Remote Debugger client app on the device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
+To debug on a Surface (or devices that do not have Visual Studio installed) you must install the Visual Studio Remote Debugger client app on the device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/RemoteDebuggerClient.png" />  
+The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
 <br />
 There is a **major** issue with this plan, however:  
@@ -38,7 +40,7 @@ What won't work here is one of those fancy (and 3x more expensive) lightning to 
 </div>-->
 
 Connect the dongles together with the ethernet cable, and plug one dongle into your laptop and the other into the Surface. Here's what it should look like when it's all hooked up:  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="500px">
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="500px" />
 
 <!--<div>
     <p style="float: left;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="300px"></p>
@@ -59,7 +61,7 @@ Here's how to do it:
 2. Locate the adapter that is supplying your internet connection. With Parallels this is done by an Ethernet adapter
 3. Select both the adapter from step #2 and the one for your plugged in USB dongle
 4. Right click and select **Bridge Connections**  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/BridgeConnections.png" width="400px">  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/BridgeConnections.png" width="400px" />  
 The internet connection will now be shared over the ethernet cable to your Surface device  
 
 
@@ -87,15 +89,15 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 - When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio.  
 
 - Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debugging the app. That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SolutionConfig.png" width="800px">  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SolutionConfig.png" width="800px" />  
 
 - I always turn on these two options in the VS Remote Debugger app running on the Surface (under **Tools** menu > **Options**):
   1. **No Authentication**  
   Turning this off seems to alleviate a lot of the hassle of trying to get the debugger to connect to the remote client app.  I debug on a private or wired network and only have the remote client running when I need to debug, so the lack of security doesn't concern me here.
   2. **Allow any user to debug**  
-  I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.    
-  <br />
-
+  I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.  
+  <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/AuthMode.png" />  
+  
 - If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses over and over in the Remote Machine textbox. Undo (Ctrl + Z) works inside that textbox.
 
 
@@ -103,7 +105,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 # Guiding Principles:
 
  - Don't live or die by what the **Remote Connections** dialog is able/unable to find. It's nice when it finds your device, but often it doesn't.  So if you've got things hooked up correctly, just type the IP + Port in the address box manually.  Remember to use the correct format: ip**.**addr**.**goes**.**here**:**[port number]  
- <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/ConnectionFound.png" width="350px">
+ <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/ConnectionFound.png" width="350px" />
 
  - You must have the Visual Studio 2015 Remote Debugger app running on the Surface at all times. That app will close automatically after a certain period of inactivity.
  
