@@ -3,13 +3,13 @@ publish: true
 layout: post
 title: Debugging .NET Native in Visual Studio
 author: tom
-tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
+tags: [UWP, Surface, Debugging, Xamarin, Xamarin. Forms]
 ---
 
-As I've mentioned before, a lot happens to your Xamarin.Forms app on UWP when you flip the switch from Debug build to Release build. Specifically this little check box: 
+As I've mentioned before, a lot happens to your Xamarin.Forms app on UWP when you flip the switch from Debug build to Release build. Specifically, this little check box: 
 <img src="{{site.baseurl}}/images/NetNativeDebugging/CompileCheckBox.png" width="500" />
 
-The Xamarin forums and StackOverflow have lots of questions related to issues stemming from this.  The big difference being that in Release mode, Visual Studio compiles your app using the .NET Native tool chain.  We've see that this can often cause late-in-the-dev-cycle runtime issues that pop up when a Release build is performed. 
+The Xamarin forums and Stack Overflow have lots of questions related to issues stemming from this.  The big difference being that in Release mode, Visual Studio compiles your app using the .NET Native tool chain.  We've see that this can often cause late-in-the-dev-cycle runtime issues that pop up when a Release build is performed. 
 
 The further along a bug gets in the development cycle, [the more expensive it is](http://blog.celerity.com/the-true-cost-of-a-software-bug), so I'd encourage you to regularly test a Release build on UWP, or better yet, have your CI Process produce a Release build of your UWP app for testing before the app even has a chance to make it into further environments like QA or Production.
 <img src="{{site.baseurl}}/images/NetNativeDebugging/costofasoftwarebug.jpg" width="600" />
@@ -38,7 +38,7 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 
 - One downside of using the .NET Native tool chain is that it takes quite a bit longer for your Solution to build, so don't be concerned when you see that.
 
-- Sometimes issues with .NET Native compilation can actully be found at compile time.  I've had some success using the [Microsoft.NETNative.Analyzer](https://www.nuget.org/packages/Microsoft.NETNative.Analyzer/) NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it out if you're having runtime issues.
+- Sometimes issues with .NET Native compilation can be found at compile time.  I've had some success using the [Microsoft.NETNative.Analyzer](https://www.nuget.org/packages/Microsoft.NETNative.Analyzer/) NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it out if you're having runtime issues.
 
 
 # Issues
@@ -47,10 +47,11 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
     - The debugger would not hit (stop at) my breakpoints in the code
     - Saw a "[Your App Name].UWP.pdb not loaded" screen when debugging
 
- As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and this was the issue here.
+    As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and this was the issue here.
 
 # Resources
 
 I hesitate to share this link because it hasn't been updated since July 2015, but this is how I learned how to do this.  Please hit me up if you find a better/newer source.
 
 - [https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/)
+
