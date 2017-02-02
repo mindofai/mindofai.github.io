@@ -8,9 +8,11 @@ tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
 
 From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not that kind of USB port.  You can't just stick anything in there, man.
 
-To debug on a Surface (or devices that do not have Visual Studio installed) you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.)  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
+To debug on a Surface (or devices that do not have Visual Studio installed) you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  
+Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
-There is a major issue with this, however:  
+<br />
+There is a major issue with this plan, however:  
 
 - More and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy.  
 - Another benefit of debugging over a wired connection is that it's a bit more reliable and faster to get the app running after each build.
@@ -63,7 +65,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 **Start debugging while online:**  
 
-1. Bridge adapters
+1. Bridge adapters  
   OR  
   You can always simply unplug the USB adapter dongle from the Surface and turn WiFi back on.
 2. Open browser on Surface to check for connectivity
