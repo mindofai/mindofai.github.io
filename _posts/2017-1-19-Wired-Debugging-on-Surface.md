@@ -11,8 +11,8 @@ From a mobile developer's perspective, debugging on a Surface tablet is weird.  
 To debug on a Surface you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio.  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
 There is a major issue with this, however:  
-More and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy.  
-Another benefit of debugging over a wired connection is that it's a bit more reliable and faster to get the app running after each build.
+- More and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy.  
+- Another benefit of debugging over a wired connection is that it's a bit more reliable and faster to get the app running after each build.
 
 One thing to note: like a lot of mobile developers, I work all day on a MacBook Pro and use [Parallels](http://www.parallels.com) that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side - so this post is written from that perspective.
 
@@ -23,7 +23,7 @@ In order to debug over a wired connection, you'll need a few things:
  - 2 USB to Ethernet dongles.  You can find them for pretty cheap on [Amazon](https://www.amazon.com/gp/product/B00ET4KHJ2/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1).
  - a length of cat 5 cable to connect the two dongles together.
 
-
+<br />
 
 What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.png" width="250" />  
