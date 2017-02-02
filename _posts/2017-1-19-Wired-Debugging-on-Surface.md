@@ -58,17 +58,19 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 
 
-Start debugging connected:
+**Start debugging while online:**
 
 1. Bridge adapters
 2. Open browser on Surface to check for connectivity
 3. Get the Surface's IP address (cmd > ipconfig)
-4. Enter the IP address in the Remote Machine textbox in Visual Studio
+4. Enter the IP address in the Remote Machine textbox in Visual Studio.  Format is xxx.xxx.xxx.xxx:[Port Number]
 5. Run on Remote device
 
-Disconnected:  
+**Then disconnected:**  
 
-1. Select adapters, right click, select Remove from Bridge
+1. Select adapters, right click, select Remove from Bridge  
+ OR  
+ Unplug the USB adapter dongle from the Surface and turn Wifi back on
 2. Wait for Surface to get new IP
 3. Type it in the Remote Machine textbox in VS
 
