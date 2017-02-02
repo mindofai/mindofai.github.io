@@ -7,7 +7,7 @@ tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
 ---
 
 As I've mentioned before, a lot happens to your Xamarin.Forms app on UWP when you flip the switch from Debug build to Release build. Specifically this little check box: 
-<img src="{{site.baseurl}}/images/NetNativeDebugging/CompileCheckBox.png" width="400" />
+<img src="{{site.baseurl}}/images/NetNativeDebugging/CompileCheckBox.png" width="500" />
 
 The Xamarin forums and StackOverflow have lots of questions related to issues stemming from this.  The big difference being that in Release mode, Visual Studio compiles your app using the .NET Native tool chain.  We've see that this can often cause late-in-the-dev-cycle runtime issues that pop up when a Release build is performed. 
 
