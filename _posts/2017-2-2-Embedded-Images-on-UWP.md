@@ -1,6 +1,6 @@
 ---
+published: false
 layout: post
-publish: false
 title: Using Embedded Images in a Xamarin.Forms App on UWP
 author: tom
 tags: [UWP, Xamarin, Xamarin.Forms]

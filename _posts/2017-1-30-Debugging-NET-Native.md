@@ -1,5 +1,5 @@
 ---
-publish: true
+published: true
 layout: post
 title: Debugging .NET Native in Visual Studio
 author: tom
