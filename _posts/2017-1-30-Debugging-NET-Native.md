@@ -12,7 +12,7 @@ As I've mentioned before, a lot happens to your Xamarin.Forms app on UWP when yo
 The Xamarin forums and StackOverflow have lots of questions related to issues stemming from this.  The big difference being that in Release mode, Visual Studio compiles your app using the .NET Native tool chain.  We've see that this can often cause late-in-the-dev-cycle runtime issues that pop up when a Release build is performed. 
 
 The further along a bug gets in the development cycle, [the more expensive it is](http://blog.celerity.com/the-true-cost-of-a-software-bug), so I'd encourage you to regularly test a Release build on UWP, or better yet, have your CI Process produce a Release build of your UWP app for testing before the app even has a chance to make it into further environments like Staging and Production.
-<img src="{{site.baseurl}}/images/NetNativeDebugging/costofasoftwarebug.jpg" width="400" />
+<img src="{{site.baseurl}}/images/NetNativeDebugging/costofasoftwarebug.jpg" width="600" />
 
 From MSDN: <br />
 > If you run into an issue when testing the Release configuration that you need to debug it is important to note that the Release configuration is by default fully optimized code (e.g. code inlining will be applied in many places). These optimizations will have a significant impact on the debugging experience including unpredictable stepping and breakpoint behavior (due to code inlining) and the inability to inspect most variables due to memory optimizations. This means you will want to debug a non-optimized .NET Native build. 

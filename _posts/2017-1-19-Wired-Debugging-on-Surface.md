@@ -45,10 +45,11 @@ The trickiest part was getting my laptop to share it's internet connection with 
 
 Thankfully, there's a nice Windows feature that allows you to do that called Adapter Bridging.  Here's how to do it:
 
-1. Open Network Connections on Windows
+1. Open **Network Connections** on Windows
 2. Locate the adapter that is supplying your internet connection. With Parallels this is done by an Ethernet adapter
 3. Select both the adapter from step #2 and the one for your plugged in USB dongle
-4. Right click and select "Bridge Connections"
+4. Right click and select **Bridge Connections**
+The internet connection will now be shared over the ethernet cable to your Surface device
 
 
 
@@ -68,14 +69,14 @@ Disconnected:
 
 
 
-Pro Tips:
+Pro Tips: <br />
 - When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio
 - Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debuggin the app (SHOW SCREENSHOT). That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.
 - If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses. Undo (Ctrl + Z) works in that Remote Machine textbox.
 
 
 
-Guiding Principles
+Guiding Principles <br />
  - Your Windows VM and Surface have to have matching IP addresses for the first two parts: (what is this called?) : 169.254.xxx.xxx
    - not sure about this actually.  IP of Windows 10 VM: 10.211.55.3, Surface: 192.168.1.132, and wireless debugging worked.  Had to enter manually tho
  - Don't live or die by what the "Remote Connections" dialog is able/unable to find. It's nice when it finds your device, but often it doesn't.  So if you've got this set up correctly, just type the IP + Port in the address box manually.
