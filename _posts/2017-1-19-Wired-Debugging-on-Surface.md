@@ -31,7 +31,7 @@ What won't work here is one of those fancy lightning to Ethernet dongles plugged
     <span style="vertical-align: middle;">What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</span>
 </div>-->
 
-Connect the dongles together, and plug one into your laptop and other other into the Surface. Here's what it should look like when it's all hooked up:  
+Connect the dongles together with the ethernet cable, and plug one dongle into your laptop and the other into the Surface. Here's what it should look like when it's all hooked up:  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="500px">
 
 <!--<div>
