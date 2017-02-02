@@ -88,8 +88,8 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 - Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debugging the app (SHOW SCREENSHOT). That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.  
 
 - I always turn on these two settings in the VS Remote Debugger app running on the Surface:
-  1. **Authentication:** None  
-  Turning this off seems to alleviate a lot of hassle of trying to get the debugger to connect to the remote client app.  I debug on a private network and only have the remote client running when I need to debug, so the lack of security doesn't concern me here.
+  1. **No Authentication:**  
+  Turning this off seems to alleviate a lot of the hassle of trying to get the debugger to connect to the remote client app.  I debug on a private or wired network and only have the remote client running when I need to debug, so the lack of security doesn't concern me here.
   2. **Allow any user to debug**  
   I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.  
 
@@ -108,8 +108,9 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 # Common Errors
 
-Error: Unable to connect to the Microsoft Visual Studio Remote Debugger named '10.211.55.5:4020'.  The Visual Studio Remote Debugger on the remote computer is running as a different user.
-Fix: on the Surface, in the menu for the VS 2015 Remote Debugger app, go to Tools > Options, and check the "Allow any user to debug" option, under the "No Authentication" radio button.
+**Error:** Unable to connect to the Microsoft Visual Studio Remote Debugger named '10.211.55.5:4020'.  The Visual Studio Remote Debugger on the remote computer is running as a different user.
+
+**Fix:** On the Surface, in the menu for the VS 2015 Remote Debugger app, go to Tools > Options, and check the **Allow any user to debug** option, under the **No Authentication** radio button.
 
 
 # Resources
