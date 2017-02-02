@@ -23,7 +23,7 @@ The easiest way to do this is to create a new build configuration with code opti
 Here's how to do that in Visual Studio:
 
 1. In VS, go to the Solution Configurations dropdown and select **Configuration Manager**.
-2. In the **Active solution configuration** dropdown, select the '<New...>' option
+2. In the **Active solution configuration** dropdown, select the **<New...** option
 3. Name this new configuration "Debug .NET Native" or something like that.
 4. Copy settings from **Debug**, click OK.  (Don't use settings from the Release configuration)
 5. You'll now see your new configuration in the config manager screen, but before you close this, make sure to check the **Build** and **Deploy** checkboxes for the UWP head project.  They're unchecked by default (I don't understand why)
