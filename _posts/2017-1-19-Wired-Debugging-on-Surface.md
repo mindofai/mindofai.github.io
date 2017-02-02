@@ -29,7 +29,7 @@ In order to debug over a wired connection, you'll need a few things:
 
 <br />
 
-What won't work here is one of those fancy (and expensive!) lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
+What won't work here is one of those fancy (and 3x more expensive) lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.png" width="250" />  
 
 <!--<div>
@@ -118,4 +118,3 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 # Resources
 - [https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)
-
