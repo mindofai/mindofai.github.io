@@ -12,10 +12,10 @@ To debug on a Surface (or devices that do not have Visual Studio installed) you 
 Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
 <br />
-There is a major issue with this plan, however:  
+There is a **major** issue with this plan, however:  
+More and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy.  
 
-- More and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy.  
-- Another benefit of debugging over a wired connection is that it's a bit more reliable and faster to get the app running after each build.
+Also, another benefit of debugging over a wired connection is that it's a bit more reliable and faster to get the app running after each build.
 
 One thing to note: like a lot of mobile developers, I work all day on a MacBook Pro and use [Parallels](http://www.parallels.com) that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side - so this post is written from that perspective.
 
