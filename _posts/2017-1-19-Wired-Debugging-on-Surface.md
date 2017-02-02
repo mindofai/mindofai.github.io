@@ -6,11 +6,10 @@ author: tom
 tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
 ---
 
-<table width="500">
+<table>
   <tr>
-    <td valign="bottom" width="150"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" width="150" /></td>
-    <td valign="top" width="350">From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  
-    Ah.... no.  Sorry.  It's not _that_ kind of USB port.  You can't just stick anything in there, man.</td>
+    <td width="150"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" width="150" /></td>
+    <td>From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not _that_ kind of USB port.  You can't just stick anything in there, man.</td>
   </tr>
 </table>
 
