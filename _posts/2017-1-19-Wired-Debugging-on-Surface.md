@@ -6,7 +6,9 @@ author: tom
 tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
 ---
 
-From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not that kind of USB port.  You can't just stick anything in there, man.
+From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" />
+Ah.... no.  Sorry.  It's not that kind of USB port.  You can't just stick anything in there, man.
 
 To debug on a Surface (or devices that do not have Visual Studio installed) you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
@@ -23,11 +25,11 @@ One thing to note: like a lot of mobile developers, I work all day on a MacBook 
 In order to debug over a wired connection, you'll need a few things:
 
  - 2 USB to Ethernet dongles.  You can find them for pretty cheap on [Amazon](https://www.amazon.com/gp/product/B00ET4KHJ2/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1).
- - a length of cat 5 cable to connect the two dongles together.
+ - A length of cat 5 cable to connect the two dongles together.
 
 <br />
 
-What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
+What won't work here is one of those fancy (and expensive!) lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.png" width="250" />  
 
 <!--<div>
