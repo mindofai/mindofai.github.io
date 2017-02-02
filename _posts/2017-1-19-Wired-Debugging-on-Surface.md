@@ -21,15 +21,18 @@ In order to debug over a wired connection, you'll need a few things:
  - 2 USB to Ethernet dongles.  You can find them for pretty cheap on [Amazon](https://www.amazon.com/gp/product/B00ET4KHJ2/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1).
  - a length of cat 5 cable to connect the two dongles together.
 
-<!--<div>
-    <p style="float: right;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150"></p>
-    <p>What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</p>
-</div>-->
 
-<div>
+
+What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150" />  
+
+<!--<div>
     <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150" style="vertical-align: middle;" />
     <span style="vertical-align: middle;">What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</span>
-</div>
+</div>-->
+
+Connect the dongles together, and plug one into your laptop and other other into the Surface. Here's what it should look like when it's all hooked up:  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="300px">
 
 <!--<div>
     <p style="float: left;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="300px"></p>
@@ -72,14 +75,15 @@ Disconnected:
 
 # Pro Tips:
 
-- When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio
-- Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debuggin the app (SHOW SCREENSHOT). That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.
+- When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio.  
+
+- Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debuggin the app (SHOW SCREENSHOT). That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.  
 
 - I always turn on these two settings in the VS Remote Debugger app running on the Surface:
-  1. Authentication: None  
+  1. **Authentication:** None  
   Turning this off seems to alleviate a lot of hassle of trying to get the debugger to connect to the remote client app.  I debug on a private network and only have the remote client running when I need to debug, so the lack of security doesn't concern me here.
-  2. Allow any user to debug  
-  I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.
+  2. **Allow any user to debug**  
+  I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.  
 
 - If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses. Undo (Ctrl + Z) works in that Remote Machine textbox.
 
