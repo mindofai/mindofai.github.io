@@ -14,9 +14,9 @@ From MSDN
 
 The easiest way to do this is to create a new build configuration with code optimization disabled, that way you can simply switch over to this new configuration when you need to debug a .NET Native build.  
 
-Here's how to do that:
+Here's how to do that in Visual Studio:
 
-1. In Visual Studio, go to the Solution Configurations dropdown and select **Configuration Manager**.
+1. In VS, go to the Solution Configurations dropdown and select **Configuration Manager**.
 2. In the **Active solution configuration** dropdown, select the '<New...>' option
 3. Name this new configuration "Debug .NET Native" or something like that.
 4. Copy settings from **Debug**, click OK.  (Don't use settings from the Release configuration)
@@ -35,14 +35,15 @@ One downside of using the .NET Native tool chain is that it takes quite a bit lo
 Sometimes issues with .NET Native can be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it if you're having runtime issues.
 
 
-# Issues and Answers
+# Issues
 
-The first time I did this, I copied settings from the Release configuration and ran into issues debugging:
-
+The first time I did this, I copied settings from the **Release** configuration instead of **Debug** and ran into issues debugging:
+ - The debugguer would not hit (stop at) my breakpoints in the code
+ - Saw a "[Your App Name].UWP.pdb not loaded" screen when debugging
+ As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and this was the issue here.
 
 # Resources
 
 I hesitate to share this link because it hasn't been updated since July 2015, but this is how I learned how to do this.  Please hit me up if you find a better/newer source.
 
-One thing you should NOT do when following the directions in this link is copy the Release settings when creating a new Solution Configuration. As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and your breakpoints will not get hit.  You will probably also see a "[Your App Name].UWP.pdb not loaded" screen in Visual Studio when debugging.
 - [https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/)
