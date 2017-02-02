@@ -52,9 +52,9 @@ Here's how to do it:
 1. Open **Network Connections** on Windows
 2. Locate the adapter that is supplying your internet connection. With Parallels this is done by an Ethernet adapter
 3. Select both the adapter from step #2 and the one for your plugged in USB dongle
-4. Right click and select **Bridge Connections**
+4. Right click and select **Bridge Connections**  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/BridgeConnections.png" width="400px">  
 The internet connection will now be shared over the ethernet cable to your Surface device  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/BridgeConnections.png" width="300px">
 
 
 
