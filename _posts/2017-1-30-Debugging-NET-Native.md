@@ -38,7 +38,7 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 
 - One downside of using the .NET Native tool chain is that it takes quite a bit longer for your Solution to build, so don't be concerned when you see that.
 
-- Sometimes issues with .NET Native can be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it out if you're having runtime issues.
+- Sometimes issues with .NET Native compilation can actully be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it out if you're having runtime issues.
 
 
 # Issues
@@ -46,7 +46,7 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 1. The first time I did this, I copied settings from the **Release** configuration instead of **Debug** and ran into issues debugging:
     - The debugger would not hit (stop at) my breakpoints in the code
     - Saw a "[Your App Name].UWP.pdb not loaded" screen when debugging
-    
+
  As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and this was the issue here.
 
 # Resources
