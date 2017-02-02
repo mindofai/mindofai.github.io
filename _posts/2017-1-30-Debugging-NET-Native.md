@@ -38,7 +38,7 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 
 - One downside of using the .NET Native tool chain is that it takes quite a bit longer for your Solution to build, so don't be concerned when you see that.
 
-- Sometimes issues with .NET Native compilation can actully be found at compile time.  I've had some success using the Microsoft.NETNative.Analyzer NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it out if you're having runtime issues.
+- Sometimes issues with .NET Native compilation can actully be found at compile time.  I've had some success using the [Microsoft.NETNative.Analyzer](https://www.nuget.org/packages/Microsoft.NETNative.Analyzer/) NuGet package as suggested by MS to find these.  It might be worth the quick NuGet download to try it out if you're having runtime issues.
 
 
 # Issues
