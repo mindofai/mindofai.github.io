@@ -88,7 +88,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 - Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debugging the app. That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SolutionConfig.png" width="800px">  
 
-- I always turn on these two settings in the VS Remote Debugger app running on the Surface:
+- I always turn on these two options in the VS Remote Debugger app running on the Surface (under **Tools** menu > **Options**):
   1. **No Authentication**  
   Turning this off seems to alleviate a lot of the hassle of trying to get the debugger to connect to the remote client app.  I debug on a private or wired network and only have the remote client running when I need to debug, so the lack of security doesn't concern me here.
   2. **Allow any user to debug**  
