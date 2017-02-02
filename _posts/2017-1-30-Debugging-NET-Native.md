@@ -23,7 +23,7 @@ The easiest way to do this is to create a new build configuration with code opti
 Here's how to do that in Visual Studio:
 
 1. In VS, go to the Solution Configurations dropdown and select **Configuration Manager**.
-2. In the **Active solution configuration** dropdown, select the **<New...>** option
+2. In the **Active solution configuration** dropdown, select the **<New...** option
 3. Name this new configuration "Debug .NET Native" or something like that.
 4. Copy settings from **Debug**, click OK.  (Don't use settings from the Release configuration)
 5. You'll now see your new configuration in the config manager screen, but before you close this, make sure to check the **Build** and **Deploy** checkboxes for the UWP head project.  They're unchecked by default (I don't understand why)
@@ -45,7 +45,7 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 
 1. The first time I did this, I copied settings from the **Release** configuration instead of **Debug** and ran into issues debugging:
     - The debugger would not hit (stop at) my breakpoints in the code
-    - Often saw a _[Your App Name].UWP.pdb not loaded_ screen when debugging
+    - Often saw a "_[Your App Name].UWP.pdb not loaded_" screen when debugging
     <img src="{{site.baseurl}}/images/NetNativeDebugging/pdbNotLoaded.png" width="450" />
 
     As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and this was the issue here.
