@@ -85,7 +85,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 - When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio.  
 
-- Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debuggin the app (SHOW SCREENSHOT). That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.  
+- Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debugging the app (SHOW SCREENSHOT). That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.  
 
 - I always turn on these two settings in the VS Remote Debugger app running on the Surface:
   1. **Authentication:** None  
@@ -99,8 +99,8 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 # Guiding Principles:
 
- - Don't live or die by what the **Remote Connections** dialog is able/unable to find. It's nice when it finds your device, but often it doesn't.  So if you've got things hooked up correctly, just type the IP + Port in the address box manually.  
- <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/ConnectionFound.png" width="200px">
+ - Don't live or die by what the **Remote Connections** dialog is able/unable to find. It's nice when it finds your device, but often it doesn't.  So if you've got things hooked up correctly, just type the IP + Port in the address box manually.  Remember to use the correct format: ip.addr.goes.here:[port number]
+ <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/ConnectionFound.png" width="300px">
 
  - You must have the Visual Studio 2015 Remote Debugger app running on the Surface at all times. That app will close automatically after a certain period of inactivity.
  
