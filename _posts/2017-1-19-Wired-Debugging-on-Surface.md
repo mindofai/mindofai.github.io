@@ -10,7 +10,7 @@ From a mobile developer's perspective, debugging on a Surface tablet is weird.  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" />  
 Ah.... no.  Sorry.  It's not that kind of USB port.  You can't just stick anything in there, man.
 
-To debug on a Surface (or devices that do not have Visual Studio installed) you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
+To debug on a Surface (or devices that do not have Visual Studio installed) you must install the Visual Studio Remote Debugger client app on the device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
 <br />
 There is a **major** issue with this plan, however:  
@@ -50,7 +50,7 @@ Connect the dongles together with the ethernet cable, and plug one dongle into y
 
 For our Xamarin.Forms app, we need to be online the first time a user logs in and syncs data with the server, but then we want to disconnect from the internet to test offline scenarios after that first login. 
 
-The trickiest part was getting my laptop to share it's internet connection with the Surface over my wired ethernet connection.  When you first connect your Surface to your laptop, if you turn off the Surface WiFi connection you'll see an icon indicating that there is no internet connection.  
+The trickiest part was getting my laptop to share its internet connection with the Surface over my wired ethernet connection.  When you first connect your Surface to your laptop, if you turn off the Surface WiFi connection you'll see an icon indicating that there is no internet connection.  
 
 Thankfully, there's a nice Windows feature that allows you to do that called Adapter Bridging.  
 Here's how to do it:
