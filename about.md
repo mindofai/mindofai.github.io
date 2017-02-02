@@ -12,12 +12,12 @@ I live and work in the bustling center of "Silicon Prairie", Minneapolis MN, whe
 
 In addition to my professional work, I also have a couple personal apps in the iOS App Store: [How Deep Is It?](https://itunes.apple.com/us/app/how-deep-is-it/id955364125) and [Pickster](https://itunes.apple.com/us/app/pickster/id1055947478) (check 'em out, they're free!)
 
-Specialties: C#, Cross-Platform Mobile Apps (iOS, UWP, Android), Xamarin.Forms, CI and Build Automation, Client communication, Leadership
+I regularly speak and attend the [MN Enterprise Mobile](https://www.meetup.com/Minnesota-Enterprise-Mobile) meetup, so if you're in the area, check it out.
 
 
 ### Contact
 
-Let's be friends on [Twitter!](https://twitter.com/tomsoderling)
+I love meeting and connecting with new people, so let's be friends on [Twitter!](https://twitter.com/tomsoderling)
 
 
 ### Press
