@@ -92,8 +92,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
   1. **No Authentication**  
   Turning this off seems to alleviate a lot of the hassle of trying to get the debugger to connect to the remote client app.  I debug on a private or wired network and only have the remote client running when I need to debug, so the lack of security doesn't concern me here.
   2. **Allow any user to debug**  
-  I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.  
-  
+  I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.    
   <br />
 
 - If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses over and over in the Remote Machine textbox. Undo (Ctrl + Z) works inside that textbox.
