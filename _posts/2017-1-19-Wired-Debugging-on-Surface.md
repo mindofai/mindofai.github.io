@@ -94,7 +94,6 @@ The internet connection will now be shared over the ethernet cable to your Surfa
   2. **Allow any user to debug**  
   I use this setting because don't log into my Windows 10 VM via Parallels and sometimes my coworker also needs to debug on the Surface.  
 
-<br />
 
 - If you find yourself switching from connected in disconnected frequently, it's a pain to keep typing in the same 2 IP addresses over and over in the Remote Machine textbox. Undo (Ctrl + Z) works inside that textbox.
 
