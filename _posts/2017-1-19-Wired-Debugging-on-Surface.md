@@ -10,7 +10,9 @@ From a mobile developer's perspective, debugging on a Surface tablet is weird.  
 
 To debug on a Surface you have to install the Visual Studio Remote Debugger client app on your device and then wirelessly communicate with it to debug from Visual Studio.  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
 
-The problem with this is that more and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy. 
+There is a major issue with this, however:  
+More and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy.  
+Another benefit of debugging over a wired connection is that it's a bit more reliable and faster to get the app running after each build.
 
 One thing to note: like a lot of mobile developers, I work all day on a MacBook Pro and use [Parallels](http://www.parallels.com) that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side - so this post is written from that perspective.
 
@@ -58,19 +60,17 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 
 
-**Start debugging while online:**
-
+**Start debugging while online:**  
 1. Bridge adapters
+  OR  
+  You can always simply unplug the USB adapter dongle from the Surface and turn WiFi back on.
 2. Open browser on Surface to check for connectivity
 3. Get the Surface's IP address (cmd > ipconfig)
 4. Enter the IP address in the Remote Machine textbox in Visual Studio.  Format is xxx.xxx.xxx.xxx:[Port Number]
 5. Run on Remote device
 
-**Then disconnected:**  
-
-1. Select adapters, right click, select Remove from Bridge  
- OR  
- Unplug the USB adapter dongle from the Surface and turn Wifi back on
+**Then offline:**  
+1. Select adapters, right click, select Remove from Bridge 
 2. Wait for Surface to get new IP
 3. Type it in the Remote Machine textbox in VS
 
