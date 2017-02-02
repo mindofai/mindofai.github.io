@@ -46,6 +46,7 @@ Then go to the Project Properties of your .UWP head project.  You'll need to tog
 1. The first time I did this, I copied settings from the **Release** configuration instead of **Debug** and ran into issues debugging:
     - The debugger would not hit (stop at) my breakpoints in the code
     - Saw a "[Your App Name].UWP.pdb not loaded" screen when debugging
+    <img src="{{site.baseurl}}/images/NetNativeDebugging/pdbNotLoaded.png" width="400" />
 
     As far as I can tell, a Release build doesn't produce the necessary symbol files (pdb) for your app DLL and this was the issue here.
 
