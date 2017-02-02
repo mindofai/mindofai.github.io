@@ -12,7 +12,7 @@ To debug on a Surface you have to install the Visual Studio Remote Debugger clie
 
 The problem with this is that more and more apps we're building need to be offline capable.  So how are you supposed to debug in an offline scenario with wireless debugging?  That's where that USB port is going to come in handy. 
 
-One thing to note. Like a lot of mobile developers, I work all day on a MacBook Pro and use Parallels that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side - so this post is written from that perspective.
+One thing to note: like a lot of mobile developers, I work all day on a MacBook Pro and use [Parallels](http://www.parallels.com) that runs a Windows 10 Virtual Machine so I can use all my Windows tools side by side - so this post is written from that perspective.
 
 # Hardware Needed
 
@@ -24,7 +24,7 @@ In order to debug over a wired connection, you'll need a few things:
 
 
 What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150" />  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.png" width="200" />  
 
 <!--<div>
     <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150" style="vertical-align: middle;" />
