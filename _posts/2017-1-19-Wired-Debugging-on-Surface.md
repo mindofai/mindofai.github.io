@@ -15,9 +15,14 @@ From a mobile developer's perspective, debugging on a Surface tablet is weird.  
   </tr>
 </table>
 
-To debug on a Surface (or devices that do not have Visual Studio installed) you must install the Visual Studio Remote Debugger client app on the device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/RemoteDebuggerClient.png" width="400" />  
-The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
+<table>
+  <tr>
+    <td>To debug on a Surface (or devices that do not have Visual Studio installed) you must install the Visual Studio Remote Debugger client app on the device and then wirelessly communicate with it to debug from Visual Studio on your laptop.
+    The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)
+    </td>
+    <td><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/RemoteDebuggerClient.png" width="400" /></td>
+  </tr>
+</table>
 
 <br />
 There is a **major** issue with this plan, however:  
