@@ -86,7 +86,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 - When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio.  
 
 - Generally, you'll have your Solution build configuration set to deploy the UWP head project to your device each time you start debugging the app. That means the app will be installed over the old one on each deploy and that can be undesirable when testing offline behavior, so don't forget to uncheck that if needed after the initial deploy of the app to the device.  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SolutionConfig.png" width="700px">  
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SolutionConfig.png" width="800px">  
 
 - I always turn on these two settings in the VS Remote Debugger app running on the Surface:
   1. **No Authentication**  
