@@ -43,11 +43,12 @@ What won't work here is one of those fancy (and 3x more expensive) lightning to 
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.png" width="250" />  
 
 <div>
-  <div style="display: inline-block; width: 60%; vertical-align: top;" align="top">
-    Connect the dongles together with the ethernet cable, and plug one dongle into your laptop and the other into the Surface. Here's what it should look like when it's all hooked up.
+  <div style="display: inline-block; width: 50%; vertical-align: top;" align="top">
+    Connect the dongles together with the ethernet cable, and plug one dongle into your laptop and the other into the Surface. <br/>
+    Here's what it should look like when it's all hooked up.
   </div>
   <div style="display: inline-block;">
-    <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="500px" />
+    <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="450px" />
   </div>
 </div>
 
