@@ -13,8 +13,8 @@ tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
   </tr>
 </table>-->
 
-<div style="display: inline-block">
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" width="150" style="display: inline-block" />  
+<div style="display: inline-block; border: 3px solid #73AD21;">
+<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" width="150" style="display: inline-block; border: 3px solid #A3AD21;" />  
 From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not *that* kind of USB port.  You can't just stick anything in there, man.  
 </div>
 
@@ -91,7 +91,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 
 
-# Tips:
+# Tips
 
 - When Un-Bridging.  The Surface will show that the internet connection is lost right away and long before it gets a new IP, so wait for the USB Ethernet adapter to show that it has a new (different) IP before trying to debug to it in Visual Studio.  
 
@@ -109,7 +109,7 @@ The internet connection will now be shared over the ethernet cable to your Surfa
 
 
 
-# Guiding Principles:
+# Guiding Principles
 
  - Don't live or die by what the **Remote Connections** dialog is able/unable to find. It's nice when it finds your device, but often it doesn't.  So if you've got things hooked up correctly, just type the IP + Port in the address box manually.  Remember to use the correct format: ip**.**addr**.**goes**.**here**:**[port number]  
  <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/ConnectionFound.png" width="350px" />
