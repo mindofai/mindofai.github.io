@@ -42,8 +42,14 @@ In order to debug over a wired connection, you'll need a few things:
 What won't work here is one of those fancy (and 3x more expensive) lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.png" width="250" />  
 
-Connect the dongles together with the ethernet cable, and plug one dongle into your laptop and the other into the Surface. Here's what it should look like when it's all hooked up:  
-<img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="500px" />
+<div>
+  <div style="display: inline-block; width: 60%; vertical-align: top;" align="top">
+    Connect the dongles together with the ethernet cable, and plug one dongle into your laptop and the other into the Surface. Here's what it should look like when it's all hooked up.
+  </div>
+  <div style="display: inline-block;">
+    <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="500px" />
+  </div>
+</div>
 
 # Debugging Online and Offline
 
