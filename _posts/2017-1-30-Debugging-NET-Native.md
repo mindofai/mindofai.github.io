@@ -3,6 +3,7 @@ published: true
 layout: post
 title: Debugging .NET Native in Visual Studio
 author: tom
+date: 2017-01-28 12:00
 tags: [UWP, Surface, Debugging, Xamarin, Xamarin. Forms]
 ---
 
