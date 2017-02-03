@@ -6,17 +6,11 @@ author: tom
 tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
 ---
 
-<!--<table>
-  <tr>
-    <td width="150"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" width="150" /></td>
-    <td>From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not _that_ kind of USB port.  You can't just stick anything in there, man.</td>
-  </tr>
-</table>-->
 <div>
-  <div style="display: inline-block; border: 3px solid #73AD21;">
+  <div style="display: inline-block; ">
     <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" width="150" />  
   </div>
-  <div style="display: inline-block; border: 3px solid red; width: 80%;">From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not *that* kind of USB port.  You can't just stick anything in there, man.  
+  <div style="display: inline-block; width: 80%;">From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not _that_ kind of USB port.  You can't just stick anything in there, man.  
   </div>
 </div>
 
@@ -43,19 +37,8 @@ In order to debug over a wired connection, you'll need a few things:
 What won't work here is one of those fancy (and 3x more expensive) lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.png" width="250" />  
 
-<!--<div>
-    <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/thunderboldToEthernetAdapter.jpeg" width="150" style="vertical-align: middle;" />
-    <span style="vertical-align: middle;">What won't work here is one of those fancy lightning to Ethernet dongles plugged into my Mac, because my Windows VM doesn't recognize it.  The USB adapter is the one Windows understands.</span>
-</div>-->
-
 Connect the dongles together with the ethernet cable, and plug one dongle into your laptop and the other into the Surface. Here's what it should look like when it's all hooked up:  
 <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="500px" />
-
-<!--<div>
-    <p style="float: left;"><img src="{{site.baseurl}}/images/WiredSurfaceDebugging/WiredSetup.jpg" width="300px"></p>
-    Connect the dongles together, and plug one into your laptop and other other into the Surface.
-</div>-->
-
 
 # Debugging Online and Offline
 
