@@ -15,8 +15,8 @@ tags: [UWP, Surface, Debugging, Xamarin, Xamarin.Forms]
 
   <div style="display: inline-block; border: 3px solid #73AD21;">
     <img src="{{site.baseurl}}/images/WiredSurfaceDebugging/SurfacePro3USBPort.png" width="150" />  
-  </div style="display: inline-block; border: 3px solid red;">
-  <div>From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not *that* kind of USB port.  You can't just stick anything in there, man.  
+  </div>
+  <div style="display: inline-block; border: 3px solid red;">From a mobile developer's perspective, debugging on a Surface tablet is weird.  The first time I picked up the Surface and spotted the USB port on the side, I figured, cool - I'll just plug it into my laptop and run something!  Ah.... no.  Sorry.  It's not *that* kind of USB port.  You can't just stick anything in there, man.  
   </div>
 
 To debug on a Surface (or devices that do not have Visual Studio installed) you must install the Visual Studio Remote Debugger client app on the device and then wirelessly communicate with it to debug from Visual Studio on your laptop.  The version of the remote client app MUST match the version of Visual Studio you're using (update 1, 2, 3, etc.).  Directions to do that is [here](https://msdn.microsoft.com/en-us/library/y7f5zaaa.aspx)  
