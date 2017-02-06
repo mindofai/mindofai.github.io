@@ -6,7 +6,13 @@ permalink: /about/
 
 ### Hey! 
 
-I'm an exuberant software developer, speaker, and open source contributor, with 10+ years experience building applications using the Microsoft technology stack. I specialize in developing cross-platform mobile apps using Xamarin technologies and am a 3-time Xamarin Certified Mobile Developer.  
+<div>
+  <div style="display: inline-block;" align="top">
+    <img src="{{site.baseurl}}/images/trophyPhoto.jpg" width="150" />  
+  </div>
+  <div style="display: inline-block; width: 80%; vertical-align: top;">I'm an exuberant software developer, speaker, and open source contributor, with 10+ years experience building applications using the Microsoft technology stack. I specialize in developing cross-platform mobile apps using Xamarin technologies and am a 3-time Xamarin Certified Mobile Developer.
+  </div>
+</div>
 
 I live and work in the bustling center of "Silicon Prairie", Minneapolis MN, where I'm a Sr. Mobile Developer at [Mobile Composer](https://www.mcomposer.com) and leading the development on our flagship app, Orchestrate.
 
