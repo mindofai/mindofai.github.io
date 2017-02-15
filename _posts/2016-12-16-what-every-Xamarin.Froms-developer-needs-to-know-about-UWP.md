@@ -84,7 +84,7 @@ Debugging the issue has been a process of examining each component and revisitin
 
 On to NControl then - it contains all the necessary Windows-specific stuff, like a Windows.UI.Xaml.Controls.Canvas, and helpers to convert the NGraphics.Brush to a Windows.UI.Xaml.Media.Brush, but most importantly, a Custom Renderer that renders an NControlView as a Windows.UI.Xaml.Controls.Grid that can be displayed on UWP.  Hooking the NControl source to my repro project seemed to be the best approach.  
 
-As you may have guessed, debugging a .NET Native compiled app is a little different.  Check out [this post on MSDN](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/) for directions, namely, you will want to debug a non-optimized .NET Native build, and this will show you how to do that.
+As you may have guessed, debugging a .NET Native compiled app is a little different.  Check out my previous [post on this](https://tomsoderling.github.io/Debugging-NET-Native) for directions, namely, you will want to debug a non-optimized .NET Native build, and this will show you how to do that.
 
 This confirmed the true issue; the constructor of my NControlViewRenderer was never getting hit, thus all the great code I had added for UWP wasn't even getting touched :/  
 I've seen this happen before when I forgot to add the assembly attribute above my renderer class.
@@ -142,7 +142,7 @@ And why would you want to register these extra assemblies?
 
 But the [little snippet of "documentation"](https://developer.xamarin.com/guides/xamarin-forms/platform-features/windows/installation/universal/#Troubleshooting) is a little murky here - there are directions to use this UWP-specific overload, but it's described as a fix for the "Target Invocation Exception" when using "Compile with .NET Native tool chain".  I wasn't seeing any exceptions, so the entire section under this heading wasn't on my radar at all.  The app ran great.  Blissfully unaware that my NControlView should be displayed on the screen.
 
-In fact, I found that this is a requirement for ALL custom renderers that live in a 3rd party library.  For example, our app has a custom renderer for playing videos.  It has an implementation for each platform (iOS & UWP) that lives in its respective platform-specific projects, and this renderer works great.  However, in addition to NControl, we're also using the popular Xamarin Image Circle Control plugin and it isn't working correctly in .NET Native builds, leaving the images square.  Same issue.
+In fact, I found that this is a requirement for **ALL custom renderers that live in a 3rd party library**.  For example, our app has a custom renderer for playing videos.  It has an implementation for each platform (iOS & UWP) that lives in its respective platform-specific projects and this renderer works great - which threw us off for a bit.  By contrast, in addition to NControl, we're also using the popular 3rd party Xamarin Image Circle Control [plugin]()circle image plugin wordpress and it also wasn't working correctly in .NET Native builds, leaving the images square.  
 
 So what other assemblies do we have to include?  
 You may notice if you look at the Xamarin Evolve [source code](https://github.com/xamarinhq/app-evolve/blob/master/src/XamarinEvolve.UWP/App.xaml.cs#L92) that James seems to add everything and the kitchen sink here. Not sure if all that is needed.  
@@ -151,7 +151,7 @@ The only answer I've heard from Xamarin was from James: "_Mostly you just need t
 
 # The Fix
 
-6 days in the making, here's the bit of code that corrected it.  This goes in the App.xaml.cs file in your UWP head project:
+Here's the bit of code that corrected it.  This goes in the App.xaml.cs file in your UWP head project:
 
 ```csharp
 // For .NET Native compilation, you have to tell Xamarin.Forms which assemblies it should scan for custom controls and renderers
