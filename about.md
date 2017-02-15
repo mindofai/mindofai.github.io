@@ -11,7 +11,8 @@ permalink: /about/
     <img src="{{site.baseurl}}/images/trophyPhoto.jpg" width="200" />  
   </div>
   <div style="display: inline-block; width: 73%; vertical-align: top;">I'm an exuberant software developer, speaker, and open source contributor, with 10+ years experience building applications using the Microsoft technology stack. I specialize in developing cross-platform mobile apps using Xamarin technologies and am a 3-time Xamarin Certified Mobile Developer. <br/><br/>
-  I live and work in the bustling center of "Silicon Prairie", Minneapolis MN, where I'm a Sr. Mobile Developer at <a href="https://www.mcomposer.com">Mobile Composer</a> and leading the development on our flagship moible app, Orchestrate.
+  I live and work in the bustling center of "Silicon Prairie", Minneapolis MN, where I'm a Sr. Mobile Developer 
+  <!--at <a href="https://www.mcomposer.com">Mobile Composer</a> and leading the development on our flagship moible app, Orchestrate.-->
   </div>
 </div>
 
@@ -20,12 +21,19 @@ In addition to my professional work, I also have a couple personal apps in the i
 I regularly speak and attend the [MN Enterprise Mobile](https://www.meetup.com/Minnesota-Enterprise-Mobile) meetup, so if you're in the area, check it out.
 
 
+### Open Source
+
+I wrote the UWP support for these two great drawing libraries that are popular among Xamarin developers:  
+ - [NGraphics](https://github.com/praeclarum/NGraphics) - a cross platform library for rendering vector graphics on .NET
+ - [NControl](https://github.com/chrfalch/NControl) - a simple Xamarin.Forms wrapper control around the NGraphics library
+
+
 ### Contact
 
 I love meeting and connecting with new people, so let's be friends on [Twitter!](https://twitter.com/tomsoderling)
 
 
-### Press
+<!--### Press
 
 - Case study on the [Xamarin blog](https://blog.xamarin.com/mobile-composer-transforms-products-people-and-processes-with-xamarin-apps/)
-- Case study [by Microsoft](https://customers.microsoft.com/en-us/story/orchestrating-marketing-and-sales-performance)
+- Case study [by Microsoft](https://customers.microsoft.com/en-us/story/orchestrating-marketing-and-sales-performance)-->
