@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: What Every Xamarin.Forms Developer Needs to Know About UWP
-date: 2016-02-15 01:23
+date: 2017-02-15 01:23
 author: tom
 comments: true
 tags: [UWP, Xamarin.Forms, .NET Native]
