@@ -32,6 +32,7 @@ I wrote the UWP support for these two great drawing libraries that are popular a
 
 I love meeting and connecting with new people, so let's be friends on [Twitter!](https://twitter.com/tomsoderling)
 
+<a href="{{site.baseurl}}/resume/Tom_Soderling_Resume.pdf" download>My Resume</a>
 
 <!--### Press
 
