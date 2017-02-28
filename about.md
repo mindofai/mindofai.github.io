@@ -16,9 +16,24 @@ permalink: /about/
   </div>
 </div>
 
-In addition to my professional work, I also have a couple personal apps in the iOS App Store: [How Deep Is It?](https://itunes.apple.com/us/app/how-deep-is-it/id955364125) and [Pickster](https://itunes.apple.com/us/app/pickster/id1055947478) (check 'em out, they're free!)
 
-I regularly speak and attend the [MN Enterprise Mobile](https://www.meetup.com/Minnesota-Enterprise-Mobile) meetup, so if you're in the area, check it out.
+In addition to my professional work, I also have a couple personal apps in the iOS App Store (check 'em out, they're free!)
+- [How Deep Is It?](https://itunes.apple.com/us/app/how-deep-is-it/id955364125) 
+- [Pickster](https://itunes.apple.com/us/app/pickster/id1055947478) 
+
+
+<div>
+  <div style="display: inline-block; width: 73%; vertical-align: top;">In addition to my professional work, I also have a couple personal apps in the iOS App Store (check 'em out, they're free!)
+- [How Deep Is It?](https://itunes.apple.com/us/app/how-deep-is-it/id955364125) 
+- [Pickster](https://itunes.apple.com/us/app/pickster/id1055947478)
+  </div>
+  <div style="display: inline-block;" align="top">
+    <img src="{{site.baseurl}}/images/xcmdBadge.png" width="200" />  
+  </div>
+</div>
+
+
+I regularly attend and speak at the [MN Enterprise Mobile](https://www.meetup.com/Minnesota-Enterprise-Mobile) meetup, so if you're in the area I'd highly recommend you check it out.
 
 
 ### Open Source
