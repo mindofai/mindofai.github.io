@@ -28,6 +28,10 @@ permalink: /about/
   <a href="https://itunes.apple.com/us/app/how-deep-is-it/id955364125">How Deep Is It?</a>
   <br />
   <a href="https://itunes.apple.com/us/app/pickster/id1055947478">Pickster</a>
+
+  <br />
+  <br />
+  I regularly attend and speak at the <a href="https://www.meetup.com/Minnesota-Enterprise-Mobile">MN Enterprise Mobile</a> meetup, so if you're in the area I'd highly recommend checking it out.
   </div>
   <div style="display: inline-block;" align="top">
     <img src="{{site.baseurl}}/images/xcmdBadge.png" width="200" />  
@@ -35,7 +39,7 @@ permalink: /about/
 </div>
 
 
-I regularly attend and speak at the [MN Enterprise Mobile](https://www.meetup.com/Minnesota-Enterprise-Mobile) meetup, so if you're in the area I'd highly recommend you check it out.
+
 
 
 ### Open Source
