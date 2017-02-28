@@ -24,9 +24,9 @@ permalink: /about/
 
 <div>
   <div style="display: inline-block; width: 73%; vertical-align: top;">In addition to my professional work, I also have a couple personal apps in the iOS App Store (check 'em out, they're free!)
-  </br>
+  <br />
   <a href="https://itunes.apple.com/us/app/how-deep-is-it/id955364125">How Deep Is It?</a>
-  </br>
+  <br />
   <a href="https://itunes.apple.com/us/app/pickster/id1055947478">Pickster</a>
   </div>
   <div style="display: inline-block;" align="top">
