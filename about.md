@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-### Hey! 
-
 <div>
   <div style="display: inline-block;" align="top">
     <img src="{{site.baseurl}}/images/trophyPhoto.jpg" width="200" />  
@@ -37,9 +35,6 @@ permalink: /about/
     <img src="{{site.baseurl}}/images/xcmdBadge.png" width="200" />  
   </div>
 </div>
-
-
-
 
 
 ### Open Source
