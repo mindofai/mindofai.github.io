@@ -25,10 +25,21 @@ xmlns:inthehand="clr-namespace:InTheHand.Forms;assembly=InTheHand.Forms"
 3. Now, you can use the InTheHand.Forms' MediaElement:
 
 ```
- <ithforms:MediaElement HorizontalOptions="Fill" VerticalOptions="Fill" AreTransportControlsEnabled="true" AutoPlay="True"
+ <inthehand:MediaElement HorizontalOptions="Fill" VerticalOptions="Fill" AreTransportControlsEnabled="true" AutoPlay="True" 
                            Source="https://sec.ch9.ms/ch9/b4ca/4e3d3cb1-4345-467b-9dc7-9fdcc9f6b4ca/VS2017_high.mp4"/>
   ```
 
-As you can see, it's almost the same as how the UWP's MediaElement looks like. You just need to set the source and you're done. There are other controls that you might want to set such as `AreTransportControlsEnabled`
+As you can see, it's almost the same as how the UWP's MediaElement looks like. You just need to set the source and you're done. I've added a link for the source which is about [Intro to Xamarin and VS2017](https://channel9.msdn.com/events/Xamarin/Recent-Webinars/Introduction-to-Xamarin-for-Visual-Studio-2017). There are other controls that you might want to set such as `AreTransportControlsEnabled` to show/hide the controls and `AutoPlay` to auto play the video/audio.
 
-4. 
+4. Once done, you can now run your application to iOS, Android, and Windows.
+
+ 
+
+This is so useful for me since I was really frustrated with my previous project which needed to play videos/audios. Now, you can just install this package, add the namespace, place the MediaElement control, and done! Pretty cool, right? Hopefully, this can also help you with your current or future projects.
+
+Resources:
+
+- https://inthehand.github.io/html/T_InTheHand_Forms_CheckSwitch.htm#!
+- https://github.com/inthehand/InTheHand.Forms
+- https://www.nuget.org/packages/inthehand.forms
+
