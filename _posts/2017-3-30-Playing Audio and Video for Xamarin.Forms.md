@@ -33,13 +33,13 @@ As you can see, it's almost the same as how the UWP's MediaElement looks like. Y
 
 4. Once done, you can now run your application to iOS, Android, and Windows.
 
- 
+ <img src="{{site.baseurl}}/MediaElementUWP.png" style="width: 500px;"/>
 
 This is so useful for me since I was really frustrated with my previous project which needed to play videos/audios. Now, you can just install this package, add the namespace, place the MediaElement control, and done! Pretty cool, right? Hopefully, this can also help you with your current or future projects.
 
 Resources:
 
-- https://inthehand.github.io/html/T_InTheHand_Forms_CheckSwitch.htm#!
+- https://inthehand.github.io/html/T_InTheHand_Forms_CheckSwitch.htm#
 - https://github.com/inthehand/InTheHand.Forms
 - https://www.nuget.org/packages/inthehand.forms
 
