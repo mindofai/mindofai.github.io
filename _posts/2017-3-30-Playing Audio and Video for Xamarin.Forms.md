@@ -21,10 +21,10 @@ I've had that problem months ago, but it looks like I'm going to encounter it ag
 <br>
 <br>
 
-1. To use this, first, you need to install [***this NuGet package***](https://www.nuget.org/packages/inthehand.forms) to the PCL and to all three platform-specific projects (Android, iOS, and UWP) or whichever you have. It will not show any error if you only added the package in PCL and run it, so it'll hard for you to debug this if you forgot to install it to your platform-specific projects.
+- To use this, first, you need to install [***this NuGet package***](https://www.nuget.org/packages/inthehand.forms) to the PCL and to all three platform-specific projects (Android, iOS, and UWP) or whichever you have. It will not show any error if you only added the package in PCL and run it, so it'll hard for you to debug this if you forgot to install it to your platform-specific projects.
 
 
-2. After the installation of package, the next thing you'll do is to open the XAML page where you want to play a video and add this namespace to your XAML:
+- After the installation of package, the next thing you'll do is to open the XAML page where you want to play a video and add this namespace to your XAML:
 
 
 ```
@@ -32,7 +32,7 @@ xmlns:inthehand="clr-namespace:InTheHand.Forms;assembly=InTheHand.Forms"
 ```
 
 
-3. Now, you can use the InTheHand.Forms' MediaElement:
+- Now, you can use the InTheHand.Forms' MediaElement:
 
 ```
  <inthehand:MediaElement HorizontalOptions="Fill" VerticalOptions="Fill" AreTransportControlsEnabled="true" AutoPlay="True" 
@@ -42,7 +42,7 @@ xmlns:inthehand="clr-namespace:InTheHand.Forms;assembly=InTheHand.Forms"
 As you can see, it's almost the same as how the UWP's MediaElement looks like. You just need to set the source and you're done. I've added a link for the source which is about [Intro to Xamarin and VS2017](https://channel9.msdn.com/events/Xamarin/Recent-Webinars/Introduction-to-Xamarin-for-Visual-Studio-2017). There are other controls that you might want to set such as `AreTransportControlsEnabled` to show/hide the controls and `AutoPlay` to auto play the video/audio.
 
 
-4. Once done, you can now run your application to iOS, Android, and Windows.
+- Once done, you can now run your application to iOS, Android, and Windows.
 
  <img src="{{site.baseurl}}/MediaElementUWP.png" style="width: 500px;"/>
 
