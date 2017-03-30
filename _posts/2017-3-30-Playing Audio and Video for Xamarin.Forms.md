@@ -39,7 +39,7 @@ This is so useful for me since I was really frustrated with my previous project 
 
 Resources:
 
-- https://inthehand.github.io/html/T_InTheHand_Forms_CheckSwitch.htm#
-- https://github.com/inthehand/InTheHand.Forms
-- https://www.nuget.org/packages/inthehand.forms
+- [https://inthehand.github.io/html/T_InTheHand_Forms_CheckSwitch.htm#](https://inthehand.github.io/html/T_InTheHand_Forms_CheckSwitch.htm#)
+- [https://github.com/inthehand/InTheHand.Forms](https://github.com/inthehand/InTheHand.Forms)
+- [https://www.nuget.org/packages/inthehand.forms](https://github.com/inthehand/InTheHand.Forms)
 
