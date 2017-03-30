@@ -18,13 +18,13 @@ I've had that problem months ago, but it looks like I'm going to encounter it ag
 2. After the installation of package, the next thing you'll do is to open the XAML page where you want to play a video and add this namespace to your XAML:
 
 
-```xaml
+```
 xmlns:inthehand="clr-namespace:InTheHand.Forms;assembly=InTheHand.Forms"
 ```
 
 3. Now, you can use the InTheHand.Forms' MediaElement:
 
-```xaml
+```
  <ithforms:MediaElement HorizontalOptions="Fill" VerticalOptions="Fill" AreTransportControlsEnabled="true" AutoPlay="True"
                            Source="https://sec.ch9.ms/ch9/b4ca/4e3d3cb1-4345-467b-9dc7-9fdcc9f6b4ca/VS2017_high.mp4"/>
   ```
