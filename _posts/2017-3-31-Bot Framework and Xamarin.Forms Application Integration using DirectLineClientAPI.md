@@ -15,8 +15,7 @@ After Philip's part, I created a Xamarin.Forms application with Prism MVVM Frame
 
 <br>
 
-
-
+ <img src="{{site.baseurl}}/Chatview.jpg" style="width: 450px;"/>
 
 
 <br>
