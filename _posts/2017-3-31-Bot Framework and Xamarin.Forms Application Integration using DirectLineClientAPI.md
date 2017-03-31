@@ -28,7 +28,7 @@ The most important thing here is the service that calls the DirectLineClient API
 First thing is you need to create a method for setup that you're gonna call every time your application starts. I used `System.Net.Http.HttpClient` for REST API calls.
 
 <br> 
-# Setup()
+## Setup()
 
 ```csharp
 
@@ -80,7 +80,7 @@ Once you run the application, you can now get the `ConversationID`, we can now c
 
 In order for us to send a message, we first need to create another method.
 
-# SendMessage()
+## SendMessage()
 
 ```csharp
  public async Task<BotMessage> SendMessage(string name, string message)
@@ -95,7 +95,7 @@ In order for us to send a message, we first need to create another method.
  
  As you can see right here, I'm serializing the BotMessage to JSON. The BotMessage has the name of who is it from (From) and the message (Text) The BotMessage also contains the `Id`, `Created` date, `ConversationID`, etc. I added the model below. Then, I posted the serialized BotMessage to `conversationURL` using `HttpClient.PostAsync()`. We've added the `ConversationId` to the link, meaning we're sending the message to the conversation. Alright, we can now send a message!
  
- # BotMessage model
+ ## BotMessage model
  
  ```csharp
  public class BotMessage
