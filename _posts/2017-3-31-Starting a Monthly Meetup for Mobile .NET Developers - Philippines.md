@@ -19,7 +19,7 @@ As an admin, I suggest a lot of stuff to my fellow admins, since I feel like we 
 So, today, I sent Microsoft Philippines a formal proposal for Mobile .NET Developers - Philippines, formerly Xamarin Mobile Developers - Philippines, to have a monthly meetup every second tuesday of the month. This will be a great opportunity for Microsoft to spread the latest technologies and teach students and professionals how to develop applications using their Mobile .NET technologies, especially Xamarin. This will surely lead to the growth of developers who will be using Mobile .NET solutions in their projects.
 <br>
 
- <img src="{{site.baseurl}}/MondpH.png" style="width: 800px;"/>
+ <img src="{{site.baseurl}}/Mondph.png" style="width: 800px;"/>
  
 <br>
 Let's just hope that Microsoft Philippines approves it. I mean, c'mon, let's do this! It'll be awesome! :)
