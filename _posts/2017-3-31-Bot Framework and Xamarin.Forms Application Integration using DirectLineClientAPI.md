@@ -118,7 +118,6 @@ In order for us to send a message, we first need to create another method.
     }
 ```
 
- 
  # Receiving Messages from the Bot
  
  After sending our message, the Bot will immediately reply. Getting the reply is quite easy! The request URI is identical with the sending of messages, but instead of `POST`, you need to use `GET`. After sending message, add this code block.
