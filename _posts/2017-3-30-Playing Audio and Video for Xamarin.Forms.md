@@ -7,7 +7,8 @@ date: 2017-03-30 12:00
 tags: [UWP, Android, iOS, Media, Video, Audio MediaElement, Xamarin. Forms, InTheHand.Forms]
 ---
 
-My experience working with video and audio streaming in Xamarin.Forms. We had this project where we used Xamarin.Forms for developing a cross-platform chatbot (Bot Framework + LUIS.ai) application (btw, this was my first Xamarin.Forms project). We needed to play a video and I thought it will be really easy, because in UWP development, you can just use MediaElement. I'VE NEVER BEEN SO WRONG IN MY LIFE. It's so painful, especially with UWP. 
+My experience working with video and audio streaming in Xamarin.Forms. We had this project where we used Xamarin.Forms for developing a cross-platform chatbot (Bot Framework + LUIS.ai) application (btw, this was my first Xamarin.Forms project). We needed to play a video and I thought it will be really easy, because in UWP development, you can just use MediaElement and I've never been so wrong in my life. It's so painful, especially with UWP. 
+
 <br>
 
 We searched for other workarounds and stuff that we can use for playing videos, but we couldn't find anything. Yeah, I know only a few uses UWP apps, but still, Xamarin.Forms should've atleast created a control for it.
