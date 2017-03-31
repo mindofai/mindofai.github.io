@@ -95,7 +95,7 @@ In order for us to send a message, we first need to create another method.
  
  As you can see right here, I'm serializing the BotMessage to JSON. The BotMessage has the name of who is it from (From) and the message (Text) The BotMessage also contains the `Id`, `Created` date, `ConversationID`, etc. I added the model below. Then, I posted the serialized BotMessage to `conversationURL` using `HttpClient.PostAsync()`. We've added the `ConversationId` to the link, meaning we're sending the message to the conversation. Alright, we can now send a message!
  
- ## BotMessage model
+## BotMessage model
  
  ```csharp
  public class BotMessage
@@ -118,7 +118,7 @@ In order for us to send a message, we first need to create another method.
     }
 ```
 
- # Receiving Messages from the Bot
+# Receiving Messages from the Bot
  
  After sending our message, the Bot will immediately reply. Getting the reply is quite easy! The request URI is identical with the sending of messages, but instead of `POST`, you need to use `GET`. After sending message, add this code block.
  
