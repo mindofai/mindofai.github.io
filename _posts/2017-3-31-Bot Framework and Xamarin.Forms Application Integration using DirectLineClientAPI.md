@@ -19,9 +19,14 @@ After Philip's part, I created a Xamarin.Forms application with Prism MVVM Frame
 
 <br>
 
+The next is, ofcourse, the most important thing here is the service that calls the DirectLineClient API. But, first, what is this DirectLineClient API thingy?
+
+> The Direct Line API is a simple REST API for connecting directly to a single bot. This API is intended for developers writing their own client applications, web chat controls, mobile apps, or service-to-service applications that will talk to their bot.
+
 ```csharp
-  public async Task<bool> Setup()
+   public async Task<bool> Setup()
         {
+            
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("https://directline.botframework.com/");
             _httpClient.DefaultRequestHeaders.Accept.Clear();
@@ -32,22 +37,14 @@ After Philip's part, I created a Xamarin.Forms application with Prism MVVM Frame
             if (response.IsSuccessStatusCode)
             {
                 var result = response.Content.ReadAsStringAsync();
-
                 token = JsonConvert.DeserializeObject<string>(result.Result);
-                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                response = await _httpClient.PostAsync("/api/conversations", null);
-                if (response.IsSuccessStatusCode)
-                {
-                    var conversationInfo = await response.Content.ReadAsStringAsync();
-                    conversationId = JsonConvert.DeserializeObject<Conversation>(conversationInfo).ConversationId;
-                    return true;
-                }
                 return true;
-
             }
             return false;
         }
  ```
+
+<br>
 
 # Slide
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/J9QITUWiwiQt3s" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/BryanAnthonyGarcia/directlineapi-xamarinforms-app-and-bot-framework-integration" title="DirectLineAPI - Xamarin.Forms App and Bot Framework Integration" target="_blank">
