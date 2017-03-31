@@ -19,19 +19,30 @@ After Philip's part, I created a Xamarin.Forms application with Prism MVVM Frame
 
 <br>
 
-The next is, ofcourse, the most important thing here is the service that calls the DirectLineClient API. But, first, what is this DirectLineClient API thingy?
+The most important thing here is the service that calls the DirectLineClient API (specifically v1.1). But, first, what is this DirectLineClient API thingy? It's a REST API for sending and receiving message from a bot framework.
 
 > The Direct Line API is a simple REST API for connecting directly to a single bot. This API is intended for developers writing their own client applications, web chat controls, mobile apps, or service-to-service applications that will talk to their bot.
 
+<br>
+
+First thing is you need to create a method for setup that you're gonna call every time your application starts. I used `System.Net.Http.HttpClient` for REST API calls.
+
+<br> 
+# Setup()
+
 ```csharp
+
+   private string conversationId;
+   private string token;
+   private HttpClient _httpClient;
+
    public async Task<bool> Setup()
         {
-            
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("https://directline.botframework.com/");
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "E9QJFcMjyys.cwA.O4w.tKCiXm5OxxgQz7_Mi-zPaRZTJHA645ICT0ryVTRomI0");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "<bot secret key>");
             var response = await _httpClient.PostAsync("/api/tokens/conversation", null);
 
             if (response.IsSuccessStatusCode)
@@ -45,6 +56,81 @@ The next is, ofcourse, the most important thing here is the service that calls t
  ```
 
 <br>
+
+The `https://directline.botframework.com/` is not the URL of your bot's web application. This is a general URL, so you shouldn't change this. You can get your `bot secret key` by following [these steps](https://docs.botframework.com/en-us/support/embed-chat-control2/). All we're getting here is a token, but what we need is to create a conversation. That's the next thing we'll do.
+
+
+# Creating a Conversation with Bot
+
+Now that we're getting the token, you need to create a conversation with the bot and get the `ConversationID`. This conversation will contain all your messages to the bot and bot's replies. After getting the value of the token, add this block of code:
+
+```csharp
+_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                response = await _httpClient.PostAsync("/api/conversations", null);
+                if (response.IsSuccessStatusCode)
+                {
+                    var conversationInfo = await response.Content.ReadAsStringAsync();
+                    conversationId = JsonConvert.DeserializeObject<Conversation>(conversationInfo).ConversationId;
+                    return true;
+                }
+```       
+Once you run the application, you can now get the `ConversationID`, we can now communicate to our bot.
+
+# Sending Messages to the Bot
+
+In order for us to send a message, we first need to create another method.
+
+# SendMessage()
+
+```csharp
+ public async Task<BotMessage> SendMessage(string name, string message)
+        {
+            var messageToSend = new BotMessage() { From = name, Text = message };
+            var contentPost = new StringContent(JsonConvert.SerializeObject(messageToSend), Encoding.UTF8, "application/json");
+            var conversationUrl = "https://directline.botframework.com/api/conversations/" + conversationId + "/messages/";
+
+            var response = await _httpClient.PostAsync(conversationUrl, contentPost);
+        }
+ ```
+ 
+ As you can see right here, I'm serializing the BotMessage to JSON. The BotMessage has the name of who is it from (From) and the message (Text) The BotMessage also contains the `Id`, `Created` date, `ConversationID`, etc. I added the model below. Then, I posted the serialized BotMessage to `conversationURL` using `HttpClient.PostAsync()`. We've added the `ConversationId` to the link, meaning we're sending the message to the conversation. Alright, we can now send a message!
+ 
+ # BotMessage model
+ 
+ ```csharp
+ public class BotMessage
+    {
+        public string Id { get; set; }
+        public string ConversationId { get; set; }
+        public DateTime Created { get; set; }
+        public string From { get; set; }
+        public string Text { get; set; }
+        public string ChannelData { get; set; }
+        public string[] Images { get; set; }
+        public Attachment[] Attachments { get; set; }
+        public string ETag { get; set; }
+    }
+
+    public class Attachment
+    {
+        public string Url { get; set; }
+        public string ContentType { get; set; }
+    }
+```
+
+ 
+ # Receiving Messages from the Bot
+ 
+ After sending our message, the Bot will immediately reply. Getting the reply is quite easy! The request URI is identical with the sending of messages, but instead of `POST`, you need to use `GET`. After sending message, add this code block.
+ 
+ ```csharp
+            var messagesReceived = await _httpClient.GetAsync(conversationUrl);
+            var messagesReceivedData = await messagesReceived.Content.ReadAsStringAsync();
+            var messagesRoot = JsonConvert.DeserializeObject<BotMessageRoot>(messagesReceivedData);
+            var messages = messagesRoot.Messages;
+ ```
+
+
 
 # Slide
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/J9QITUWiwiQt3s" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/BryanAnthonyGarcia/directlineapi-xamarinforms-app-and-bot-framework-integration" title="DirectLineAPI - Xamarin.Forms App and Bot Framework Integration" target="_blank">
