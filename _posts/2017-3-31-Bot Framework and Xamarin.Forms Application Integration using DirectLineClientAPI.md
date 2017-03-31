@@ -212,7 +212,7 @@ Now, if you use this service, you can now communicate with the bot through Xamar
 Pretty cool, right? I also have this slide that I used with my talk last month where I discussed the DirectLineClient REST API:
 
 # Slide
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/J9QITUWiwiQt3s" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/BryanAnthonyGarcia/directlineapi-xamarinforms-app-and-bot-framework-integration" title="DirectLineAPI - Xamarin.Forms App and Bot Framework Integration" target="_blank">
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/J9QITUWiwiQt3s" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
 
 Hope this helps you develop your Xamarin Application integrated with Bot Framework! Good luck!
