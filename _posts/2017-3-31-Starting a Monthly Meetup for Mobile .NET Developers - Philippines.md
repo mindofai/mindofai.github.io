@@ -11,7 +11,7 @@ Last month, my friend, Michael John Pena, who's a Microsoft MVP for Windows App 
 
 <br>
 
-Since then, I became really active in the Xamarin community in the Philippines. I share new and awesome Xamarin-related stuff to the community. The owner of the Xamarin Mobile Developers - Philippines user group (where I keep on sharing these awesome stuff) noticed that I'm really active, so he wanted me to be an admin to his user group. My friend also recommended me to be an admin of the user group, so I became the third admin of the user group.
+Since then, I became really active in the Xamarin community in the Philippines. I share new and awesome Xamarin-related stuff to the community. The owner of the Mobile .NET Developers - Philippines, formerly Xamarin Mobile Developers - Philippines, user group (where I keep on sharing these awesome stuff) noticed that I'm really active, so he wanted me to be an admin to his user group. My friend also recommended me to be an admin of the user group, so I became the third admin of the user group.
 
 <br>
 
@@ -19,7 +19,7 @@ As an admin, I suggest a lot of stuff to my fellow admins, since I feel like we 
 
 <br>
 
-So, today, I sent Microsoft Philippines a formal proposal for Mobile .NET Developers - Philippines, formerly Xamarin Mobile Developers - Philippines, to have a monthly meetup every second tuesday of the month. This will be a great opportunity for Microsoft to spread the latest technologies and teach students and professionals how to develop applications using their Mobile .NET technologies, especially Xamarin. This will surely lead to the growth of developers who will be using Mobile .NET solutions in their projects.
+So, today, I sent Microsoft Philippines a formal proposal for Mobile .NET Developers - Philippines to have a monthly meetup every second tuesday of the month. This will be a great opportunity for Microsoft to spread the latest technologies and teach students and professionals how to develop applications using their Mobile .NET technologies, especially Xamarin. This will surely lead to the growth of developers who will be using Mobile .NET solutions in their projects.
 
 <br>
 
