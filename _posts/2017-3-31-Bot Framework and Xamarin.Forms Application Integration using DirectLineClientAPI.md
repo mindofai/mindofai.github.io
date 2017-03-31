@@ -207,6 +207,8 @@ Now, if you use this service, you can now communicate with the bot through Xamar
 
 # Output
 
+ <img src="{{site.baseurl}}/ChatbotXamarin.jpeg" style="width: 350px;"/>
+
 Pretty cool, right? I also have this slide that I used with my talk last month where I discussed the DirectLineClient REST API:
 
 # Slide
