@@ -140,6 +140,8 @@ The data doesn't only have the bot's reply to your message, but it has all the m
 
 The last one that I want to share is that tokens do expire every 30 minutes, so you can only have a whole conversation with a bot for 30 minutes. What I suggest is you renew your token every time the user sends a message. You can renew it using these two lines. Add this right before the return keyword:
 
+## Renew
+
 ```csharp
 var renewUrl = "https://directline.botframework.com/api/tokens/" + conversationId + "/renew/";
  response = await _httpClient.GetAsync(renewUrl);
@@ -201,9 +203,18 @@ Now, you should have both Setup() and SendMessage() methods:
         }
 ```
 
-Now, if you use this service, you can now communicate with the bot! 
+Now, if you use this service, you can now communicate with the bot through Xamarin, UWP, Console apps, etc.! 
 
+# Output
 
+Pretty cool, right? I also have this slide that I used with my talk last month where I discussed the DirectLineClient REST API:
 
 # Slide
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/J9QITUWiwiQt3s" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/BryanAnthonyGarcia/directlineapi-xamarinforms-app-and-bot-framework-integration" title="DirectLineAPI - Xamarin.Forms App and Bot Framework Integration" target="_blank">
+
+
+Hope this helps you develop your Xamarin Application integrated with Bot Framework! Good luck!
+
+Resource:
+- [https://docs.botframework.com/en-us/restapi/directline/](https://docs.botframework.com/en-us/restapi/directline/)
+- [https://github.com/PrismLibrary/Prism](https://github.com/PrismLibrary/Prism)
