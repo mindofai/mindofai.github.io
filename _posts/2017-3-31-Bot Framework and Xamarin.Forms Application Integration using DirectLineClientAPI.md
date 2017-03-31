@@ -83,7 +83,7 @@ In order for us to send a message, we first need to create another method.
 ## SendMessage()
 
 ```csharp
- public async Task<BotMessage> SendMessage(string name, string message)
+public async Task<BotMessage> SendMessage(string name, string message)
         {
             var messageToSend = new BotMessage() { From = name, Text = message };
             var contentPost = new StringContent(JsonConvert.SerializeObject(messageToSend), Encoding.UTF8, "application/json");
@@ -98,7 +98,7 @@ In order for us to send a message, we first need to create another method.
 ## BotMessage model
  
  ```csharp
- public class BotMessage
+public class BotMessage
     {
         public string Id { get; set; }
         public string ConversationId { get; set; }
@@ -123,11 +123,85 @@ In order for us to send a message, we first need to create another method.
  After sending our message, the Bot will immediately reply. Getting the reply is quite easy! The request URI is identical with the sending of messages, but instead of `POST`, you need to use `GET`. After sending message, add this code block.
  
  ```csharp
+var messagesReceived = await _httpClient.GetAsync(conversationUrl);
+var messagesReceivedData = await messagesReceived.Content.ReadAsStringAsync();
+var messagesRoot = JsonConvert.DeserializeObject<BotMessageRoot>(messagesReceivedData);
+var messages = messagesRoot.Messages;
+return messages.Last();
+ ```
+The data doesn't only have the bot's reply to your message, but it has all the messages inside the conversation. So, I have to create a model which has a list of BotMessage called BotMessageRoot (added the model below). To get your bot's reply, you need to get the latest message, which is the last one.
+
+```csharp
+  public class BotMessageRoot
+    {
+        public List<BotMessage> Messages { get; set; }
+    }
+``` 
+
+The last one that I want to share is that tokens do expire every 30 minutes, so you can only have a whole conversation with a bot for 30 minutes. What I suggest is you renew your token every time the user sends a message. You can renew it using these two lines. Add this right before the return keyword:
+
+```csharp
+var renewUrl = "https://directline.botframework.com/api/tokens/" + conversationId + "/renew/";
+ response = await _httpClient.GetAsync(renewUrl);
+ ```
+
+Now, you should have both Setup() and SendMessage() methods:
+
+## Setup()
+
+```csharp
+ public async Task<bool> Setup()
+        {
+            _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("https://directline.botframework.com/");
+            _httpClient.DefaultRequestHeaders.Accept.Clear();
+            _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "<bot secret key>");
+            var response = await _httpClient.PostAsync("/api/tokens/conversation", null);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = response.Content.ReadAsStringAsync();
+
+                token = JsonConvert.DeserializeObject<string>(result.Result);
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                response = await _httpClient.PostAsync("/api/conversations", null);
+                if (response.IsSuccessStatusCode)
+                {
+                    var conversationInfo = await response.Content.ReadAsStringAsync();
+                    conversationId = JsonConvert.DeserializeObject<Conversation>(conversationInfo).ConversationId;
+                    return true;
+                }
+                return true;
+
+            }
+            return false;
+        }
+```
+
+## SendMessage()
+```csharp
+ public async Task<BotMessage> SendMessage(string name, string message)
+        {
+            var messageToSend = new BotMessage() { From = name, Text = message };
+            var contentPost = new StringContent(JsonConvert.SerializeObject(messageToSend), Encoding.UTF8, "application/json");
+            var conversationUrl = "https://directline.botframework.com/api/conversations/" + conversationId + "/messages/";
+
+            var response = await _httpClient.PostAsync(conversationUrl, contentPost);
+
             var messagesReceived = await _httpClient.GetAsync(conversationUrl);
             var messagesReceivedData = await messagesReceived.Content.ReadAsStringAsync();
             var messagesRoot = JsonConvert.DeserializeObject<BotMessageRoot>(messagesReceivedData);
             var messages = messagesRoot.Messages;
- ```
+
+            var renewUrl = "https://directline.botframework.com/api/tokens/" + conversationId + "/renew/";
+            response = await _httpClient.GetAsync(renewUrl);
+
+            return messages.Last();
+        }
+```
+
+Now, if you use this service, you can now communicate with the bot! 
 
 
 
