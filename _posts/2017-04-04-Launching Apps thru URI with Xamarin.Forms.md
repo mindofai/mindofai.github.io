@@ -20,10 +20,65 @@ But, now that I migrated to Xamarin.Forms development, obviously, this won't wor
 
 I saw Jordan Hewitt's reply to the thread and he shared how you can do it with both Android and iOS and it's quite easy. There will be different implementations for each platforms, meaning we'll have to use [Dependency Injection](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/dependency-service/)  to create an implementation. 
 
-First, you should create an interface for the OpenApp, then create a `Launch()` method that we'll call later:
+First, you should create an interface for the OpenAppService, then create a `Launch()` method that we'll call later:
+
+## IOpenAppService Interface
+
+```csharp
+public interface IOpenAppService
+{
+    Task<bool> Launch(string stringUri);
+}
+```
+
+The next step is to create platform-specific implementations for UWP, Android, and iOS. It will be a little bit tricky with iOS and I'll explain it later.
+
+Let's work with UWP first:
+
+## OpenAppService (UWP)
+
+```csharp
+[assembly: Xamarin.Forms.Dependency (typeof (OpenAppService))]
+namespace OpenAppLaunch.UWP {
+
+ public class OpenAppService : IOpenAppService
+ {
+    public async bool  Launch(string stringUri)
+    {
+        Uri uri = new Uri(stringUri);
+        return await Windows.System.Launcher.LaunchUriAsync(uri);
+    }
+ }
+}
+```
+
+Then for Android: 
+
+```csharp
+[assembly: Xamarin.Forms.Dependency(typeof(OpenAppService))]
+namespace OpenAppLaunch.Droid
+{
+    public class OpenAppService : Activity, IOpenAppService
+    {
+        public bool OpenExternalApp()
+        {
+            Intent intent = Android.App.Application.Context.PackageManager.GetLaunchIntentForPackage("yoururl");
+
+            
+            if (intent != null)
+            {
+                intent.AddFlags(ActivityFlags.NewTask);
+                Forms.Context.StartActivity(intent);           
+            }
+            else
+            {
+                intent = new Intent(Intent.ActionView);
+                intent.AddFlags(ActivityFlags.NewTask);
+                intent.SetData(Android.Net.Uri.Parse("market://details?id=yoururl"));
+                Forms.Context.StartActivity(intent);
+            }
+        }
 
 ```
-public interface IOpenApp
-{
-    Task<bool> Launch(string Uri);
-}
+
+As for iOS, this is where it gets tricky. Due to iOS 9's security, we
