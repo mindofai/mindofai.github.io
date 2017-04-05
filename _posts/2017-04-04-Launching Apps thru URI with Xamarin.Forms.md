@@ -7,7 +7,7 @@ date: 2017-04-04 12:00
 tags: [URI, Launch, UWP, iOS, Android Xamarin, Xamarin. Forms]
 ---
 
-As a developer who has always been working with Microsoft Technologies, specifically, Windows (Phone and Desktop) 8, 8.1, and UWP apps, launching other apps from an app that I'm developing is really quick and easy. All you have to do is to create a `myapp://app` Uri and launch it using `Launcher.LaunchUriAsync();` method:
+As a developer who has always been working with Microsoft Technologies, specifically, Windows (Phone and Desktop) 8, 8.1, and UWP apps, launching other apps from an app that I'm developing is really quick and easy. With just two lines of code, you can execute external apps which is installed to your device or machine. All you have to do is to create a `myapp://app` Uri and launch it using `Launcher.LaunchUriAsync();` method:
 
 ```csharp
  Uri uri = new Uri("myapp://app");
