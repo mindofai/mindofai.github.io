@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Launching Apps thru URI with Xamarin.Forms
 author: mindofai
-date: 2017-03-30 12:00
+date: 2017-04-04 12:00
 tags: [URI, Launch, UWP, iOS, Android Xamarin, Xamarin. Forms]
 ---
 
