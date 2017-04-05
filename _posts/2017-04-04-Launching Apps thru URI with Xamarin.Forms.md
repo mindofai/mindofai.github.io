@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Launching Apps thru URI with Xamarin.Forms
 author: mindofai
@@ -54,31 +54,100 @@ namespace OpenAppLaunch.UWP {
 
 Then for Android: 
 
+## OpenAppService (Droid)
+
 ```csharp
 [assembly: Xamarin.Forms.Dependency(typeof(OpenAppService))]
 namespace OpenAppLaunch.Droid
 {
     public class OpenAppService : Activity, IOpenAppService
     {
-        public bool OpenExternalApp()
+        public Task<bool> Launch(string stringUri)
         {
-            Intent intent = Android.App.Application.Context.PackageManager.GetLaunchIntentForPackage("yoururl");
+        try{
+            Intent intent = Android.App.Application.Context.PackageManager.GetLaunchIntentForPackage(stringUri);
 
             
             if (intent != null)
             {
                 intent.AddFlags(ActivityFlags.NewTask);
-                Forms.Context.StartActivity(intent);           
+                Forms.Context.StartActivity(intent); 
             }
             else
             {
                 intent = new Intent(Intent.ActionView);
                 intent.AddFlags(ActivityFlags.NewTask);
-                intent.SetData(Android.Net.Uri.Parse("market://details?id=yoururl"));
+                intent.SetData(Android.Net.Uri.Parse("market://details?id=" + stringUri)); // This launches the PlayStore and search for the app if it's not installed on your device
                 Forms.Context.StartActivity(intent);
             }
+                return Task.FromResult(true);
+          }
+            return Task.FromResult(false);
         }
 
 ```
 
-As for iOS, this is where it gets tricky. Due to iOS 9's security, we
+As for iOS, this is where it gets tricky. Due to iOS 9's security, we will need to add the name of the app into the `info.plist`. This security requirement was added because some apps were using this functionality to determine what other apps you had installed except pre-installed apps.
+
+## info.plist
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>google</string>
+    <string>facebook</string>
+</array>
+```
+
+If the application name is not added to the `info.plist`, when you try to launch the application using `OpenAppService.Launch()`, it will still launch the application, but it will return `false`. For the iOS' OpenAppService:
+
+## OpenAppService (iOS)
+
+``` csharp
+[assembly: Xamarin.Forms.Dependency(typeof(OpenAppService))]
+namespace OpenAppLaunch.iOS
+{
+    public class OpenAppService : IOpenAppService
+    {
+      
+        public Task<bool> Launch(string stringUri)
+        {
+            try
+            {
+                NSUrl request = new NSUrl(stringUrl);
+                bool isOpened = UIApplication.SharedApplication.OpenUrl(stringUrl);
+
+                if (isOpened == false)
+                    UIApplication.SharedApplication.OpenUrl(new NSUrl(stringUrl));
+                    
+                return Task.FromResult(true);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Cannot open url: {0}, Error: {1}", request.AbsoluteString, ex.Message);
+                var alertView = new UIAlertView("Error", ex.Message, null, "OK", null);
+
+                alertView.Show();
+                
+                return Task.FromResult(false);
+            }
+        }
+    }
+```
+
+You can use the `OpenAppService` service and call the `Launch(string stringUri)` method and pass the URI. How does that URI look like? The URI should be like this: 
+
+``` csharp
+"appname://dataYouWantToPass"
+```
+
+Now, pass it as a parameter using the `OpenAppService.Launch()`:
+
+``` csharp
+OpenAppService.Launch("skype://2812574");
+```
+
+Now, you can open external apps through URI with Xamarin.Forms with these platform-specific implementations and with the help of DependencyService! I hope this will help you with your development for the future!
+
+Resources:
+- [https://forums.xamarin.com/discussion/48089/how-to-open-other-apps-from-xamarin-forms](https://forums.xamarin.com/discussion/48089/how-to-open-other-apps-from-xamarin-forms)
