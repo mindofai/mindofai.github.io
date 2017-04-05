@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Launching Apps thru URI with Xamarin.Forms
 author: mindofai
