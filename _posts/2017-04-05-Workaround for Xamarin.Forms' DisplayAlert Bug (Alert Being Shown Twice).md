@@ -9,7 +9,7 @@ tags: [Bug, DisplayAlert, Alert, Popup, Display, Twice, UWP, iOS, Android Xamari
 
 While I was answering questions in StackOverflow, I encountered a [question](http://stackoverflow.com/questions/43106567/xamarin-form-display-alert-pop-up-appear-2-times/43106944#43106944) about Xamarin.Forms' DisplayALert. My first answer was so wrong and it's not solving any problem. I was trying to correct something which is already correct. I'll be honest, I haven't actually tried out his code. So, I tried the code myself. I thought it was only a bug within his app, but apparently, it's been a bug for a very long time. 
 
-I'm taking about this code block:
+I'm talking about this code block:
 
 ```csharp
 var resp = await DisplayAlert("","Are you sure want to Logout?","Yes", "No");
