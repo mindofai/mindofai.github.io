@@ -36,23 +36,21 @@ So, instead, I looked for other workarounds, because I know that I'll encounter 
   }));
  ```
  
- This is the same with how Silverlight/WPF/WP8.1, iOS, and Android access the GUI thread:
+This is used in order to do something on the UI thread. So it's normally called from a background thread, in order to manipulate the UI, which can only be done on the UI thread. The body of the lambda expression is the code which you want to execute in the UI thread. This is the same with how Silverlight/WPF/WP8.1, iOS, and Android access the GUI thread:
  
 ## Silverlight/WPF/etc.
 
-```
-Deployment.Current.Dispatcher.BeginInvoke
-```
-## Android.
+```csharp
+Deployment.Current.Dispatcher.BeginInvoke( ()=> {
+ if(await DisplayAlert("", "Are you sure want to Logout?", "Yes", "No"))
+       {
 
-```
-AndroidRunOnUiThread(() => delta)
+       }
+});
 ```
 
-## Same thing for iOS 
+And for Android: `AndroidRunOnUiThread(() => delta)`
 
-```
-InvokeOnMainThread
-```
+Same thing for iOS: `InvokeOnMainThread`
  
 This fixes the issue, because we're now invoking it on the Main UI thread. Our DisplayAlert will now be executed once. So, yeah, for now, we can use this workaround. But, hopefully, they fix the bug, so we can just execute it without the BeginInvokeOnMainThread method. I hope this can help you with your development, especially those guys who's encountering this right now.
