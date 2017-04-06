@@ -54,3 +54,6 @@ And for Android: `AndroidRunOnUiThread(() => delta)`
 Same thing for iOS: `InvokeOnMainThread`
  
 This fixes the issue, because we're now invoking it on the Main UI thread. Our DisplayAlert will now be executed once. So, yeah, for now, we can use this workaround. But, hopefully, they fix the bug, so we can just execute it without the BeginInvokeOnMainThread method. I hope this can help you with your development, especially those guys who's encountering this right now.
+
+Resource: 
+-[https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/)
