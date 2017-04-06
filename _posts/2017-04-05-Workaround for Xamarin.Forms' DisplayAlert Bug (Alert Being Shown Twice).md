@@ -15,7 +15,7 @@ I'm taking about this code block:
 var resp = await DisplayAlert("","Are you sure want to Logout?","Yes", "No");
 if (resp)
 { 
-//Do something
+   //Do something
 }
 ```
 
