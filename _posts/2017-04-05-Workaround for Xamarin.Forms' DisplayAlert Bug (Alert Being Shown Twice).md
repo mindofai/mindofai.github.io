@@ -31,7 +31,7 @@ So, instead, I looked for other workarounds, because I know that I'll encounter 
   {
        if(await DisplayAlert("", "Are you sure want to Logout?", "Yes", "No"))
        {
-
+         //Do something
        }
   }));
  ```
@@ -44,16 +44,16 @@ This is used in order to do something on the UI thread. So it's normally called 
 Deployment.Current.Dispatcher.BeginInvoke( ()=> {
  if(await DisplayAlert("", "Are you sure want to Logout?", "Yes", "No"))
        {
-
+         //Do something
        }
 });
 ```
 
-And for Android: `AndroidRunOnUiThread(() => delta)`
+<b>And for Android:</b> `AndroidRunOnUiThread(() => delta)`
 
-Same thing for iOS: `InvokeOnMainThread`
+<b>Same thing for iOS:</b> `InvokeOnMainThread`
  
 This fixes the issue, because we're now invoking it on the Main UI thread. Our DisplayAlert will now be executed once. So, yeah, for now, we can use this workaround. But, hopefully, they fix the bug, so we can just execute it without the BeginInvokeOnMainThread method. I hope this can help you with your development, especially those guys who's encountering this right now.
 
 Resource: 
--[https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/)
+- [https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/)
