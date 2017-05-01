@@ -154,7 +154,7 @@ private async Task SyncDebt()
             await debtTable.PullAsync("allDebt", debtTable.CreateQuery());
             await Client.SyncContext.PushAsync();
         }
-        ```
+```
 
 ## GetAllDebts()
 We can just call our table data like this. Again, we’ll need to sync our data every time to make our data as latest as possible.
@@ -165,7 +165,7 @@ public async Task<List<Debt>> GetAllDebts()
             await SyncDebt();
             return await debtTable.ToListAsync();
         }
-        ```
+```
         
 ## AddDebt()
 We can insert data like this. This is almost the same as how you will have to do it with update and delete. Again, we’re syncing right after the changes from our backend.
