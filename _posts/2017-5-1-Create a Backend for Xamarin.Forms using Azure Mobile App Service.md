@@ -3,13 +3,13 @@ published: true
 layout: post
 title: Create a Backend for Xamarin.Forms using Azure Mobile App's Easy Tables
 author: mindofai
-date: 2017-04-05 12:00
+date: 2017-05-01 12:00
 tags: [Azure, Mobile, Data, Easy Tables, Offline, Sync, Mobile App, UWP, iOS, Android, Xamarin, Xamarin. Forms]
 ---
 
 Just last monday, I was asked if I could give a talk anything about Azure for Global Azure Bootcamp. At first, I wasn’t very sure what to talk about since I was focusing on Mobile .NET and I have a tight schedule last week. But then, I remembered that I will train STI college professors about Azure Mobile App and how to integrate it to a Xamarin.Forms application, so why not talk about it. Plus, I also remembered that there is this one thing that I wanted to share about Azure Mobile App that can probably make some of the audience’s jaw drop… and it did!
 
-I’m talking about Easy Tables aka “No-Code API/Tables”. It makes data storage backend creation so easy and fast. As a matter of fact, when I demoed it yesterday, it only took me roughly 13 minutes and I was even explaining every step that I did! If I wasn’t, the setup would’ve been finished in less than 10 minutes. That’s how easy and fast Easy Tables is. I mean let’s be honest, we want to setup our data storage backend as quick as possible, so we can focus on developing our client app immediately. That’s what Azure Mobile App is offering us.
+I’m talking about Easy Tables aka **No-Code API/Table**. It makes data storage backend creation so easy and fast. As a matter of fact, when I demoed it yesterday, it only took me roughly 13 minutes and I was even explaining every step that I did! If I wasn’t, the setup would’ve been finished in less than 10 minutes. That’s how easy and fast Easy Tables is. I mean let’s be honest, we want to setup our data storage backend as quick as possible, so we can focus on developing our client app immediately. That’s what Azure Mobile App is offering us.
 
 # Creating an Azure Mobile App
 Firstly, in order to use/try out Azure services, you need to have an Azure account. If you don’t have any Azure account, you can join the Dev Essentials program to acquire a $25/month Azure credits for 12 months.
@@ -54,12 +54,15 @@ To integrate our mobile app into our Xamarin application, we need to firstly add
  
 Next step is to add this line of code on your platform projects. For iOS, add this to the FinishedLaunching method of AppDelegate class. For Android, add this to the OnCreated method of MainActivity class:
 
-```Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
-SQLitePCL.CurrentPlatform.Init();```
+```csharp
+Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+SQLitePCL.CurrentPlatform.Init();
+```
 
 This is to initialize the Azure Mobile Client SDK on your platform projects.
 Now, we can finally create a Data Model that we’ll use locally to map the data from our backend. First, it should have the same name as the created table and a string of Id property should be added. This ensures the Mobile App SDK to identify that the data model can be mapped from the backend. This is how my Debt class looks like:
-```
+
+```csharp
   public class Debt
     {
         [Newtonsoft.Json.JsonProperty("Id")]
@@ -79,7 +82,7 @@ Finally, we can now create our service that will use the Mobile App SDK to integ
 ## AzureMobileService class
 First, create a class named AzureMobileService. Then, create a method named `Initialize()` and two properties: `MobileServiceClient` and `IMobileServiceSyncTable`. 
 
-```
+```csharp
 public class AzureMobileService
     {
         public MobileServiceClient Client { get; private set; }
@@ -94,7 +97,7 @@ public class AzureMobileService
 ## Initialize()
 In our `Initialize()` method, we will initialize our `MobileServiceClient` and `SyncTable`. This needs to be called only once. We need to pass in the base url of our Mobile App and specify the path of our local database:
 
-```
+```csharp
 private async Task Initialize()
         {
             Client = new MobileServiceClient("https://<mobileappname>.azurewebsites.net");
@@ -114,7 +117,8 @@ private async Task Initialize()
 ## SyncDebt()
 Next step is to sync our local database and our backend. We’ll do that by creating a SyncDebt() method. This will be called every time we make updates or calls to our table.
 
-```private async Task SyncDebt()
+```csharp
+private async Task SyncDebt()
         {
             await debtTable.PullAsync("allDebt", debtTable.CreateQuery());
             await Client.SyncContext.PushAsync();
@@ -124,7 +128,7 @@ Next step is to sync our local database and our backend. We’ll do that by crea
 ## GetAllDebts()
 We can just call our table data like this. Again, we’ll need to sync our data every time to make our data as latest as possible.
 
-```
+```csharp
 public async Task<List<Debt>> GetAllDebts()
         {
             await SyncDebt();
@@ -135,7 +139,8 @@ public async Task<List<Debt>> GetAllDebts()
 ## AddDebt()
 We can insert data like this. This is almost the same as how you will have to do it with update and delete. Again, we’re syncing right after the changes from our backend.
 
-```  public async Task<bool> AddDebt(Debt debt)
+```csharp 
+public async Task<bool> AddDebt(Debt debt)
         {
             try
             {
