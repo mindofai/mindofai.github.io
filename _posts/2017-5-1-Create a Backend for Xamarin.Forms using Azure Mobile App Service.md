@@ -15,25 +15,43 @@ I’m talking about Easy Tables aka **No-Code API/Table**. It makes data storage
 Firstly, in order to use/try out Azure services, you need to have an Azure account. If you don’t have any Azure account, you can join the Dev Essentials program to acquire a $25/month Azure credits for 12 months.
 Once you have an Azure account, just log it in the Azure portal and you should now see your Azure Dashboard:
  
+  <img src="{{site.baseurl}}/MAS-1.png"/>
+ 
 Now, we can create our Azure Mobile App. To create a Mobile App, click New, then you can either search for ‘Mobile App’ or click Web + Mobile, then select Mobile App.
 
- 
+  <img src="{{site.baseurl}}/MAS-2.png"/>
+  
 Once Mobile App is selected, you can now fill out the required details. You will have to give a name, the subscription, the resource group, and an App Service plan (Standard would suffice). You can also enable the Application Insights to track things about your services such as diagnosis of issues and your users’ interaction with it. 
  
 
+  <img src="{{site.baseurl}}/MAS-3.png"/>
+  
 After filling this out, you can now click Create. This will take a while to create, but after a period of time, you should see this.
+
+
+  <img src="{{site.baseurl}}/MAS-4.png"/>
 
 This means we’ve already created our Mobile App. Now, we can set up our Easy Tables!
 
 # Initializing Easy Tables
 Initializing the Easy Tables is, ofcourse, really easy and also fast. To do this step, go to the Mobile Section of our Mobile App and select Easy Tables. 
  
+ 
+  <img src="{{site.baseurl}}/MAS-5.png"/>
+ 
 Once Easy Tables is clicked, this blade will appear. Click the ‘Need to configure Easy Tables…’ notification which is being shown at the top. It will navigate you to another blade wherein you set your Easy Tables’ data connection and initialize the Mobile App’s Easy Tables.
+ 
+  <img src="{{site.baseurl}}/MAS-6.png"/>
  
 ## Adding Data Connection for your Easy Tables
 The first step in initializing your Easy Tables is to add a data connection. As of now, you can only add Azure SQL Databases. Click the button below the ‘Connect a Database’ and you can now create a connection to an existing database or you can create one. We’ll just create an empty Azure Database.
- 
+
+  <img src="{{site.baseurl}}/MAS-7.png"/>
+  
 After clicking the button, you can just click Add, select SQL Database, and create a new one.
+ 
+ 
+  <img src="{{site.baseurl}}/MAS-8.png"/>
  
 You will have to configure the details for the Database name and the server it’s going to be in. After that, click Select. 
 This will also automatically create a connection string for you. Ideally, you will have to type in your server’s username and password, but with Easy Tables, it will be already set up for you. You can now just click OK to finish things up.
@@ -42,15 +60,23 @@ It will just take a while, because this will create not only the database (and e
 
 Finally, you will be navigated back to the Initialization of Easy Tables. The next step is just the acknowledgement of the creation of Easy Tables. All you have to do is to click the checkbox, then click `Initialize App` and you’re all done.
 
+
+  <img src="{{site.baseurl}}/MAS-10.png"/>
+
 We can now add tables for our Easy Tables.
 
 # Adding Tables
 After a few moments, we’re now ready to create our first table for our Database. You can call it anything you want, but I already have an existing DataModel named Debt. The beauty of Easy Tables is that it automatically updates your columns in the tables dynamically based on the data we pass in. You can also set the permission for each method. You can select from three access permissions: Anonymous, Authenticated users (wherein only authenticated users can access your tables), or even disable any access. We’ll select anonymous for now then click OK.
  
+  <img src="{{site.baseurl}}/MAS-9.png"/>
+ 
 Now, our backend is fully set up. You can actually try to retrieve the table data like a REST API with the endpoint `http://<urlofazureapp>/api/tables/<nameoftable>?ZUMO-API-VERSION=2.0.0`.
 
 # Trying out your backend
 To integrate our mobile app into our Xamarin application, we need to firstly add the Azure Mobile App SDK Nuget Packages. The Microsoft.Azure.Mobile.Client lets you connect to your Azure Mobile backend and the SQLiteStore enables you to add full online/offline synchronization. Both of this should be added in all projects (PCL/Shared and all platforms):
+ 
+ 
+  <img src="{{site.baseurl}}/MAS-11.png"/>
  
 Next step is to add this line of code on your platform projects. For iOS, add this to the FinishedLaunching method of AppDelegate class. For Android, add this to the OnCreated method of MainActivity class:
 
@@ -92,7 +118,7 @@ public class AzureMobileService
         {
         }
     }
-    ```
+```
     
 ## Initialize()
 In our `Initialize()` method, we will initialize our `MobileServiceClient` and `SyncTable`. This needs to be called only once. We need to pass in the base url of our Mobile App and specify the path of our local database:
