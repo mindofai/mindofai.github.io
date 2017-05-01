@@ -9,6 +9,9 @@ tags: [Azure, Mobile, Data, Easy Tables, Offline, Sync, Mobile App, UWP, iOS, An
 
 Just last monday, I was asked if I could give a talk anything about Azure for Global Azure Bootcamp. At first, I wasn’t very sure what to talk about since I was focusing on Mobile .NET and I have a tight schedule last week. But then, I remembered that I will train STI college professors about Azure Mobile App and how to integrate it to a Xamarin.Forms application, so why not talk about it. Plus, I also remembered that there is this one thing that I wanted to share about Azure Mobile App that can probably make some of the audience’s jaw drop… and it did!
 
+
+<img src="{{site.baseurl}}/MAS-14.png"/>
+
 I’m talking about Easy Tables aka **No-Code API/Table**. It makes data storage backend creation so easy and fast. As a matter of fact, when I demoed it yesterday, it only took me roughly 13 minutes and I was even explaining every step that I did! If I wasn’t, the setup would’ve been finished in less than 10 minutes. That’s how easy and fast Easy Tables is. I mean let’s be honest, we want to setup our data storage backend as quick as possible, so we can focus on developing our client app immediately. That’s what Azure Mobile App is offering us.
 
 # Creating an Azure Mobile App
@@ -49,13 +52,15 @@ The first step in initializing your Easy Tables is to add a data connection. As 
   <img src="{{site.baseurl}}/MAS-7.png"/>
   
 After clicking the button, you can just click Add, select SQL Database, and create a new one.
- 
- 
+   
   <img src="{{site.baseurl}}/MAS-8.png"/>
+  
  
 You will have to configure the details for the Database name and the server it’s going to be in. After that, click Select. 
 This will also automatically create a connection string for you. Ideally, you will have to type in your server’s username and password, but with Easy Tables, it will be already set up for you. You can now just click OK to finish things up.
 
+  <img src="{{site.baseurl}}/MAS-9.png"/>
+  
 It will just take a while, because this will create not only the database (and even the server if you created a new one), but also the data connection for your Easy Tables. 
 
 Finally, you will be navigated back to the Initialization of Easy Tables. The next step is just the acknowledgement of the creation of Easy Tables. All you have to do is to click the checkbox, then click `Initialize App` and you’re all done.
@@ -68,7 +73,7 @@ We can now add tables for our Easy Tables.
 # Adding Tables
 After a few moments, we’re now ready to create our first table for our Database. You can call it anything you want, but I already have an existing DataModel named Debt. The beauty of Easy Tables is that it automatically updates your columns in the tables dynamically based on the data we pass in. You can also set the permission for each method. You can select from three access permissions: Anonymous, Authenticated users (wherein only authenticated users can access your tables), or even disable any access. We’ll select anonymous for now then click OK.
  
-  <img src="{{site.baseurl}}/MAS-9.png"/>
+  <img src="{{site.baseurl}}/MAS-11.png"/>
  
 Now, our backend is fully set up. You can actually try to retrieve the table data like a REST API with the endpoint `http://<urlofazureapp>/api/tables/<nameoftable>?ZUMO-API-VERSION=2.0.0`.
 
@@ -180,3 +185,17 @@ public async Task<bool> AddDebt(Debt debt)
             }
         }
 ```
+# Running the App
+Finally, we can now see the list of people with debts and insert others with or without network connection!
+
+
+<img src="{{site.baseurl}}/MAS-13.png"/>
+
+
+# Slide
+Also, here's the slide that I've used last week:
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/g5Yew5bp81HKeH" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+
+Cheers!
+ 
