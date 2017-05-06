@@ -12,7 +12,7 @@ Just last monday, I was asked if I could give a talk anything about Azure for Gl
 
 <img src="{{site.baseurl}}/MAS-14.png"/>
 
-I’m talking about Easy Tables aka **No-Code API/Table**. It makes data storage backend creation so easy and fast. As a matter of fact, when I demoed it yesterday, it only took me roughly 13 minutes and I was even explaining every step that I did! If I wasn’t, the setup would’ve been finished in less than 10 minutes. That’s how easy and fast Easy Tables is. I mean let’s be honest, we want to setup our data storage backend as quick as possible, so we can focus on developing our client app immediately. That’s what Azure Mobile App is offering us.
+I’m talking about Easy Tables aka **No-Code API/Table**. It makes data storage backend creation so easy and fast. As a matter of fact, when I demoed it, it only took me roughly 13 minutes and I was even explaining every step that I did! If I wasn’t, the setup would’ve been finished in less than 10 minutes. That’s how easy and fast Easy Tables is. I mean let’s be honest, we want to setup our data storage backend as quick as possible, so we can focus on developing our client app immediately. That’s what Azure Mobile App is offering us.
 
 # Creating an Azure Mobile App
 Firstly, in order to use/try out Azure services, you need to have an Azure account. If you don’t have any Azure account, you can join the Dev Essentials program to acquire a $25/month Azure credits for 12 months.
