@@ -7,7 +7,7 @@ date: 2017-05-28 12:00
 tags: [Debugging, Xamarin Live Player, Live Player, Preview, Visual Studio, Mobile, iOS, Android, Xamarin, Xamarin. Forms]
 ---
 
-So, I'm already kinda late with this. It's been almost 3 weeks since Build 2017 happened in Seattle and I just finished watching some of the highlights on [https://channel9.msdn.com/Events/Build/2017](Channel 9), especially all the things relevant to Xamarin and Mobile .NET. I've read that Xamarin had a bunch of sessions where they announce awesome stuff and I was really interested and excited about a couple of things, namely Xamarin Live Player, Visual Studio Mobile Center, .NET Standard and Fluent Design. I will write a different article about other the other three, but we'll start talking about Xamarin Live Player.
+So, I'm already kinda late with this. It's been almost 3 weeks since Build 2017 happened in Seattle and I just finished watching some of the highlights on (https://channel9.msdn.com/Events/Build/2017)[Channel 9], especially all the things relevant to Xamarin and Mobile .NET. I've read that Xamarin had a bunch of sessions where they announce awesome stuff and I was really interested and excited about a couple of things, namely Xamarin Live Player, Visual Studio Mobile Center, .NET Standard and Fluent Design. I will write a different article about other the other three, but we'll start talking about Xamarin Live Player.
 
 # Xamarin Live Player
 
@@ -19,7 +19,7 @@ So, what I want to show to you is how you can actually use Xamarin Live Player. 
 
 # Visual Studio 2017 Preview Installation
 
-First, you need to install the Visual Studio 2017 Preview ((https://www.visualstudio.com/en-us/news/releasenotes/vs2017-preview-relnotes)[For Windows]/(https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/#xamarinstudio)[For Mac]. If you already have a Visual Studio 2017 installed, don't worry, this is a different one. You can actually run the currently-installed Visual Studio 2017 and this one side-by-side, meaning they're not the same application. Make sure that the Visual Studio 2017 version you're installing is 15.3. The only workload you need to install is ofcourse Cross-Platform Development. It wiss ask you for the installation nickname, you can just name it `153Preview` or whatever you like. The installation will take a while.
+First, you need to install the Visual Studio 2017 Preview ((https://www.visualstudio.com/en-us/news/releasenotes/vs2017-preview-relnotes)[For Windows]/(https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/#xamarinstudio)[For Mac]). If you already have a Visual Studio 2017 installed, don't worry, this is a different one. You can actually run the currently-installed Visual Studio 2017 and this one side-by-side, meaning they're not the same application. Make sure that the Visual Studio 2017 version you're installing is 15.3. The only workload you need to install is ofcourse Cross-Platform Development. It wiss ask you for the installation nickname, you can just name it `153Preview` or whatever you like. The installation will take a while.
 
 After the installation, this is what you will see on your Visual Studio Installer. There will be two different Visual Studio 2017 application as you can see below:
 
