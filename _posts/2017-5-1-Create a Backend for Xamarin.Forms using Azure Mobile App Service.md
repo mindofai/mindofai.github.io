@@ -81,7 +81,7 @@ Now, our backend is fully set up. You can actually try to retrieve the table dat
 To integrate our mobile app into our Xamarin application, we need to firstly add the Azure Mobile App SDK Nuget Packages. The Microsoft.Azure.Mobile.Client lets you connect to your Azure Mobile backend and the SQLiteStore enables you to add full online/offline synchronization. Both of this should be added in all projects (PCL/Shared and all platforms):
  
  
-  <img src="{{site.baseurl}}/MAS-11.png"/>
+  <img src="{{site.baseurl}}/MAS-12.png"/>
  
 Next step is to add this line of code on your platform projects. For iOS, add this to the FinishedLaunching method of AppDelegate class. For Android, add this to the OnCreated method of MainActivity class:
 
@@ -189,7 +189,7 @@ public async Task<bool> AddDebt(Debt debt)
 Finally, we can now see the list of people with debts and insert others with or without network connection! You can actually try it out. Here's [the github repository](https://github.com/mindofai/mobileservicebackup).
 
 
-<img src="http://gph.is/2r1iNQr" Width="600px"/>
+  <img src="{{site.baseurl}}/MAS-13.png"/>
 
 
 # Slide
