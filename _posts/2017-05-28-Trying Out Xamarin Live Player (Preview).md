@@ -35,5 +35,15 @@ First, we need to install Xamarin Updater which provides us out of band updates 
 
 Once installed, you can go back to Tools > Extension and Updates. Select Updates and then Xamarin Previe node. This gives you the list of stuff you can update for Xamarin. What yo need to update specifically is the Xamarin for Visual Studio. Click update and once done, you will have to close your Visual Studio again to install the updates. Then, we'll have to re-open Visual Studio again. Our Visual Studio is ready. Let's now set up our devices!
 
-# Installing Xamarin Live Player Applicatrion
+## Installing Xamarin Live Player Application
 
+This one's pretty straightforward, you just need to install the Xamarin Live Player application into your device ([iOS](https://itunes.apple.com/us/app/xamarin-live-player/id1228841832?ls=1&mt=8)/[Android](https://play.google.com/store/apps/details?id=com.xamarin.live)). After the installation, we can now pair our device with Visual Studio 2017.
+
+# Create/Open a Xamarin Project
+
+Apparently, you can't pair your device with Visual Studio unless you have a Xamarin Project opened. So, let's open any or create a Xamarin Project. In my case, I've already created my own.
+
+# Pair Device to Visual Studio
+Once you have a Xamarin project opened in your Visual Studio, we can now pair our device with Visual Studio. To do this, select Tools > Xamarin Live Player > Manage Devices. This will open this popup:
+
+There are two ways to pair, first is to type the code from your Xamarin Live Player app on your device or just scan the QR code being shown in the popup. This will add your device to the list of paired device
