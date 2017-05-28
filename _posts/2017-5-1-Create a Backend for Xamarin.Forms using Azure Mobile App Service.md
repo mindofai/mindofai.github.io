@@ -189,7 +189,7 @@ public async Task<bool> AddDebt(Debt debt)
 Finally, we can now see the list of people with debts and insert others with or without network connection! You can actually try it out. Here's [the github repository](https://github.com/mindofai/mobileservicebackup).
 
 
-<img src="{{site.baseurl}}/MAS-13.png"/>
+<img src="http://gph.is/2r1iNQr" Width="600px"/>
 
 
 # Slide
