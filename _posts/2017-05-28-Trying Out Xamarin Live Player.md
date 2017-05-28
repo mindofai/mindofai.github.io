@@ -69,7 +69,7 @@ Once you have a Xamarin project opened in your Visual Studio, we can now pair ou
 
 There are two ways to pair, first is to type the code from your Xamarin Live Player app on your device or just scan the QR code being shown in the popup. This is like a handshake. Make sure you're on the same wifi network, too. This will add your device to the list of paired device. FYI I'm using [Vysor](https://www.vysor.io/) for the device mirroring.
 
-<img src="https://media.giphy.com/media/9sMZsuUFlg90I/giphy.gif/>
+<img src="https://media.giphy.com/media/9sMZsuUFlg90I/giphy.gif" Width="700px"/>
 
 Now, it's all finally set up. We can now debug our application using Xamarin Live Player!
 
@@ -79,7 +79,7 @@ To do traditional development cycle debugging, we can select our paired device o
 
 <img src="{{site.baseurl}}/XLP-10.png"/>
 
-<img src="https://media.giphy.com/media/l0Iy3PnprUKYbCb1m/giphy.gif"/>
+<img src="https://media.giphy.com/media/l0Iy3PnprUKYbCb1m/giphy.gif" Width="700px"/>
 
 It will compile and will take seconds to deploy it to your device. I was actually amazed how smooth and fast it is! Now, you can debug without even waiting for the long compilation, builds, etc. which sometimes takes minutes. But wait, there's more!
 
@@ -87,13 +87,13 @@ It will compile and will take seconds to deploy it to your device. I was actuall
 
 Now if you don't want to debug your application and just see the live preview on your device, you can use this Live Run feature. This allows you to write not only your UI, but also the business logic of your application. Again, this is really smooth and you can easily check your changes without running your application.
 
-<img src="https://media.giphy.com/media/l0IyiH4cWGctrIv7y/giphy.gif"/>
+<img src="https://media.giphy.com/media/l0IyiH4cWGctrIv7y/giphy.gif" Width="700px"/>
 
 # Settings and Logs
 
 Inside your Xamarin Live Player Application on your device, you can actually set some settings like for example, changing the theme, allowing to show compile and runtime errors, etc. As for the logs, this is where you can see the compilation and runtime errors that you configure on your settings, but you can only see high-level logs.
 
-<img src="{{site.baseurl}}/XLP-11.png"/>
+<img src="{{site.baseurl}}/XLP-11.png" Width="400px"/>
 
 # Limitations
 
