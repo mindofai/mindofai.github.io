@@ -49,6 +49,8 @@ Once you have a Xamarin project opened in your Visual Studio, we can now pair ou
 There are two ways to pair, first is to type the code from your Xamarin Live Player app on your device or just scan the QR code being shown in the popup. This is like a handshake. Make sure you're on the same wifi network, too. This will add your device to the list of paired device. FYI I'm using [Vysor](https://www.vysor.io/) for the device mirroring.
 
 
+<img src="http://gph.is/2r1iNQrg"/>
+
 Now, it's all finally set up. We can now debug our application using Xamarin Live Player!
 
 # Debug using Xamarin Live Player 
