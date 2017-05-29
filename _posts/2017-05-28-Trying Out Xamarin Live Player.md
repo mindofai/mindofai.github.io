@@ -63,7 +63,7 @@ This one's pretty straightforward, you just need to install the Xamarin Live Pla
 Apparently, you can't pair your device with Visual Studio unless you have a Xamarin Project opened. So, let's open any or create a Xamarin Project. In my case, I've already created my own.
 
 # Pair Device to Visual Studio
-Once you have a Xamarin project opened in your Visual Studio, we can now pair our device with Visual Studio. To do this, select Tools > Xamarin Live Player > Manage Devices. This will open this popup:
+Once you have a Xamarin project opened in your Visual Studio, we can now pair our device with Visual Studio. To do this, select Tools > Xamarin Live Player > Manage Devices. It will open this popup:
 
 <img src="{{site.baseurl}}/XLP-9.png"/>
 
