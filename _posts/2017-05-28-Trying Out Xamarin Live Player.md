@@ -44,11 +44,11 @@ First, we need to install Xamarin Updater which provides us out of band updates 
 
 ## Xamarin Preview Updates
 
-Once installed, you can go back to Tools > Extension and Updates. Select Updates and then Xamarin Previe node. This gives you the list of stuff you can update for Xamarin. What yo need to update specifically is the Xamarin for Visual Studio. Click update and once done, you will have to close your Visual Studio again to install the updates. 
+Once installed, you can go back to Tools > Extension and Updates. Select Updates and then Xamarin Preview node. This gives you the list of stuff you can update for Xamarin. What you need to update specifically is the Xamarin for Visual Studio.
 
 <img src="{{site.baseurl}}/XLP-6.png"/>
 
-Then, we'll have to re-open Visual Studio again. Our Visual Studio is ready. Let's now set up our devices!
+Click update and once done, you will have to close your Visual Studio again to install the updates. Then, we'll have to re-open Visual Studio again. Our Visual Studio is ready. Let's now set up our devices!
 
 <img src="{{site.baseurl}}/XLP-7.png"/>
 
@@ -56,7 +56,7 @@ Then, we'll have to re-open Visual Studio again. Our Visual Studio is ready. Let
 
 This one's pretty straightforward, you just need to install the Xamarin Live Player application into your device ([iOS](https://itunes.apple.com/us/app/xamarin-live-player/id1228841832?ls=1&mt=8)/[Android](https://play.google.com/store/apps/details?id=com.xamarin.live)). Also, we'll only try it out with Android, but it's pretty much the same with iOS. After the installation, we can now pair our device with Visual Studio 2017.
 
-<img src="{{site.baseurl}}/XLP-8.jpg"/>
+<img src="{{site.baseurl}}/XLP-8.jpeg"/>
 
 # Create/Open a Xamarin Project
 
