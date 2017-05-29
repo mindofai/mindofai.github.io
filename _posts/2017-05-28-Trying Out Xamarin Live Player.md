@@ -56,7 +56,7 @@ Click update and once done, you will have to close your Visual Studio again to i
 
 This one's pretty straightforward, you just need to install the Xamarin Live Player application into your device ([iOS](https://itunes.apple.com/us/app/xamarin-live-player/id1228841832?ls=1&mt=8)/[Android](https://play.google.com/store/apps/details?id=com.xamarin.live)). Also, we'll only try it out with Android, but it's pretty much the same with iOS. After the installation, we can now pair our device with Visual Studio 2017.
 
-<img src="{{site.baseurl}}/XLP-8.jpeg" Height="200px"/>
+<img src="{{site.baseurl}}/XLP-8.jpeg" Height="350px"/>
 
 # Create/Open a Xamarin Project
 
