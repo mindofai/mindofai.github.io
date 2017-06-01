@@ -101,6 +101,12 @@ There are still some stuff that are not supported for iOS and Android. Again, th
 
 I'm really amazed with this one, though I didn't expect it. I just thought that XAML Previewer was enough. But, when I tried this out, I'm convinced that I'll be using this from now on. This is just one of the things from this year's Build Conference that made my jaw drop. I will be talking about other Xamarin-related stuff on my next article.
 
+
+# Slide
+Also, here's the slide that I've used for the demo:
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/1pZj3LblFNgy3i" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+
 Reference/s:
 -[Xamarin Live Player](https://developer.xamarin.com/guides/cross-platform/live/)
 -[Visual Studio 2017 Preview 15.3](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-preview-relnotes)
