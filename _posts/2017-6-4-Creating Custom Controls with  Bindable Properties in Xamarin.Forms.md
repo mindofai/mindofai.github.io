@@ -63,7 +63,7 @@ There are several things that we need to set up on our control's code behind and
 
 First, you need to create a regular property for your bindable property. We're gonna start with the label and we'll name it *TitleText*. This is the property that will be exposed by the control.
 
-       ``` csharp
+       ```csharp
        public string TitleText { get; set; }
        ```
        
@@ -71,13 +71,13 @@ First, you need to create a regular property for your bindable property. We're g
 
 The next step is to create the **BindableProperty**. What you need to do is to create a read-only **BindableProperty** field. Ideally, the name of this field is the same as the regular property that we created, we'll just add *Property* at the end of it.
 
-       ``` csharp
+       ```csharp
        public static readonly BindableProperty TitleTextProperty;
        ```
        
 But, ofcourse, we're not done with it. The next part is to set the the field with *BindableProperty.Create()* method. This *Create()* method takes numerous parameters wherein some of them can be *null*:
 
-       ``` csharp
+       ```csharp
        public static readonly BindableProperty TitleTextProperty = BindableProperty.Create(
                                                          propertyName: "TitleText",
                                                          returnType: typeof(string),
@@ -105,7 +105,7 @@ But, ofcourse, we're not done with it. The next part is to set the the field wit
 
 Lastly, we need to create a callback. You can either do this through inline or by creating a callback method. We'll do it by creating a method:
 
-``` csharp
+```csharp
    private static void TitleTextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var control = (MyCustomControl)bindable;
@@ -117,7 +117,7 @@ Basically, what we just did here is we're casting the bindable as a *MyCustomCon
 
 Again, you need to set this up again if you want to create another bindable property. I actually created another one for the image. This is **MyCustomControl**'s content now.
 
-``` csharp
+```csharp
 public string TitleText { get; set; }
 
         private static BindableProperty titleTextProperty = BindableProperty.Create(
