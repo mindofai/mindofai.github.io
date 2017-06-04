@@ -47,6 +47,8 @@ I already created a custom control called **MyCustomControl** that has a label a
 </ContentView>
 ```
 
+Which results to this:
+
 <img src="{{site.baseurl}}/BP-2.png"/>
 
 Anyway, that is what I currently have. I can only set the actual image's source and label's text. What I want to do is to create a property that will be exposed by the control. I wonder what do we need to use to do this??? Well, you guessed it, it's called **BindableProperty**.
