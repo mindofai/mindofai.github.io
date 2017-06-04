@@ -17,7 +17,7 @@ I already created a custom control called **MyCustomControl** that has a label a
 
 ## MyCustomControl.xaml
 
-```xaml
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -176,7 +176,7 @@ Now that we've set up the bindable properties, what we want to do now is to actu
 We're now able to set TitleText and Image which sets up the image's source and our label's text! I've added a few more and this is how my **MainPage.xaml** looks like:
 
 ## MainPage.xaml
-```xaml
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
