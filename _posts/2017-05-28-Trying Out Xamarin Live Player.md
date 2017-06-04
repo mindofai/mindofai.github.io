@@ -109,5 +109,7 @@ Also, here's the slide that I've used for the demo:
 
 Reference/s:
 -[Xamarin Live Player](https://developer.xamarin.com/guides/cross-platform/live/)
+
 -[Visual Studio 2017 Preview 15.3](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-preview-relnotes)
+
 -[Previewing the Xamarin Live Players for Visual Studio](https://blog.xamarin.com/live-player/)
