@@ -63,21 +63,21 @@ There are several things that we need to set up on our control's code behind and
 
 First, you need to create a regular property for your bindable property. We're gonna start with the label and we'll name it *TitleText*. This is the property that will be exposed by the control.
 
-       ```csharp
+```csharp
        public string TitleText { get; set; }
-       ```
+ ```
        
 ## Adding the BindableProperty field
 
 The next step is to create the **BindableProperty**. What you need to do is to create a read-only **BindableProperty** field. Ideally, the name of this field is the same as the regular property that we created, we'll just add *Property* at the end of it.
 
-       ```csharp
+ ```csharp
        public static readonly BindableProperty TitleTextProperty;
-       ```
+```
        
 But, ofcourse, we're not done with it. The next part is to set the the field with *BindableProperty.Create()* method. This *Create()* method takes numerous parameters wherein some of them can be *null*:
 
-       ```csharp
+```csharp
        public static readonly BindableProperty TitleTextProperty = BindableProperty.Create(
                                                          propertyName: "TitleText",
                                                          returnType: typeof(string),
@@ -86,7 +86,7 @@ But, ofcourse, we're not done with it. The next part is to set the the field wit
                                                          defaultBindingMode: BindingMode.TwoWay,
                                                          propertyChanged: TitleTextPropertyChanged);
 
-       ```
+```
  
  As you can see,there are several parameters being set. I'm going to break down each of the parameters that I've set:
  
