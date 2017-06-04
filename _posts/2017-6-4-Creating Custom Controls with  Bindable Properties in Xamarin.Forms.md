@@ -65,13 +65,13 @@ First, you need to create a regular property for your bindable property. We're g
 
 ```csharp
        public string TitleText { get; set; }
- ```
+```
        
 ## Adding the BindableProperty field
 
 The next step is to create the **BindableProperty**. What you need to do is to create a read-only **BindableProperty** field. Ideally, the name of this field is the same as the regular property that we created, we'll just add *Property* at the end of it.
 
- ```csharp
+```csharp
        public static readonly BindableProperty TitleTextProperty;
 ```
        
