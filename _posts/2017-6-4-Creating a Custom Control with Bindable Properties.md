@@ -7,16 +7,80 @@ date: 2017-06-04 12:00
 tags: [Custom, Custom Control, BindableProperty, Bindable, XAML, Mobile App, UWP, iOS, Android, Xamarin, Xamarin. Forms]
 ---
 
-Just last monday, I was asked if I could give a talk anything about Azure for Global Azure Bootcamp. At first, I wasn’t very sure what to talk about since I was focusing on Mobile .NET and I have a tight schedule last week. But then, I remembered that I will train STI college professors about Azure Mobile App and how to integrate it to a Xamarin.Forms application, so why not talk about it. Plus, I also remembered that there is this one thing that I wanted to share about Azure Mobile App that can probably make some of the audience’s jaw drop… and it did!
-
+Last week, I gave a talk for last month's MSDN Session wherein I talked about Xamarin Live Player. A lot of developers were amazed, especially those who are in need of iOS debugging. Atleast, they can now check their application out in an iOS device without a Mac. Right after my talk and all the questions about Xamarin Live Player, someone came up to me and asked me about how can they create a property for their custom control, because currently, they're struggling with how to do it. I really found it interesting and told them that I'll just create an article about it. So, yeah, that's the reason why this article exists now lol.
 
 <img src="{{site.baseurl}}/MAS-14.png"/>
 
-I’m talking about Easy Tables aka **No-Code API/Table**. It makes data storage backend creation so easy and fast. As a matter of fact, when I demoed it, it only took me roughly 13 minutes and I was even explaining every step that I did! If I wasn’t, the setup would’ve been finished in less than 10 minutes. That’s how easy and fast Easy Tables is. I mean let’s be honest, we want to setup our data storage backend as quick as possible, so we can focus on developing our client app immediately. That’s what Azure Mobile App is offering us.
+# My Custom Control
 
-# Creating an Azure Mobile App
-Firstly, in order to use/try out Azure services, you need to have an Azure account. If you don’t have any Azure account, you can join the Dev Essentials program to acquire a $25/month Azure credits for 12 months.
-Once you have an Azure account, just log it in the Azure portal and you should now see your Azure Dashboard:
+I already created a custom control called **MyCustomControl** that has a label and an image. I want to use this as a layout for each sport categories that will be shown on my home page. I'll admit, this isn't the best example to use for demoing BindableProperty, but this works :P 
+
+## MyCustomControl.xaml
+
+``` xaml
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BindablePropertyDemo.Custom.MyCustomControl">
+    <Grid x:Name="grid" 
+          Padding="10,40,10,10"
+          HeightRequest="160"
+          VerticalOptions="Start">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="image"
+               Source="basketball.png"
+               HeightRequest="100"/>
+        
+        <Label x:Name="title"
+               Text="BASKETBALL"
+               Grid.Row="1" 
+               FontSize="20"
+               VerticalOptions="Center"
+               TextColor="White"
+               HorizontalOptions="Center" 
+               FontAttributes="Bold"/>
+    </Grid>
+</ContentView>
+```
+
+Anyway, that is what I currently have. I can only set the actual image's source and label's text. What I want to do is to create a property that will be exposed by the control. I wonder what do we need to use to do this??? Well, you guessed it, it's called **BindableProperty**.
+
+# What is a Bindable Property?
+
+Basicall, a bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system. You can read more about Bindable Property in [this article](https://developer.xamarin.com/guides/xamarin-forms/xaml/bindable-properties/).
+
+# Adding Bindable Properties
+
+## Adding the exposed property
+
+First, you need to create a regular property for your bindable property. We're gonna start with the label and we'll name it *TitleText*. This is the property that will be exposed by the control.
+
+       ``` csharp
+       public string TitleText { get; set; }
+       ```
+The next step is to create the **BindableProperty**. What you need to do is to create a read-only **BindableProperty** field. Ideally, the name of this field is the same as the regular property that we created, we'll just add *Property* at the end of it.
+
+       ``` csharp
+       public static readonly BindableProperty TitleTextProperty;
+       ```
+       
+But, ofcourse, we're not done with it. The next part is to set the the field with *BindableProperty.Create()* method. This *Create()* method takes numerous parameters wherein some of them can be *null*:
+
+       ``` csharp
+       public static readonly BindableProperty TitleTextProperty = BindableProperty.Create(
+                                                         propertyName: "TitleText",
+                                                         returnType: typeof(string),
+                                                         declaringType: typeof(MyCustomControl),
+                                                         defaultValue: "",
+                                                         defaultBindingMode: BindingMode.TwoWay,
+                                                         propertyChanged: TitleTextPropertyChanged);
+
+       ```
+ 
+ As you can see,there are several parameters being set. I'm going to break down each of the parameters that I've set
  
   <img src="{{site.baseurl}}/MAS-1.png"/>
  
