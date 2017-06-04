@@ -54,6 +54,8 @@ Basicall, a bindable property is a special type of property, where the property'
 
 # Adding Bindable Properties
 
+There are several things that we need to set up and we'll be adding these for each setting this up for each properties that we want to add.
+
 ## Adding the exposed property
 
 First, you need to create a regular property for your bindable property. We're gonna start with the label and we'll name it *TitleText*. This is the property that will be exposed by the control.
@@ -61,6 +63,9 @@ First, you need to create a regular property for your bindable property. We're g
        ``` csharp
        public string TitleText { get; set; }
        ```
+       
+## Adding the BindableProperty field
+
 The next step is to create the **BindableProperty**. What you need to do is to create a read-only **BindableProperty** field. Ideally, the name of this field is the same as the regular property that we created, we'll just add *Property* at the end of it.
 
        ``` csharp
@@ -80,7 +85,26 @@ But, ofcourse, we're not done with it. The next part is to set the the field wit
 
        ```
  
- As you can see,there are several parameters being set. I'm going to break down each of the parameters that I've set
+ As you can see,there are several parameters being set. I'm going to break down each of the parameters that I've set:
+ 
+**propertyName** - the name of our exposed property as a string.
+
+**returnType** - the return type of our property.
+
+**declaringType** - the type declaring this BindableProperty.
+
+**defaultBindingMode** - the binding mode our property should have.
+
+**propertyChanged** - the specified callback method to be fired after the property has changed. This will receive 3 parameters: *bindable* (the current control class), *oldValue* (the old value of the property), and *newValue* (the newest value of the property)
+
+## Adding the callback method
+
+   private static void TitleTextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var control = (MyCustomControl)bindable;
+            control.title.Text = newValue.ToString();
+        }
+
  
   <img src="{{site.baseurl}}/MAS-1.png"/>
  
