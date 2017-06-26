@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Installing Visual Studio for Mac
 author: mindofai
