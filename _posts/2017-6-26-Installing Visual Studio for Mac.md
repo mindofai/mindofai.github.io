@@ -9,6 +9,8 @@ tags: [IDE, Visual Studio, Mac, Installer, Mobile App, UWP, iOS, Android, Xamari
 
 It’s been a while since I last posted an article. I’ve been really busy with the technical training sessions I’ve been facilitating. Not only that, the craziest thing also happened to me just last week. My personal laptop, where I keep all of my important files, do all of my mobile development, etc., has succumbed to the ephemeral nature of its existence. In short, it’s broken. I still have three upcoming events and I need a machine to share my presentation and do the demos. Luckily, my company lend me a Mac.
 
+## The "Problem"
+
 The thing is, this is the first time I’m going to use a Mac and I’m kind of not really happy using a Mac machine since I’ve been a solid PC master race member since birth. So, yeah, this is new to me. Yes, I have no problems with showing my presentations to the audiences using Mac. What I was worried about is my development setup. How can I demo Xamarin Development? (I’m kind of underestimating the power of Mac :P) And yes, I knew that Visual Studio for Mac exists, but I wasn’t sure what else to setup other that. I thought I needed to install different components, configure a couple of stuff, etc. But I was wrong. So so wrong. All I needed to do was to launch Visual Studio Installer and install Visual Studio for Mac and that’s it!
 
 ## Download Visual Studio Installer for Mac
