@@ -13,13 +13,13 @@ It’s been a while since I last posted an article. I’ve been really busy with
 
 ## The "Problem"
 
-The thing is, this is the first time I’m going to use a Mac and I’m kind of not really happy using a Mac machine since I’ve been a solid PC master race member since birth. So, yeah, this is new to me. Yes, I have no problems with showing my presentations to the audiences using Mac. What I was worried about is my development setup. How can I demo Xamarin Development? (I’m kind of underestimating the power of Mac :P) And yes, I knew that Visual Studio for Mac exists, but I wasn’t sure what else to setup other that. I thought I needed to install different components, configure a couple of stuff, etc. But I was wrong. So so wrong. All I needed to do was to launch Visual Studio Installer and install Visual Studio for Mac and that’s it!
+The thing is, this is the first time I’m going to use a Mac and I’m kind of not really happy using a Mac machine since I’ve been a solid PC master race member since birth. So, yeah, this is new to me. Yes, I have no problems with showing my presentations to the audiences using Mac. What I was worried about is my development setup. How can I demo Xamarin Development? (I’m kind of underestimating the power of Mac :P) And yes, I knew that Visual Studio for Mac exists, but I wasn’t sure what else to setup other than that. I thought I needed to install different components, configure a couple of stuff, etc. But I was wrong. So so wrong. All I needed to do was to launch Visual Studio Installer and install Visual Studio for Mac and that’s it!
 
 ## Download Visual Studio Installer for Mac
 
 <img src="{{site.baseurl}}/VSM1.png"/>
 
-First of all, what you need to do is to download the Visual Studio Installer by going to [this link] and click the Download Visual Studio for Mac button.(https://www.visualstudio.com/vs/visual-studio-mac/) It will download a disk image (***.dmg***) file of Visual Studio Installer.
+First of all, what you need to do is to download the Visual Studio Installer by going to [this link](https://www.visualstudio.com/vs/visual-studio-mac/) and click the Download Visual Studio for Mac button. It will download a disk image (***.dmg***) file of Visual Studio Installer.
 
 
 <img src="{{site.baseurl}}/VSM12.png"/>
