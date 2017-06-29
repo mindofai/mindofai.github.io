@@ -7,7 +7,6 @@ date: 2017-06-29 12:00
 tags: [Blogging, .NET, Meetups, Microsoft, UWP, Xamarin, Xamarin. Forms]
 ---
 
-
 <img src="{{site.baseurl}}/lol.png"/>
 
 I have finally organized an event and it's an awesome feeling for me. I'm inviting everyone to come and join the **Mobile .NET Developers - Philippines** for a hands-on technical training session geared towards mobile developers to deliver first class mobile experiences and drive business transformation with Mobile DevOps.
