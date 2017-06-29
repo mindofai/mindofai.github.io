@@ -13,6 +13,7 @@ I have finally organized an event and it's an awesome feeling for me. I'm inviti
 
 Explore Mobile DevOps with free training courses from MoNDPH's local community members. Then, after lunch, get the opportunity to put new knowledge into practice by trying out Visual Studio Team Services and Visual Studio Mobile Center to mobilize your project with access to a world-class, end-to-end lifecycle solution that has tools for every stage of Mobile DevOps.
 
+
 In this **FREE technical training session**, we're going to have:
 
 **Michael John T. Peña, Senior Consultant @ Readify, Microsoft MVP, Xamarin MVP, Xamarin Certified Developer** will talk about **Opportunities in Mobile DevOps**
@@ -28,18 +29,20 @@ In this **FREE technical training session**, we're going to have:
 
 **Training Schedule:**
 
-8:00am - 9:00am - Registration
-9:00am - 9:15am - Welcome Remarks
-9:15am - 10:00am - Opportunities in Mobile Devops
-10:00am - 10:30am - VSTS: Source Control Management Overview
-10:30am - 11:00am - Visual Studio Mobile Center's Lifecycle Service (Build - Test - Distribute)
-11:00am - 11:30am - Visual Studio Mobile Center's Monitoring Service (Crash and Analytics)
-11:30am - 12:00nn - Azure Mobile App's Push Notification Service
-12:00pm - 1:00pm - Lunch
+8:00am - 9:00am - Registration <br>
+9:00am - 9:15am - Welcome Remarks <br>
+9:15am - 10:00am - Opportunities in Mobile Devops <br>
+10:00am - 10:30am - VSTS: Source Control Management Overview <br>
+10:30am - 11:00am - Visual Studio Mobile Center's Lifecycle Service (Build - Test - Distribute) <br>
+11:00am - 11:30am - Visual Studio Mobile Center's Monitoring Service (Crash and Analytics) <br>
+11:30am - 12:00nn - Azure Mobile App's Push Notification Service <br>
+12:00pm - 1:00pm - Lunch <br>
 1:00pm - 5:00pm - Workshop
 
 
 This FREE event will be held on Saturday, **July 15, 2017, 8:00AM - 5:00PM in the Visayas and Mindanao rooms of Microsoft Philippines, 8th Floor, 6750 Makati Ave., Makati City, Philippines**.
+
+To register and to see more details, check out [this link](https://www.eventbrite.com/e/mobile-devops-an-agile-efficient-and-iterative-mobile-development-journey-tickets-34394028465).
 
 Nope, this isn't gonna happen monthly YET. But, I promise that this will be the first of many. This will be a great opportunity for Microsoft to spread the latest technologies and teach students and professionals how to develop applications using their Mobile .NET technologies.
 
