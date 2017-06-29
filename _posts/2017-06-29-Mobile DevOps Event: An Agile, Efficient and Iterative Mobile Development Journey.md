@@ -1,10 +1,10 @@
 ---
-published: false
+published: true
 layout: post
-title: Workaround for Xamarin.Forms' DisplayAlert Bug (Alert Being Shown Twice)
+title: Mobile DevOps Event: An Agile, Efficient and Iterative Mobile Development Journey
 author: mindofai
-date: 2017-04-05 12:00
-tags: [Bug, DisplayAlert, Alert, Popup, Display, Twice, UWP, iOS, Android Xamarin, Xamarin. Forms]
+date: 2017-06-29 12:00
+tags: [Mobile DevOps, Visual Studio, Mobile Center, VSTS, .NET, Meetups, Microsoft, UWP, Xamarin, Xamarin. Forms]
 ---
 
 <img src="{{site.baseurl}}/lol.png"/>
