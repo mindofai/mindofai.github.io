@@ -4,7 +4,7 @@ layout: post
 title: Mobile DevOps Event: An Agile, Efficient and Iterative Mobile Development Journey
 author: mindofai
 date: 2017-06-29 12:00
-tags: [Event, Visual Studio, Mobile Center, VSTS, Microsoft, Mobile, Devops, Free, Hands-on, Speaker, XAML, Mobile App, UWP, iOS, Android, Xamarin, Xamarin. Forms]
+tags: [Event, Visual Studio, Mobile Center, VSTS, Microsoft, Mobile, Devops, Hands-on, Speaker, XAML, Mobile App, UWP, iOS, Android]
 ---
 
 <img src="{{site.baseurl}}/lol.png"/>
