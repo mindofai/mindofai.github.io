@@ -7,53 +7,39 @@ date: 2017-04-05 12:00
 tags: [Bug, DisplayAlert, Alert, Popup, Display, Twice, UWP, iOS, Android Xamarin, Xamarin. Forms]
 ---
 
-While I was answering questions in StackOverflow, I encountered a [question](http://stackoverflow.com/questions/43106567/xamarin-form-display-alert-pop-up-appear-2-times/43106944#43106944) about Xamarin.Forms' DisplayALert. My first answer was so wrong and it's not solving any problem. I was trying to correct something which is already correct. I'll be honest, I haven't actually tried out his code. So, I tried the code myself. I thought it was only a bug within his app, but apparently, it's been a bug for a very long time. 
+<img src="{{site.baseurl}}/lol.png"/>
 
-I'm talking about this code block:
+I have finally organized an event and it's an awesome feeling for me. I'm inviting everyone to come and join the **Mobile .NET Developers - Philippines** for a hands-on technical training session geared towards mobile developers to deliver first class mobile experiences and drive business transformation with Mobile DevOps.
 
-```csharp
-var resp = await DisplayAlert("","Are you sure want to Logout?","Yes", "No");
-if (resp)
-{ 
-   //Do something
-}
-```
+Explore Mobile DevOps with free training courses from MoNDPH's local community members. Then, after lunch, get the opportunity to put new knowledge into practice by trying out Visual Studio Team Services and Visual Studio Mobile Center to mobilize your project with access to a world-class, end-to-end lifecycle solution that has tools for every stage of Mobile DevOps.
 
-## Bug
-This results into two popups, which is obviously not expected. This is [an actual bug](https://github.com/UXDivers/Grial-UI-Kit-Support/issues/127) and is reported to Bugzilla already back in December and I guess it's still not fixed.
+In this **FREE technical training session**, we're going to have:
 
-## Solution
+**Michael John T. Peña, Senior Consultant @ Readify, Microsoft MVP, Xamarin MVP, Xamarin Certified Developer** will talk about **Opportunities in Mobile DevOps**
 
-So, instead, I looked for other workarounds, because I know that I'll encounter this problem in the future, too. And also, I want to help the guy from StackOverflow. What I've found is that you need to need to invoke the Display Alert in the main UI thread using [Xamarin.Forms.Device.BeginInvokeOnMainThread](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/). We need to pass in an `Action` that will execute the `DisplayAlert` to the main UI thread:
+**Christian Nicolas Z. Pascua, Junior Software Developer @ Clink IT Solutions** will talk about **VSTS: Source Control Management**
 
-```csharp
-  Device.BeginInvokeOnMainThread(new Action(async () =>
-  {
-       if(await DisplayAlert("", "Are you sure want to Logout?", "Yes", "No"))
-       {
-         //Do something
-       }
-  }));
- ```
- 
-This is used in order to do something on the UI thread. So it's normally called from a background thread, in order to manipulate the UI, which can only be done on the UI thread. The body of the lambda expression is the code which you want to execute in the UI thread. This is the same with how Silverlight/WPF/WP8.1, iOS, and Android access the GUI thread:
- 
-## Silverlight/WPF/etc.
+**Bryan Anthony Garcia, Software Engineer @ Avanade, Mobile .NET Developer, Xamarin Community Blogger** will talk about **Visual Studio Mobile Center's Lifecycle Service (Build - Test - Distribute)**
 
-```csharp
-Deployment.Current.Dispatcher.BeginInvoke( ()=> {
- if(await DisplayAlert("", "Are you sure want to Logout?", "Yes", "No"))
-       {
-         //Do something
-       }
-});
-```
+**Nathaniel Brion Sison, Software Developer @ Smart Communications, Xamarin Certified Developer** will talk about **Visual Studio Mobile Center's Monitoring Service (Crash and Analytics)**
 
-<b>And for Android:</b> `AndroidRunOnUiThread(() => delta)`
+**Mark Deanil Vicente, Corporate Software Developer and Development Lead @ Any Network Systems Inc.** will talk about **Azure Mobile App's Push Notification Service**
 
-<b>Same thing for iOS:</b> `InvokeOnMainThread`
- 
-This fixes the issue, because we're now invoking it on the Main UI thread. Our DisplayAlert will now be executed once. So, yeah, for now, we can use this workaround. But, hopefully, they fix the bug, so we can just execute it without the BeginInvokeOnMainThread method. I hope this can help you with your development, especially those guys who's encountering this right now.
 
-Resource: 
-- [https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/)
+**Training Schedule:**
+
+8:00am - 9:00am - Registration
+9:00am - 9:15am - Welcome Remarks
+9:15am - 10:00am - Opportunities in Mobile Devops
+10:00am - 10:30am - VSTS: Source Control Management Overview
+10:30am - 11:00am - Visual Studio Mobile Center's Lifecycle Service (Build - Test - Distribute)
+11:00am - 11:30am - Visual Studio Mobile Center's Monitoring Service (Crash and Analytics)
+11:30am - 12:00nn - Azure Mobile App's Push Notification Service
+12:00pm - 1:00pm - Lunch
+1:00pm - 5:00pm - Workshop
+
+
+This FREE event will be held on Saturday, **July 15, 2017, 8:00AM - 5:00PM in the Visayas and Mindanao rooms of Microsoft Philippines, 8th Floor, 6750 Makati Ave., Makati City, Philippines**.
+
+Nope, this isn't gonna happen monthly YET. But, I promise that this will be the first of many. This will be a great opportunity for Microsoft to spread the latest technologies and teach students and professionals how to develop applications using their Mobile .NET technologies.
+
