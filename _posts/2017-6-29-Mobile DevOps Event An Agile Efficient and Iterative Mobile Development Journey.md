@@ -25,6 +25,7 @@ In this **FREE technical training session**, we're going to have:
 
 **Mark Deanil Vicente, Corporate Software Developer and Development Lead @ Any Network Systems Inc.** will talk about **Azure Mobile App's Push Notification Service**
 
+
 **Training Schedule:**
 
 8:00am - 9:00am - Registration
