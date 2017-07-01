@@ -29,14 +29,22 @@ In this **FREE technical training session**, we're going to have:
 
 **Training Schedule:**
 
-8:00am - 9:00am - Registration <br>
-9:00am - 9:15am - Welcome Remarks <br>
-9:15am - 10:00am - Opportunities in Mobile Devops <br>
-10:00am - 10:30am - VSTS: Source Control Management Overview <br>
-10:30am - 11:00am - Visual Studio Mobile Center's Lifecycle Service (Build - Test - Distribute) <br>
-11:00am - 11:30am - Visual Studio Mobile Center's Monitoring Service (Crash and Analytics) <br>
-11:30am - 12:00nn - Azure Mobile App's Push Notification Service <br>
-12:00pm - 1:00pm - Lunch <br>
+8:00am - 9:00am - Registration
+
+9:00am - 9:15am - Welcome Remarks
+
+9:15am - 10:00am - Opportunities in Mobile Devops
+
+10:00am - 10:30am - VSTS: Source Control Management Overview
+
+10:30am - 11:00am - Visual Studio Mobile Center's Lifecycle Service (Build - Test - Distribute)
+
+11:00am - 11:30am - Visual Studio Mobile Center's Monitoring Service (Crash and Analytics)
+
+11:30am - 12:00nn - Azure Mobile App's Push Notification Service
+
+12:00pm - 1:00pm - Lunch
+
 1:00pm - 5:00pm - Workshop
 
 
