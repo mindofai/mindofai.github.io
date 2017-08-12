@@ -34,12 +34,47 @@ Localization doesn’t only apply with text or labels. It can also be applied wi
 
 ## Creating Resx files
 
-In order for us to create a language resource for each language that we want to support, we'll have to create a **Resources** folder first (just to organize our resx files) inside the **Portable** project. Next is to actually create the resource file. You can do this by right-clicking the Resource folder, **Add > New File > Misc.** and select Resource file. Name the resource file **AppResource.cs** and this will be our default language resource which is english. Once created, you can now add a Name or the key for this translatable string(It must be a valid C# property name - so no spaces or special characters are allowed) and of course the value which is the string that we want to display in our application. It should look like this:
+In order for us to create a language resource for each language that we want to support, we'll have to create a **Resources** folder first (just to organize our resx files) inside the **Portable** project. Next is to actually create the resource file. You can do this by right-clicking the Resource folder, **Add > New File > Misc.** and select Resource file. Name the resource file **AppResource.resx** and this will be our default language resource which is english. Once created, you can now add a Name or the key for this translatable string(It must be a valid C# property name - so no spaces or special characters are allowed) and of course the value which is the string that we want to display in our application. It should look like this:
 
 
-Once done with our default resource file, we can now create resource files for other languages that we want to support. For each language you're going to support, you will need to add an aditional resource file with the name: *"Resource.{culture name}.resx"*. You can find a list of culture names [here](https://msdn.microsoft.com/en-us/library/cc233982.aspx). In my case, I'll support the Spanish language, so I'll name it *"Resource.es.resx"*. We'll need to add the same keys that we added in our default resource to make sure our app will have translations for each text. It should look like this:
+Once done with our default resource file, we can now create resource files for other languages that we want to support. For each language you're going to support, you will need to add an aditional resource file with the name: *"Resource.{culture name}.resx"*. You can find a list of culture names [here](https://msdn.microsoft.com/en-us/library/cc233982.aspx). In my case, I'll support the Spanish language, so I'll name it **Resource.es.resx**. We'll need to add the same keys that we added in our default resource to make sure our app will have translations for each text. This is how mine looks like:
+
+You can create more if you want, but I'll only add Spanish.
+
+## Using Resx files through C#
+
+We can now use our resource files by just calling the AppResource class. As an example, I created a **Label** control with the text of **AppResource.WelcomeText**.
 
 
+Now, when I run the app, this is how it looks like when my phone's language settings is English.
+
+But, when I use Spanish as my phone language, this is how it looks like:
+
+Using resource files through C# isn't as hard as you think it is. We can also use XAML for this, but we'll have to add a glue in order for our app to inject our values into our controls. We'll have to use the **IMarkupExtension** interface. We'll do it by creating a C# class named **TranslateExtension.cs** and we'll implement it by adding this:
+
+```csharp
+using System;
+using System.Globalization;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace Glider_Log.Resources
+{
+    [ContentProperty("Text")]
+    public class TranslateExtension : IMarkupExtension
+    {
+        public string Text { get; set; }
+
+        public object ProvideValue(IServiceProvider serviceProvider)
+        {
+            if (Text == null)
+                return null;
+
+            return Resource.ResourceManager.GetString(Text, CultureInfo.CurrentCulture);
+        }
+    }
+}
+```
 
 If you want to try this out, I uploaded [this project to github](https://github.com/mindofai/BindablePropertyDemo). Hopefully, this can get you started with creating bindable properties. Happy coding!
 
