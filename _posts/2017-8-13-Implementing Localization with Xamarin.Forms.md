@@ -138,9 +138,9 @@ Now, I can create a XAML page called **MainPage.xaml** and use the **AppResource
 
 This will result to a button with a Tap this button text for both english and spanish.
 
-<img src="{{site.baseurl}}/LOC-9.png"/>
+<img src="{{site.baseurl}}/LOC-21.png"/>
 
-<img src="{{site.baseurl}}/LOC-10.png"/>
+<img src="{{site.baseurl}}/LOC-22.png"/>
 
 ## It's not only about the language
 
@@ -219,9 +219,11 @@ Now, we just need to add an image control that will use the **flag.png** in our 
 
 If we run the app, this is how it looks like on Android and iOS:
 
+<img src="{{site.baseurl}}/LOC-20.png"/>
 
 And if look at the name of the application for platforms:
 
+<img src="{{site.baseurl}}/LOC-19.png"/>
 
 So, yeah, localization it's as easy as that! If you want to try this out, I uploaded [this project to github](https://github.com/mindofai/LocalizationDemo). Hopefully, this can get you started with implementing Localization in your application. Happy coding!
 
