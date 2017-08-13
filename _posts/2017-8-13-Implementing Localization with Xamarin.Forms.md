@@ -10,7 +10,7 @@ tags: [Localization, Internationalization, i18n, l10n, Globalization, Languages 
 <img src="{{site.baseurl}}/LOC-1.png"/>
 
 
-Last, Mobile .NET Developers - Philippines in partnership with DevCon PH and Seer Technologies had a whole day hands-on training session called Xamarin Code Camp for Professionals. In the first half of the event, the crew and I talked about Visual Studio 2017, fundamentals of Xamarin, Microsoft Cognitive Services, MVVM, Localization and Accessibility. Then, right after lunch, we had live coding and mini hackaton about the things we discussed in the in the first half. All in all, it was a great event, everyone looked happy and I really think they learned a lot of things about Xamarin. 
+Last month, Mobile .NET Developers - Philippines in partnership with DevCon PH and Seer Technologies had a whole day hands-on training session called Xamarin Code Camp for Professionals. In the first half of the event, the crew and I talked about Visual Studio 2017, fundamentals of Xamarin, Microsoft Cognitive Services, MVVM, Localization and Accessibility. Then, right after lunch, we had live coding and mini hackaton about the things we discussed in the in the first half. All in all, it was a great event, everyone looked happy and I really think they learned a lot of things about Xamarin. 
 
 I was supposed to talk only about Localization, but we needed to atleast give them knowledge about MVVM, because they’ll be using the design pattern in the live coding. So, yeah, we didn’t have a choice so I gave a brief introduction to MVVM and I just followed the given slides lol. Anyway, I really want to talk about Localization, because I feel like it’s really important to implement it to all applications in the App Store or Play Store, since it’s going to be available globally. Only a few application have been internationalized, but I’m pretty sure that these apps are much easier to use for a lot of people globally and ofcourse, they cater a bigger market.
 
@@ -20,7 +20,7 @@ So, let’s talk about Internationalization. Basically, it is when your app supp
 
 <img src="{{site.baseurl}}/LOC-2.png"/>
 
-Enough with the jokes. In all seriousness, Internationalization is the process of making your code capable of displaying different languages and adapting its display for different locales. This is also called globalization. So, some of you might be wondering what is i18n? If you look at it, between the i and n, there are 18 letters. These are called numeronyms. That’s pretty much it.
+Enough with the jokes. In all seriousness, Internationalization is the process of making your code capable of displaying different languages and adapting its display for different locales. This is also called globalization.
 
 ## B-b-but, why???
 
