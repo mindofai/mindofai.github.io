@@ -164,8 +164,17 @@ With Android, you put images inside **drawable** folders on default. You can cre
 
 <img src="{{site.baseurl}}/LOC-13.png"/>
 
-
 #### Application Name
+
+For the application name, you will need to do the same thing with values. You need to create a values-{language code} suffix and create an **XML** file called **Strings.xml** where you need to create a string with an *app_name* key under the resource. 
+
+Now, in order for us to set the title of the application, we need to go to the **MainActivity.cs** and update the **Activity** attribute's Label value to **"@string/app_name"** just like this:
+
+```csharp
+[Activity(Label = "@string/app_name", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+```
+
+
 
 If you want to try this out, I uploaded [this project to github](https://github.com/mindofai/BindablePropertyDemo). Hopefully, this can get you started with creating bindable properties. Happy coding!
 
