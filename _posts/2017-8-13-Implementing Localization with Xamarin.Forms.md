@@ -166,7 +166,11 @@ With Android, you put images inside **drawable** folders on default. You can cre
 
 #### Application Name
 
-For the application name, you will need to do the same thing with values. You need to create a values-{language code} suffix and create an **XML** file called **Strings.xml** where you need to create a string with an *app_name* key under the resource. 
+For the application name, you will need to do the same thing with values. You need to create a values-{language code} suffix and create an **XML** file (**Add > New File > Data > XML file**) called **Strings.xml** under the **drawable** folder. Inside the Strings.XML, you need to create a string with an *app_name* key under the resource. 
+
+<img src="{{site.baseurl}}/LOC-14.png"/>
+
+<img src="{{site.baseurl}}/LOC-15.png"/>
 
 Now, in order for us to set the title of the application, we need to go to the **MainActivity.cs** and update the **Activity** attribute's Label value to **"@string/app_name"** just like this:
 
@@ -174,9 +178,52 @@ Now, in order for us to set the title of the application, we need to go to the *
 [Activity(Label = "@string/app_name", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 ```
 
+### iOS Project
+
+With iOS, it's kinda different since under **Resources**, we don't have a **drawable** folder, so we'll have to create our own folders. iOS has a naming standard called *Localization Projects* or **.lproj** directories that will not only contain the images but also the strings resources. Instead of adding a suffix for the specific language code, we'll only name it using the language code itself. In my case, I have english and spanish as my two languages, so I'll create **en.lproj** and **es.proj** for English and Spanish, respectively.
+
+#### Images
+
+This is how it should look like for your images:
+
+<img src="{{site.baseurl}}/LOC-16.png"/>
+
+#### Application Name
+
+For the application name, you will need to create a **.strings** file called **InfoPList.strings** where you need to create a key value pair for the application name by adding **"CFBundleDisplayName" = "[Type the display name here]";** for both localization projects.
+
+<img src="{{site.baseurl}}/LOC-17.png"/>
+
+<img src="{{site.baseurl}}/LOC-18.png"/>
+
+Now, we just need to add an image control that will use the **flag.png** in our XAML code:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LocalizationDemo"
+             x:Class="LocalizationDemo.MainPage">
+    <StackLayout 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center">
+        <Image Source="flag" HeightRequest="100"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center"/>
+        <Button Text="{local:Translate TapThisButtonText}" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
+```
+
+If we run the app, this is how it looks like on Android and iOS:
 
 
-If you want to try this out, I uploaded [this project to github](https://github.com/mindofai/BindablePropertyDemo). Hopefully, this can get you started with creating bindable properties. Happy coding!
+And if look at the name of the application for platforms:
+
+
+So, yeah, localization it's as easy as that! If you want to try this out, I uploaded [this project to github](https://github.com/mindofai/LocalizationDemo). Hopefully, this can get you started with implementing Localization in your application. Happy coding!
 
 Reference:
 - [https://developer.xamarin.com/guides/xamarin-forms/xaml/bindable-properties/](https://developer.xamarin.com/guides/xamarin-forms/xaml/bindable-properties/)
