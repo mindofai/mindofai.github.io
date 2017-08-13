@@ -56,7 +56,7 @@ Once done with our default resource file, we can now create resource files for o
 
 You can create more if you want, but I'll only add Spanish.
 
-## Using Resx files through C#
+## Using Resx files through Csharp
 
 We can now use our resource files by just calling the AppResource class. As an example, I created a **Label** control with the text of **AppResource.WelcomeText** just inside the **App** constructor.
 
