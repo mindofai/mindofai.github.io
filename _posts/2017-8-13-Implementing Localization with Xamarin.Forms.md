@@ -226,6 +226,3 @@ And if look at the name of the application for platforms:
 <img src="{{site.baseurl}}/LOC-19.png"/>
 
 So, yeah, localization it's as easy as that! If you want to try this out, I uploaded [this project to github](https://github.com/mindofai/LocalizationDemo). Hopefully, this can get you started with implementing Localization in your application. Happy coding!
-
-Reference:
-- [https://developer.xamarin.com/guides/xamarin-forms/xaml/bindable-properties/](https://developer.xamarin.com/guides/xamarin-forms/xaml/bindable-properties/)
