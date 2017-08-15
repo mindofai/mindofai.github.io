@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Implementing Localization with Xamarin.Forms using Resx files
 author: mindofai
