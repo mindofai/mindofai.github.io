@@ -4,7 +4,7 @@ layout: post
 title: Integrating Xamarin Test Recorder and Xamarin Test Cloud
 author: mindofai
 date: 2017-08-21 12:00
-tags: [Prism, AppMap, Infragistics, Test Recorder, Realm, Custom Renderers, VSTS, .NET, September, Speakers, Speaking, Meetups, Microsoft, UWP, Xamarin, Xamarin. Forms]
+tags: [Xamarin Test Recorder, Xamarin Test Cloud, Xamarin UI.Test, iOS, Android, Automated Testing, Microsoft, UWP, Xamarin, Xamarin. Forms]
 ---
 
 
