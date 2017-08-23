@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Integrating Xamarin Test Recorder for Mac and Xamarin Test Cloud
 author: mindofai
@@ -42,11 +42,11 @@ You should first select a device to proceed with the selection of the applicatio
 After selecting the device, the dropdown for the App will be enabled. When you click the dropdown, you will see the list of the applications that you recently used for recording. But, if this is your first time, you can select ‘Open’ to browse your files and select the application. For Android, you need an .apk file, sign or unsigned, and for iOS, you need an .app file.
 
 <img src="{{site.baseurl}}/XTR-6.png"/>
+<img src="{{site.baseurl}}/XTR-62.png"/>
 
 Right after you select an application, the simulator (if you didn’t select a device) will launch instantly if it’s not already running. It’ll take less than a minute to launch the application. Once the application’s done launching, we can now start recording our automated test.
 
 ## Let’s Start Recording!
-
 
 <img src="{{site.baseurl}}/XTR-7.png"/>
 
@@ -66,7 +66,6 @@ You can even use coordinates instead of calling controls and views. Lastly, you 
 
 <img src="{{site.baseurl}}/XTR-11.png"/>
 
-<img src="{{site.baseurl}}/XTR-12.png"/>
 
  Really cool, right? Every step has a screenshot and remove button. Screenshot button allows you to take a snapshot right after executing the step. You can either enable or disable it.
  
@@ -82,7 +81,11 @@ On the right part of your Test Recorder, you can see all of the steps generated 
 
 <img src="{{site.baseurl}}/XTR-15.png"/>
 
-Once done recording all of your test’s steps, you can press the ‘Stop’ button and it will end the recording. To check if your test is working properly or you just want to see how your test looks like, you can press the ‘Run’ button to simulate the test.
+Once done recording all of your test’s steps, you can press the ‘Stop’ button and it will end the recording.
+
+<img src="{{site.baseurl}}/XTR-12.png"/>
+
+To check if your test is working properly or you just want to see how your test looks like, you can press the ‘Run’ button to simulate the test.
 
 <img src="{{site.baseurl}}/XTR-16.png"/>
 
@@ -112,7 +115,7 @@ Once you’ve logged in. There will be a two-step modal where it allows you to s
 
 <img src="{{site.baseurl}}/XTR-20.png"/>
 
-The next step allows you to select what test do you want to run. Usually, if it’s from the Xamarin Test Recorder, it’s just a single test. After selecting, you can confirm the selection and proceed to the testing.
+The next step allows you to select what test series do you want to run. Usually, if it’s from the Xamarin Test Recorder, it’s just a single test. After selecting, you can confirm the selection and proceed to the testing.
 
 <img src="{{site.baseurl}}/XTR-21.png"/>
 
