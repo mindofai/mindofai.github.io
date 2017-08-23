@@ -107,7 +107,7 @@ Lastly, you can send it to **Xamarin Test Cloud** and run your tests to thousand
 
 The fourth option is *‘Send to Test Cloud’* which will navigate you to the Xamarin Test Cloud web application when selected. If this is your first time to use Xamarin Test Cloud will ask you to login your account.
 
-<img src="{{site.baseurl}}/XTR-19.png" height="200px"/>
+<img src="{{site.baseurl}}/XTR-19.png" height="330px"/>
 
 Xamarin Test Cloud is not for free, but it has a **30-day free trial** which allows you to run your tests to three (3) devices. 
 
