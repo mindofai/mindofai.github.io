@@ -22,8 +22,6 @@ The solution is pretty quick and easy if you're using XCode (as long as you have
 
 But for Xamarin Studio, this Marketing Icon isn’t available in the App Assets yet (Welp, until now! Read 'til the end). I tried looking for a solution. It took me hours looking for a helpful fix, but I couldn't find any. So, we came up with a solution. What we did is updated the *Contents.json* under the *Assets.xcassets* and we added the settings for the Marketing Icon:
 
-<img src="{{site.baseurl}}/MI-3.png"/>
-
 ```
 {
   "size" : "1024x1024",
@@ -54,4 +52,5 @@ So, yeah, hope this helps!
 
 Reference/s:
 
-- 
+- [https://stackoverflow.com/questions/44565883/missing-marketing-icon](https://stackoverflow.com/questions/44565883/missing-marketing-icon)
+- [https://bugzilla.xamarin.com/show_bug.cgi?id=59515](https://bugzilla.xamarin.com/show_bug.cgi?id=59515)
