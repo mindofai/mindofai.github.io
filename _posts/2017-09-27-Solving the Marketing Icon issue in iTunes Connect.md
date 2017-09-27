@@ -19,7 +19,8 @@ But for Xamarin Studio, this Marketing Icon isn’t available in the App Assets 
 
 <img src="{{site.baseurl}}/MI-3.png"/>
 
-```{
+```
+   {
      "size" : "1024x1024",
      "idiom" : "ios-marketing",
      "filename" : "logo.png",
