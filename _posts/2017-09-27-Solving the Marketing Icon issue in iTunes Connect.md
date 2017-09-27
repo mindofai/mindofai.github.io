@@ -20,18 +20,18 @@ But for Xamarin Studio, this Marketing Icon isn’t available in the App Assets 
 <img src="{{site.baseurl}}/MI-3.png"/>
 
 ```
-   {
-     "size" : "1024x1024",
-     "idiom" : "ios-marketing",
-     "filename" : "logo.png",
-     "scale" : "1x"
-   }
+{
+  "size" : "1024x1024",
+  "idiom" : "ios-marketing",
+  "filename" : "logo.png",
+  "scale" : "1x"
+}
 ```
  
 This allows you to set the Marketing Icon by using the idiom *"ios-marketing"*. I’ve also added the **logo.png** image which should be **1024x1024** inside *AppIcons.xcassets*. You need to make sure that the logo.png was added inside the iOS project:
 
 ```
-       <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\logo.png"/>
+<ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\logo.png"/>
 ```
 
 After doing this, the warning will be gone. You should be able to successfully submit the binary to Apple for review and you won’t receive the warning message anymore. 
