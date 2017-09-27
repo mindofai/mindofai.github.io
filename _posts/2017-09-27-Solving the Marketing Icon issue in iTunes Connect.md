@@ -42,7 +42,7 @@ This allows you to set the Marketing Icon by using the idiom *"ios-marketing"*. 
 After doing this, the warning will be gone. You should be able to successfully submit the binary to Apple for review and you won’t receive the warning message anymore. 
 
 
-## The Better Solution :P
+## The Better Solution
 
 The funny thing here is that Visual Studio for Mac already have an update where they added the Marketing Icon into their AppIcon assets. So, you can just update your Visual Studio for Mac to **7.1.5** and make sure you already have **XCode 9**. After updating, you can check the AppIcon assets and you'll find the Marketing Icon:
 
