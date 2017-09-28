@@ -42,11 +42,11 @@ After doing this, the warning will be gone. You should be able to successfully s
 
 ## The Better Solution
 
-The funny thing here is that Visual Studio for Mac already have an update where they added the Marketing Icon into their AppIcon assets. So, you can just update your Visual Studio for Mac to **7.1.5** and make sure you already have **XCode 9**. After updating, you can check the AppIcon assets and you'll find the Marketing Icon:
+The funny thing here is that Visual Studio for Mac already had an update where they added the Marketing Icon into their AppIcon assets. So, you can just update your Visual Studio for Mac to **7.1.5** and make sure you already have **XCode 9**. After updating, you can check the AppIcon assets and you'll find the Marketing Icon:
 
 <img src="{{site.baseurl}}/MI-4.png"/>
 
-You can just set the Marketing Icon image same as how you'd do it with XCode and you're good to go. This made me slightly crazy because right after applying our fix, we saw this. But hey, this is what I expect from Microsoft! Quick fix!
+You can just set the Marketing Icon image same as how you'd do it with XCode and you're good to go. This made me slightly crazy because right after applying our fix, I found this. But hey, this is what I expect from Microsoft! Quick fixes!
 
 So, yeah, hope this helps!
 
