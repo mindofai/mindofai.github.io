@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Creating Native macOS Apps with Xamarin.Forms
 author: mindofai
