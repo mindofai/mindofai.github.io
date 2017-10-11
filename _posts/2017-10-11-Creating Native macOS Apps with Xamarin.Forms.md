@@ -37,7 +37,7 @@ You can then select *Mac > App > Cocoa App* and name it whatever you want, but i
 
 ## Second Step: Add the Xamarin.Forms NuGet Package
 
-You will have to add the Xamarin.Forms’ latest pre-release nuget package or specifically **2.4.0.280**. To do this, right click the Cocoa App project that you just created and select *Add > Add Nuget Packages*.
+You will have to add the Xamarin.Forms’ latest pre-release nuget package or specifically [**2.4.0.282**](https://www.nuget.org/packages/Xamarin.Forms/2.4.0.282). To do this, right click the Cocoa App project that you just created and select *Add > Add Nuget Packages*.
 
 <img src="{{site.baseurl}}/MAC-06.png" height="300"/>
 
