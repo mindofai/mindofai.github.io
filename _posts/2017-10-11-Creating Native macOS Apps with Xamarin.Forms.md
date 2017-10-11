@@ -7,7 +7,7 @@ date: 2017-010-11 12:00
 tags: [macOS, Cocoa App, Xamarin.Forms 3.0, Visual Studio, Mobile, iOS, Android, Xamarin, Xamarin. Forms]
 ---
 
-<img src="{{site.baseurl}}/MAC-01.png" height="300"/>
+<img src="{{site.baseurl}}/MAC-01.png"/>
 
 
 Back in .NET Conf 2017 The Xamarin team already shared what’s going to be new with **Xamarin Forms 3.0** and it actually surprised me. I was expecting some performance improvements, bug fixing and a big upgrade on XAML. But, what they announced focuses on enabling the usage of Xamarin.Forms in more ways and on more platforms. I was really hoping for XAML improvements, maybe add some cascading styling like how CSS works. Maybe sometime in the future, we’ll get it. For now, I’ll just use the [**XAMLCss by warapa**](https://github.com/warappa/XamlCSS). Anyway if you want to watch all sessions from .NET Conf 2017, you can check it out on [**Channel9**](https://channel9.msdn.com/Events/dotnetConf/2017). Going back, I really didn’t expect these new features, but definitely, I love it and really excited to try it out!
@@ -19,7 +19,7 @@ That’s why right now, I’m going to show to you one of the exciting features 
 
 One of the Xamarin team’s plan is to reach more platforms. That means UWP, iOS and Android are not only platform the Xamarin.Forms will be able to target from now on, they are also bringing **macOS, GTK#, Linux and WPF**!
 
-<img src="{{site.baseurl}}/MAC-02.png" height="300"/>
+<img src="{{site.baseurl}}/MAC-02.png" height="350"/>
 
 You might think that it will be hard and will take a lot of time to integrate your Xamarin.Forms solution into the macOS project, but it’s not. Not at all. You’ll be able to create a native macOS application using your Xamarin.Forms solution using **Visual Studio for Mac** or **Xamarin Studio** in just **3 quick steps**!
 
