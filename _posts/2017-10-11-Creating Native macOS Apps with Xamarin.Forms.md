@@ -31,9 +31,9 @@ Right now, Xamarin.Forms template doesn’t have a **Cocoa App** initially. So, 
 
 You can then select *Mac > App > Cocoa App* and name it whatever you want, but ideally, the name has a suffix of **.macOs**.
 
-<img src="{{site.baseurl}}/MAC-04.png" height="300"/>
+<img src="{{site.baseurl}}/MAC-04.png" height="500"/>
 
-<img src="{{site.baseurl}}/MAC-05.png" height="300"/>
+<img src="{{site.baseurl}}/MAC-05.png" height="500"/>
 
 ## Second Step: Add the Xamarin.Forms NuGet Package
 
@@ -43,7 +43,7 @@ You will have to add the Xamarin.Forms’ latest pre-release nuget package or sp
 
 Then, search for 'Xamarin.Forms' and make sure that the *‘Show pre-release packages’* is ticked. Click 'Add' to add Xamarin.Forms nuget package.
 
-<img src="{{site.baseurl}}/MAC-07.png" height="300"/>
+<img src="{{site.baseurl}}/MAC-07.png" height="500"/>
 
 You will also need to update the Xamarin.Forms on your shared project and the version should be the same with what the Cocoa app have.
 
@@ -52,9 +52,9 @@ You will also need to update the Xamarin.Forms on your shared project and the ve
 
 The first thing that you should do with your Cocoa app project is to add the shared project into your Cocoa app as a reference. 
 
-<img src="{{site.baseurl}}/MAC-10.png" height="300"/>
+<img src="{{site.baseurl}}/MAC-10.png" height="200"/>
 
-<img src="{{site.baseurl}}/MAC-11.png" height="300"/>
+<img src="{{site.baseurl}}/MAC-11.png" height="250"/>
 
 Then, open the Info.plist and remove the *‘Main storyboard file base name’ entry (Opened with XCode)* 
 
@@ -116,10 +116,10 @@ public override void DidFinishLaunching(NSNotification notification)
 You can now set your project as the startup project and run your macOS! 
 
 
-<img src="{{site.baseurl}}/MAC-12.png" height="350"/>
+<img src="{{site.baseurl}}/MAC-12.png" height="500"/>
 
 
-<img src="{{site.baseurl}}/MAC-13.png" height="350"/>
+<img src="{{site.baseurl}}/MAC-13.png" height="500"/>
 
 
 
