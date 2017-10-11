@@ -10,7 +10,7 @@ tags: [macOS, Cocoa App, Xamarin.Forms 3.0, Visual Studio, Mobile, iOS, Android,
 <img src="{{site.baseurl}}/XLP-1.png"/>
 
 
-The Xamarin team already shared what’s gonna be new with **Xamarin Forms 3.0** and it actually surprised me. I was expecting some performance improvements, bug fixing and a big upgrade on XAML. But, what they announced focuses on enabling  usage of Xamarin.Forms in more ways and on more platforms. I was really hoping for XAML improvements, maybe add some cascading styling like how CSS works. Maybe sometime in the future, we’ll get it. For now, I’ll just use the **[XAMLCss by warapa]**(https://github.com/warappa/XamlCSS). Going back, I really didn’t expect these new features, but I love it and really excited to try it out!
+The Xamarin team already shared what’s gonna be new with **Xamarin Forms 3.0** and it actually surprised me. I was expecting some performance improvements, bug fixing and a big upgrade on XAML. But, what they announced focuses on enabling  usage of Xamarin.Forms in more ways and on more platforms. I was really hoping for XAML improvements, maybe add some cascading styling like how CSS works. Maybe sometime in the future, we’ll get it. For now, I’ll just use the [**XAMLCss by warapa**](https://github.com/warappa/XamlCSS). Going back, I really didn’t expect these new features, but I love it and really excited to try it out!
 
 That’s why right now, I’m gonna show to you one of the exciting features added to the **Xamarin.Forms 3.0** that I think you’ll also love. I’m talking about Xamarin.Form’s **macOS** support.
 
