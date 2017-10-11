@@ -127,4 +127,4 @@ Again, in just 3 quick steps, it’s done!
 
 # Wrapping up
 
-This is just a basic walkthrough since this is still on **preview**. Expect that there are still bugs and not ready for production. Not all nuget packages are compatible and surely, there are lots of UI features still not implemented, but this is a good start. For now, you can send your issues and problems that you encounter in this forum discussion: https://forums.xamarin.com/discussion/93585/preview-xamarin-forms-for-macos/p1
+This is just a basic walkthrough since this is still on **preview**. Expect that there are still bugs and not ready for production. Not all nuget packages are compatible and surely, there are lots of UI features still not implemented, but this is a good start. For now, you can send your issues and problems that you encounter in this forum discussion: [https://forums.xamarin.com/discussion/93585/preview-xamarin-forms-for-macos/p1](https://forums.xamarin.com/discussion/93585/preview-xamarin-forms-for-macos/p1)
