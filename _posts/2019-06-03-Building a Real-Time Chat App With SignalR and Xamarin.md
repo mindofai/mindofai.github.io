@@ -69,6 +69,8 @@ You have SDKs for both the hub itself and the client.
 
 * For the client, you can connect, send and receive thru an [SDK](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client/3.0.0-preview5-19227-01). Which is available not only for .NET, but also for [JavaScript/Typescript](https://docs.microsoft.com/en-us/aspnet/core/signalr/javascript-client?view=aspnetcore-2.2), and [Java](https://docs.microsoft.com/en-us/aspnet/core/signalr/java-client?view=aspnetcore-2.2).
 
+<img src="{{site.baseurl}}/signal6.png"/>
+
 ## Trying it out!
 
 
