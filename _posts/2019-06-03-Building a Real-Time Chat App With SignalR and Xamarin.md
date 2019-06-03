@@ -195,6 +195,7 @@ And that's all that you need, once you run the app on multiple devices, you shou
 
 <img src="{{site.baseurl}}/signalrdemo.gif"/>
 
+![Alt Text]({{site.baseurl}}/signalrdemo.gif)
 
 If you want to try it out on your own, here's the source code for [the hub](https://github.com/mindofai/SignalRChat) and [the client app](https://github.com/mindofai/Build2019Chat). You can toggle the branch to get to the starting point, the basic chat, and the group chat.
 
