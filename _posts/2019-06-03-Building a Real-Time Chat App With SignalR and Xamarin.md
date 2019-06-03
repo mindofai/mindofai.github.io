@@ -76,6 +76,8 @@ You have SDKs for both the hub itself and the client.
 
 So, the hub is basically the backend service where your user subscribes, listens, and sends messages/data. To build this, all you need to do is to create a new ASP.NET Core Web App. Then you just have to include the SignalR namespace to use it in your code:
 
+
+```
 using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
@@ -92,41 +94,57 @@ namespace SignalRChat.Hubs
         }
     }
 }
+```
+
 
 This code right here is the Hub itself.
 
-The SendMessage handles all of the messages sent to the "SendMessage" which will then send the message to anyone who's actively listening to "ReceiveMessage". This is all you need for the hub, but you still have to configure something on your ASP.NET Core Web App.
+The SendMessage handles all of the messages sent to the `SendMessage` which will then send the message to anyone who's actively listening to `ReceiveMessage`. This is all you need for the hub, but you still have to configure something on your ASP.NET Core Web App.
 
-Open the Startup.cs and at the end of "ConfigureServices" method, add this line of code:
+Open the Startup.cs and at the end of `ConfigureServices` method, add this line of code:
 
+
+```
 services.AddSignalR();
+```
+
 
 Then on the "Configure" method, add this block of code right before UseMvc:
 
+
+```
 app.UseSignalR(routes =>
 {
     routes.MapHub<ChatHub>("/chatHub");
 });
+```
 
-NOTE: Please disable app.UseHttpsRedirection(); under the "Configure" method when testing in on the mobile app locally.
+
+NOTE: Please disable `app.UseHttpsRedirection();` under the `Configure` method when testing in on the mobile app locally.
 
 That's all you need to do! Your hub is done! Now the next thing that you need to build is the client app.
 
 
 ### Integrating the Hub to your Xamarin App
 
-First things first, you need to download and install this NuGet package on all your projects (iOS, Android, Windows, and the shared code)
+First things first, you need to download and install [this NuGet package]() on all your projects *(iOS, Android, Windows, and the shared code)*
 
 Once it's installed, you can now use the client SDK. Now it's time to code!
 
 You can now create the hub connection by configuring the URL where it will connect. You can run the hub locally or you can publish it on Azure.
 
+
+```
  hubConnection = new HubConnectionBuilder()
         .WithUrl("{https://yoururlhere.com or ip:port or localhost:port" + "/chatHub")
         .Build();
+ ```
+
 
 Once done with the configuration, we can start the connection. Connecting is basically listening to the hub. You also have a disconnect functionality that stops the device from listening to it.
 
+
+```
         async Task Connect()
         {
             await hubConnection.StartAsync();
@@ -135,32 +153,41 @@ Once done with the configuration, we can start the connection. Connecting is bas
         {
             await hubConnection.StopAsync();
         }
+```
+
 
 Now, we can start sending and receiving messages.
 
 
 ### Sending Messages to the Hub
 
-You can send messages thru SendAsync or InvokeAsync (the difference is the InvokeAsync returns some success/failed response). See code below:
+You can send messages thru `SendAsync` or `InvokeAsync` *(the difference is the InvokeAsync returns some success/failed response)*. See code below:
 
+
+```
 async Task SendMessage(string user, string message)
         {
             await hubConnection.InvokeAsync("SendMessage", user, message);
         }
+```
+        
+        
 
-Basically, what's happening here is we're sending a message thru a key named "SendMessage" and it will look for a hub method on our hub that matches it. If you remember, we have a SendMessage method on the Hub that we created earlier. Then, we're just passing in two data, the name of the user and the text message.
+Basically, what's happening here is we're sending a message thru a key named `SendMessage` and it will look for a hub method on our hub that matches it. If you remember, we have a SendMessage method on the Hub that we created earlier. Then, we're just passing in two data, the name of the user and the text message.
 
 ### Receiving Messages from the Hub
 
-This is as easy as setting up a listen function on your code using the 'On' method. When this method is fired, that means a message was sent to whatever you're listening on. In this example, we're listening to "ReceiveMessage". Now, when you receive something from the hub, this is the time where you update something on your UI or just basically do something that you need to do.
+This is as easy as setting up a listen function on your code using the `On` method. When this method is fired, that means a message was sent to whatever you're listening on. In this example, we're listening to `ReceiveMessage`. Now, when you receive something from the hub, this is the time where you update something on your UI or just basically do something that you need to do.
 
 
+```
 hubConnection.On<string,string>("ReceiveMessage", (user, message) =>
             {
            //do something on your UI maybe?
             });
+```
 
 
 And that's all that you need, once you run the app on multiple devices, you should now be able to connect to the hub, send and receive messages to/from other devices!
 
-If you want to try it out on your own, here's the source code for the hub and the client app. You can toggle the branch to get to the starting point, the basic chat, and the group chat.
+If you want to try it out on your own, here's the source code for [the hub]() and [the client app](). You can toggle the branch to get to the starting point, the basic chat, and the group chat.
