@@ -22,6 +22,8 @@ Real-time apps are basically apps where you get the data on demand. An example o
 
 Well, you can always integrate your app with WebSockets or some sort of push notifications to receive the data as it is sent. However, Microsoft has this thing called SignalR. It’s a service and framework made by Microsoft to enable you to build real-time applications from your backend to your frontend.
 
+<img src="{{site.baseurl}}/signal5.png"/>
+
 ## How does SignalR work?
 
 Basically, there’s this SignalR hub, and this hub is processing all of the communication to and from your clients. (If you've heard of 'Hub' in networking terms, it works exactly the same as that!) 
@@ -29,24 +31,21 @@ Basically, there’s this SignalR hub, and this hub is processing all of the com
 
 So, a common scenario is we send want to send out a notification to anyone that is listening. 
 
-<img src="{{site.baseurl}}/signal3.png"/>
+<img src="{{site.baseurl}}/signal3.png" height="150"/>
 
 Another scenario here is that when one of the clients sends out a message to the SignalR service backend, it will be received by everyone who’s subscribed to a specific ID. So, this might be familiar to you guys. This is a scenario that is used for chatrooms.
 
 
-<img src="{{site.baseurl}}/signal4.png"/>
+<img src="{{site.baseurl}}/signal4.png" height="150"/>
 
 ## So, SignalR...
 
-Automatically Handles Connections
-
-Sends messages simultaneously to:
-All connected clients
-Group of specific clients
-
-Scales to handle increasing traffic
-
-Transports to WebSockets, Server-Sent Events, and Long-Polling.
+* Automatically Handles Connections
+* Sends messages simultaneously to:
+⋅⋅* All connected clients
+⋅⋅* Group of specific clients
+* Scales to handle increasing traffic
+* Transports to WebSockets, Server-Sent Events, and Long-Polling.
 
 ## SignalR SDKs
 
