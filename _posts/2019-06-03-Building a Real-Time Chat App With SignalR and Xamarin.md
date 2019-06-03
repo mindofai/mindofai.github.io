@@ -65,8 +65,8 @@ Another scenario here is that when one of the clients sends out a message to the
 * Automatically Handles Connections
 
 * Sends messages simultaneously to:
-.. * All connected clients
-.. * Group of specific clients
+    * All connected clients
+    * Group of specific clients
 
 * Scales to handle increasing traffic
 
