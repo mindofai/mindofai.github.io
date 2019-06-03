@@ -13,14 +13,20 @@ Years ago, I was thinking about making my own chat app and I always think that b
 
 
 
+
 ## So what is a 'real-time' app?
+
 
 
 Real-time apps are basically apps where you get the data on demand. An example of this is a *MOBA* or *"Multiplayer online battle arena"*. Basically, when you're playing with your friend; when you move your character on your device, your character should move on his/her device as well, simultaneously, because again, it should happen **REAL TIME**. 
 
 And of course, another example of that is a chatroom. In a chatroom, when you send a message, it should be received by everyone **at the same time and as soon as possible**.
 
+
+
+
 <img src="{{site.baseurl}}/signal2.png"/>
+
 
 
 ## How can I create a 'real-time' app?
@@ -31,7 +37,11 @@ Well, you can always integrate your app with WebSockets or some sort of push not
 <img src="{{site.baseurl}}/signal5.png"/>
 
 
+
+
 ## How does SignalR work?
+
+
 
 
 Basically, there’s this SignalR hub, and this hub is processing all of the communication to and from your clients. *(If you've heard of 'Hub' in networking terms, it works exactly the same as that!)*
@@ -43,7 +53,11 @@ So, a common scenario is we send want to send out a notification to anyone that 
 Another scenario here is that when one of the clients sends out a message to the SignalR service backend, it will be received by everyone who’s subscribed to a specific ID. So, this might be familiar to you guys. This is a scenario that is used for chatrooms.
 
 
+
+
 <img src="{{site.baseurl}}/signal4.png" width="450"/>
+
+
 
 
 ## So, SignalR...
@@ -51,8 +65,8 @@ Another scenario here is that when one of the clients sends out a message to the
 * Automatically Handles Connections
 
 * Sends messages simultaneously to:
-..* All connected clients
-..* Group of specific clients
+.. * All connected clients
+.. * Group of specific clients
 
 * Scales to handle increasing traffic
 
@@ -63,6 +77,7 @@ Another scenario here is that when one of the clients sends out a message to the
 ## SignalR SDKs
 
 
+
 You have SDKs for both the hub itself and the client.
 
 * For the hub, you can always use ASP.NET Core and SignalR library is readily available for you. You can just use the `Microsoft.AspNetCore.SignalR` namespace and it’s good to go. There’s also this Azure SignalR Service, but we're not gonna discuss it here.
@@ -71,7 +86,12 @@ You have SDKs for both the hub itself and the client.
 
 <img src="{{site.baseurl}}/signal6.png"/>
 
+
+
+
 ## Trying it out!
+
+
 
 
 ### Creating the Hub
@@ -193,9 +213,9 @@ hubConnection.On<string,string>("ReceiveMessage", (user, message) =>
 And that's all that you need, once you run the app on multiple devices, you should now be able to connect to the hub, send and receive messages to/from other devices!
 
 
+
 <img src="{{site.baseurl}}/signalrdemo.gif"/>
 
-![Alt Text]({{site.baseurl}}/signalrdemo.gif)
 
 If you want to try it out on your own, here's the source code for [the hub](https://github.com/mindofai/SignalRChat) and [the client app](https://github.com/mindofai/Build2019Chat). You can toggle the branch to get to the starting point, the basic chat, and the group chat.
 
