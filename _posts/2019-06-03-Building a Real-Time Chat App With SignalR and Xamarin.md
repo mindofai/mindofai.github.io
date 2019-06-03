@@ -43,7 +43,7 @@ So, a common scenario is we send want to send out a notification to anyone that 
 Another scenario here is that when one of the clients sends out a message to the SignalR service backend, it will be received by everyone who’s subscribed to a specific ID. So, this might be familiar to you guys. This is a scenario that is used for chatrooms.
 
 
-<img src="{{site.baseurl}}/signal4.png" width="250"/>
+<img src="{{site.baseurl}}/signal4.png" width="450"/>
 
 
 ## So, SignalR...
@@ -67,7 +67,7 @@ You have SDKs for both the hub itself and the client.
 
 * For the hub, you can always use ASP.NET Core and SignalR library is readily available for you. You can just use the `Microsoft.AspNetCore.SignalR` namespace and it’s good to go. There’s also this Azure SignalR Service, but we're not gonna discuss it here.
 
-* For the client, you can connect, send and receive thru an [SDK](). Which is available not only for .NET, but also for JavaScript/Typescript, and Java.
+* For the client, you can connect, send and receive thru an [SDK](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client/3.0.0-preview5-19227-01). Which is available not only for .NET, but also for [JavaScript/Typescript](https://docs.microsoft.com/en-us/aspnet/core/signalr/javascript-client?view=aspnetcore-2.2), and [Java](https://docs.microsoft.com/en-us/aspnet/core/signalr/java-client?view=aspnetcore-2.2).
 
 ## Trying it out!
 
@@ -127,7 +127,7 @@ That's all you need to do! Your hub is done! Now the next thing that you need to
 
 ### Integrating the Hub to your Xamarin App
 
-First things first, you need to download and install [this NuGet package]() on all your projects *(iOS, Android, Windows, and the shared code)*
+First things first, you need to download and install [this NuGet package](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client/3.0.0-preview5-19227-01) on all your projects *(iOS, Android, Windows, and the shared code)*
 
 Once it's installed, you can now use the client SDK. Now it's time to code!
 
