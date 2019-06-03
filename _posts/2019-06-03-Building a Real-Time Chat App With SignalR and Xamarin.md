@@ -190,4 +190,9 @@ hubConnection.On<string,string>("ReceiveMessage", (user, message) =>
 
 And that's all that you need, once you run the app on multiple devices, you should now be able to connect to the hub, send and receive messages to/from other devices!
 
-If you want to try it out on your own, here's the source code for [the hub]() and [the client app](). You can toggle the branch to get to the starting point, the basic chat, and the group chat.
+
+<img src="{{site.baseurl}}/signalrdemo.gif"/>
+
+
+If you want to try it out on your own, here's the source code for [the hub](https://github.com/mindofai/SignalRChat) and [the client app](https://github.com/mindofai/Build2019Chat). You can toggle the branch to get to the starting point, the basic chat, and the group chat.
+
