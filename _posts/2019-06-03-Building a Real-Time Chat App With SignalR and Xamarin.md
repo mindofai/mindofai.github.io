@@ -38,12 +38,12 @@ Basically, there’s this SignalR hub, and this hub is processing all of the com
 
 So, a common scenario is we send want to send out a notification to anyone that is listening. 
 
-<img src="{{site.baseurl}}/signal3.png" height="250"/>
+<img src="{{site.baseurl}}/signal3.png" width="450"/>
 
 Another scenario here is that when one of the clients sends out a message to the SignalR service backend, it will be received by everyone who’s subscribed to a specific ID. So, this might be familiar to you guys. This is a scenario that is used for chatrooms.
 
 
-<img src="{{site.baseurl}}/signal4.png" height="250"/>
+<img src="{{site.baseurl}}/signal4.png" width="250"/>
 
 
 ## So, SignalR...
