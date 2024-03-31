@@ -1,4 +1,4 @@
-  ---
+---
 published: true
 layout: post
 title: Azure Messaging Services Why, When, and How?
