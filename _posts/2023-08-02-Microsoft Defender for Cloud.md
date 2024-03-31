@@ -3,7 +3,7 @@ published: true
 layout: post
 title: What is Microsoft Defender for Cloud?
 author: mindofai
-date: 2023-07-21 12:00
+date: 2023-08-02 12:00
 tags: [Azure, Security, Microsoft Defender, Microsoft, Cloud]
 ---
 
