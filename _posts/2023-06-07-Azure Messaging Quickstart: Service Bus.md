@@ -6,7 +6,8 @@ author: mindofai
 date: 2023-06-07 12:00
 tags: [Azure, Messaging, Integration, Events, Service Bus]
 ---
-# Azure Messaging Services: Why, When, and How?
+
+<img src="{{site.baseurl}}/MS_1.png"/>
 
 ## Introduction
 
@@ -14,17 +15,22 @@ Welcome to my blog post on Azure Messaging Services! In this article, I'll delve
 
 ## Why Messaging?
 
-Before we dive into the specifics, let's address the fundamental question: Why messaging? In the era of microservices and serverless architecture, messaging plays a crucial role in enabling reliable communication between systems. Whether it's passing commands, notifications, or events, messaging ensures seamless interaction and facilitates the development of distributed applications.
+Firstly, it's essential to address why we need these messaging services. At a basic level, you might not actually need them. If you're building a small application with a single client, API, and database, messaging might not be necessary. However, messaging becomes invaluable when you have distributed applications, such as microservices or serverless applications, that need to communicate seamlessly. While REST APIs are excellent for retrieving data and sending requests, messaging is the solution for non-blocking, loosely-coupled communication between applications or services.
 
 ## Understanding Messaging Terminology
 
-To start off, let's familiarize ourselves with some key terms in messaging:
+Before we delve into specific services, let's familiarize ourselves with some key messaging terms:
 
-- **Command**: An instruction from one system to another, such as order placement.
-- **Notification**: A lightweight message indicating a change of state in the system.
-- **Event**: Data representing an occurrence or state change, often used in event-driven architectures.
+- **Message**: Essentially an instruction or command sent from one system to another.
+- **Event**: Similar to a message but more about broadcasting that something happened, rather than expecting an action.
+- **Producer**: The sender of messages or events.
+- **Consumer**: The receiver of messages or events.
+- **Broker**: The intermediary service responsible for handling and routing messages or events.
+- **Event-driven Architecture**: A design approach focused on building distributed applications that communicate via events or messages.
 
 ## Azure Storage Queue
+
+<img src="{{site.baseurl}}/MS_2.png"/>
 
 ### Why Use It?
 
@@ -45,6 +51,8 @@ To start off, let's familiarize ourselves with some key terms in messaging:
 
 ## Azure Service Bus
 
+<img src="{{site.baseurl}}/MS_3.png"/>
+
 ### Why Use It?
 
 - Offers high reliability and scalability.
@@ -63,6 +71,8 @@ To start off, let's familiarize ourselves with some key terms in messaging:
 - Alternatively, interact via AMQP for low-level consumption.
 
 ## Azure Event Hub
+
+<img src="{{site.baseurl}}/MS_4.png"/>
 
 ### Why Use It?
 
@@ -83,6 +93,8 @@ To start off, let's familiarize ourselves with some key terms in messaging:
 
 ## Azure Event Grid
 
+<img src="{{site.baseurl}}/MS_5.png"/>
+
 ### Why Use It?
 
 - Seamless integration with Azure services.
@@ -102,6 +114,8 @@ To start off, let's familiarize ourselves with some key terms in messaging:
 
 ## Azure Notification Hub
 
+<img src="{{site.baseurl}}/MS_6.png"/>
+
 ### Why Use It?
 
 - Efficient for sending push notifications to mobile apps.
@@ -120,6 +134,8 @@ To start off, let's familiarize ourselves with some key terms in messaging:
 - Client-side support for Xamarin, React Native, etc.
 
 ## Azure SignalR Service
+
+<img src="{{site.baseurl}}/MS_7.png"/>
 
 ### Why Use It?
 
@@ -153,6 +169,16 @@ When selecting a messaging service, consider your specific requirements:
 In conclusion, Azure offers a wide array of messaging services tailored to various use cases. By understanding the strengths and limitations of each service, you can effectively leverage them to enhance your applications' communication capabilities.
 
 ## Further Exploration
+
+References:
+
+- **Storage Queue**: [Get started with Azure Storage Queue using .NET](https://bit.ly/3pU7R4q)
+- **Service Bus**: [Get started with Azure Service Bus using .NET](https://bit.ly/3AyHnKP)
+- **Event Hub**: [Send and receive messages with Azure Event Hub using .NET](https://bit.ly/3AAx6hm)
+- **Event Grid**: [Send an event grid event using Azure Function trigger](https://bit.ly/3AWM2aL)
+- **SignalR Service**: [Quickstart: Learn how to use Azure SignalR Service](https://bit.ly/3R3MMkf)
+- **Notification Hub**: [Send push notifications to Android devices using Firebase SDK](https://bit.ly/3RoV3Pd)
+
 
 If you have any questions or wish to explore specific topics further, feel free to reach out to me:
 
