@@ -1,4 +1,4 @@
-![image](https://github.com/mindofai/mindofai.github.io/assets/18261468/f437bc50-1703-4b05-b630-a94162cc8aae)---
+---
 published: true
 layout: post
 title: Azure Cosmos DB Quickstart - Managing Azure Cosmos DB Security, Access Control, Backup, and Restore
