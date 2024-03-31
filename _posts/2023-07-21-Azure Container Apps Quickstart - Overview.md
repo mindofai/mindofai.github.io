@@ -91,8 +91,6 @@ One of the standout features of Azure Container Apps is its fully-managed Dapr i
 
 By incorporating fully-managed Dapr, Azure Container Apps empowers developers to focus more on writing code that matters rather than getting bogged down by the complexities of microservices architecture and communication. This offering stands as a testament to Azure's commitment to simplifying cloud-native application development and management.
 
-
-
 ## Further Exploration
 
 References:
