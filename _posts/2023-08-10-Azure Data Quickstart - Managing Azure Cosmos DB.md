@@ -43,12 +43,12 @@ Azure Cosmos DB offers three throughput offerings:
 
 <img src="{{site.baseurl}}/DB-5.png"/>
 
-3. **Provisioned throughput (autoscale):** Automatically adjusts provisioned throughput based on workload demand, offering cost-effective scalability.
+2. **Provisioned throughput (autoscale):** Automatically adjusts provisioned throughput based on workload demand, offering cost-effective scalability.
    
 <img src="{{site.baseurl}}/DB-6.png"/>
 
 
-5. **Serverless:** Consumption-based model where users pay only for the RUs consumed, ideal for unpredictable workloads.
+3. **Serverless:** Consumption-based model where users pay only for the RUs consumed, ideal for unpredictable workloads.
 
 <img src="{{site.baseurl}}/DB-7.png"/>
 
@@ -80,5 +80,3 @@ If you have any questions or wish to explore specific topics further, feel free 
 - bryananthonygarcia@live.com
 
 Thank you for reading!
-
-
