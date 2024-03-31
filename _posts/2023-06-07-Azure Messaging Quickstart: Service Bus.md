@@ -1,4 +1,4 @@
----
+  ---
 published: true
 layout: post
 title: Azure Messaging Services Why, When, and How?
@@ -182,6 +182,8 @@ References:
 
 If you have any questions or wish to explore specific topics further, feel free to reach out to me:
 
-- Bryan Anthony Garcia: @mindofai | bryananthonygarcia@live.com
+- Bryan Anthony Garcia
+- @mindofai
+- bryananthonygarcia@live.com
 
 Thank you for reading!
