@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title:  Azure Cosmos DB Quickstart - Managing Azure Cosmos DB cont'd (Data Migration with Azure Data Factory)
+title:  Azure Cosmos DB Quickstart - Azure Cosmos DB Data Migration with Azure Data Factory
 author: mindofai
 date: 2023-09-03 12:00
 tags: [Azure, CosmosDB, Data, Data Factory, ETL, ELT, Migration]
