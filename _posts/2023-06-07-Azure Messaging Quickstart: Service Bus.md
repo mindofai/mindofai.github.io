@@ -7,7 +7,7 @@ date: 2023-06-07 12:00
 tags: [Azure, Messaging, Integration, Events, Service Bus]
 ---
 
-<img src="{{site.baseurl}}/MS_1.png"/>
+<img src="{{site.baseurl}}/MS-1.png"/>
 
 ## Introduction
 
@@ -30,7 +30,7 @@ Before we delve into specific services, let's familiarize ourselves with some ke
 
 ## Azure Storage Queue
 
-<img src="{{site.baseurl}}/MS_2.png"/>
+<img src="{{site.baseurl}}/MS-2.png"/>
 
 ### Why Use It?
 
@@ -51,7 +51,7 @@ Before we delve into specific services, let's familiarize ourselves with some ke
 
 ## Azure Service Bus
 
-<img src="{{site.baseurl}}/MS_3.png"/>
+<img src="{{site.baseurl}}/MS-3.png"/>
 
 ### Why Use It?
 
@@ -72,7 +72,7 @@ Before we delve into specific services, let's familiarize ourselves with some ke
 
 ## Azure Event Hub
 
-<img src="{{site.baseurl}}/MS_4.png"/>
+<img src="{{site.baseurl}}/MS-4.png"/>
 
 ### Why Use It?
 
@@ -93,7 +93,7 @@ Before we delve into specific services, let's familiarize ourselves with some ke
 
 ## Azure Event Grid
 
-<img src="{{site.baseurl}}/MS_5.png"/>
+<img src="{{site.baseurl}}/MS-5.png"/>
 
 ### Why Use It?
 
@@ -114,7 +114,7 @@ Before we delve into specific services, let's familiarize ourselves with some ke
 
 ## Azure Notification Hub
 
-<img src="{{site.baseurl}}/MS_6.png"/>
+<img src="{{site.baseurl}}/MS-6.png"/>
 
 ### Why Use It?
 
@@ -135,7 +135,7 @@ Before we delve into specific services, let's familiarize ourselves with some ke
 
 ## Azure SignalR Service
 
-<img src="{{site.baseurl}}/MS_7.png"/>
+<img src="{{site.baseurl}}/MS-7.png"/>
 
 ### Why Use It?
 
