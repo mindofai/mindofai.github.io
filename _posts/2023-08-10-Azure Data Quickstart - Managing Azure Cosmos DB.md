@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Azure Data Quickstart - Managing Azure Cosmos DB
+title:  Azure Cosmos DB Quickstart - Managing Azure Cosmos DB
 author: mindofai
 date: 2023-08-10 12:00
 tags: [Azure, Database, Document, Cosmos, DB, NoSql]
