@@ -6,7 +6,6 @@ author: mindofai
 date: 2023-07-21 12:00
 tags: [Azure, Security, Microsoft Defender, Microsoft, Cloud]
 ---
- # Exploring Microsoft Defender for Cloud: A Comprehensive Guide
 
 <img src="{{site.baseurl}}/MDC-1.png"/>
 
