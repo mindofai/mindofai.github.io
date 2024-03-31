@@ -64,10 +64,21 @@ Enabling global distribution in Azure Cosmos DB allows for the replication of da
 
 <img src="{{site.baseurl}}/DB-10.png"/>
 
+By effectively managing Azure Cosmos DB's performance, throughput, and global distribution, organizations can leverage its capabilities to build highly scalable and responsive applications tailored to their specific requirements.
+
 ## Additional Resources
 
 - [Azure Cosmos DB Capacity Calculator](https://cosmos.azure.com/capacitycalculator/)
 - [Microsoft Docs: Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/)
 - [Microsoft Learn: Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/)
 
-By effectively managing Azure Cosmos DB's performance, throughput, and global distribution, organizations can leverage its capabilities to build highly scalable and responsive applications tailored to their specific requirements.
+
+If you have any questions or wish to explore specific topics further, feel free to reach out to me:
+
+- Bryan Anthony Garcia
+- @mindofai
+- bryananthonygarcia@live.com
+
+Thank you for reading!
+
+
