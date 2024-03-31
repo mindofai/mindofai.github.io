@@ -25,7 +25,6 @@ So, my understanding of Kubernetes is this. It's like diving into this crazy wor
 
 Kubernetes abstracts container orchestration, but its operational complexity can deter adoption. However, not all hope is lost! Enter Azure Container Apps: a service designed to streamline container deployment, provisioning, and management, while minimizing operational overhead.
 
-<img src="{{site.baseurl}}/ACA-6.png"/>  
 
 ## Azure Container Apps Overview
 
@@ -46,13 +45,13 @@ While Azure Container Apps harnesses Kubernetes' power, it abstracts the complex
 
 ## Container Apps vs Other Azure Container Options
 
-<img src="{{site.baseurl}}/ACA-7.png"/>  
+<img src="{{site.baseurl}}/ACA-6.png"/>  
 
 Azure Container Apps sits at the intersection of simplicity and control, offering a managed Kubernetes experience without the need for direct API access. It's a compelling alternative to traditional Kubernetes deployment models, such as Azure Kubernetes Service (AKS), Azure Container Instances (ACI), and Azure Virtual Machines with Kubernetes.
 
 ### Scenarios for Usage:
 
-<img src="{{site.baseurl}}/ACA-8.png"/>  
+<img src="{{site.baseurl}}/ACA-7.png"/>  
 
 - API endpoints
 - Background processing
@@ -62,15 +61,37 @@ Azure Container Apps sits at the intersection of simplicity and control, offerin
 
 ## Environments & Containers
 
-<img src="{{site.baseurl}}/ACA-9.png"/>  
+<img src="{{site.baseurl}}/ACA-8.png"/>  
 
 Environments in Azure Container Apps serve as isolation boundaries for container apps. These environments encapsulate collections of container apps and support the deployment of multiple active or inactive container revisions. Containers within environments are based on Linux and support various development stacks.
 
 ## Pricing
 
-<img src="{{site.baseurl}}/ACA-10.png"/>  
+<img src="{{site.baseurl}}/ACA-9.png"/>  
 
 Azure Container Apps follows a consumption-based pricing model similar to Azure Functions. You only pay for resources when they're utilized, with generous free usage tiers available for experimentation and development.
+
+## Fully-managed DAPR!
+
+One of the standout features of Azure Container Apps is its fully-managed Dapr integration. Dapr, or the Distributed Application Runtime, is an open-source project that simplifies building microservices. Dapr offers a variety of building blocks, such as service invocation, state management, pub/sub messaging, and more. These capabilities are designed to tackle common challenges in cloud-native application development.
+
+<img src="{{site.baseurl}}/ACA-10.png"/>  
+
+### Why Dapr Matters:
+
+- **Simplifies Microservices Development:** Dapr offers consistent patterns and building blocks that developers can use across multiple applications and platforms.
+- **Platform Agnostic:** It works across cloud and edge, providing flexibility in where you deploy your applications.
+- **Community and Ecosystem:** Being open source, Dapr benefits from contributions and support from a wide community, continually enhancing its features and usability.
+
+### Advantages of Fully-Managed Dapr in Azure Container Apps:
+
+- **Ease of Use:** With Dapr fully managed within Azure Container Apps, developers get to leverage its benefits without the overhead of managing its infrastructure.
+- **Integration:** Seamlessly integrates with Azure services and other cloud environments, providing a robust ecosystem for your microservices.
+- **Scalability and Reliability:** Dapr components are designed to scale seamlessly with your applications, ensuring high availability and reliability.
+
+By incorporating fully-managed Dapr, Azure Container Apps empowers developers to focus more on writing code that matters rather than getting bogged down by the complexities of microservices architecture and communication. This offering stands as a testament to Azure's commitment to simplifying cloud-native application development and management.
+
+
 
 ## Further Exploration
 
