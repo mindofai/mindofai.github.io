@@ -28,6 +28,7 @@ Before we delve into specific services, let's familiarize ourselves with some ke
 - **Consumer**: The receiver of messages or events.
 - **Broker**: The intermediary service responsible for handling and routing messages or events.
 - **Event-driven Architecture**: A design approach focused on building distributed applications that communicate via events or messages.
+
 ## Azure Event Hub
 
 <img src="{{site.baseurl}}/MS-4.png"/>
