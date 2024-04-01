@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Azure Container Quickstart - Overview
+title: Azure Container Apps Quickstart - Overview
 author: mindofai
 date: 2023-07-21 12:00
 tags: [Azure, Container Apps, Kubernetes, ACA, Cloud]
