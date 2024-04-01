@@ -95,7 +95,7 @@ References:
 - [Azure Event Hubs Documentation](https://docs.microsoft.com/en-us/azure/event-hubs/)
 - [Azure Blob Storage Documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/)
 - [Azure Event Hubs Pricing](https://azure.microsoft.com/en-us/pricing/details/event-hubs/)
-- 
+  
 If you have any questions or wish to explore specific topics further, feel free to reach out to me:
 
 - Bryan Anthony Garcia
