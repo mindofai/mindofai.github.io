@@ -76,11 +76,13 @@ And it’s not easy to handle, coz there are multiple producers maybe coming fro
 
 <img src="{{site.baseurl}}/CE-7.png"/>
 
-For me, that’s a problem that needs some fixing. So yeah, in conclusion, you have to work on new handlers for each event format and having to deal with new handler for each event formats and newly introduced ones? Not good.
+For me, that’s a problem that needs some fixing. So yeah, in conclusion:
+
+<img src="{{site.baseurl}}/CE-8.png"/>
 
 ## Introducing CloudEvents
 
-<img src="{{site.baseurl}}/CE-8.png"/>
+<img src="{{site.baseurl}}/CE-9.png"/>
 
 CloudEvents is a standardized format designed to address the challenges of event data interoperability. Developed by the Cloud Native Computing Foundation (CNCF), CloudEvents provides a common schema for describing event data, ensuring consistency, accessibility, and portability across diverse environments.
 
@@ -92,13 +94,13 @@ So, why cloud events? It’s because events are everywhere. The best thing they 
 
 As I’ve mentioned, CloudEvents is just mainly specifications. That’s mainly it. It standardizes the event format by providing a core specification and the good thing about it is it supports all these protocols. 
 
-<img src="{{site.baseurl}}/CE-9.png"/>
+<img src="{{site.baseurl}}/CE-10.png"/>
 
 CloudEvents have bindings to support JSON, HTTP, AMQP, Kafka, Websockets and more to maximize cross-platform interopability.
 
 ### CloudEvents Core Spec sample
 
-<img src="{{site.baseurl}}/CE-10.png"/>
+<img src="{{site.baseurl}}/CE-11.png"/>
 
 So this is the core specifications of a CloudEvent schema. Nothing special here, right? Just a normal schema, and that’s by design. Mainly because they wanted it to have flexible event semantics. You can easily adjust. So it was purposely made to be dumb, but in reality, this is bare minimum that works for most if not all event formats out there. So there are two parts here. 
 
@@ -108,23 +110,23 @@ And ofcourse we have the actual data that needs to be sent and processed by the 
 
 ### CloudEvents HTTP Binding Spec sample
 
-<img src="{{site.baseurl}}/CE-11.png"/>
+<img src="{{site.baseurl}}/CE-12.png"/>
 
 If we are to use the http protocol, let’s say we’re sending an event and we want it to abide with the CloudEvent specs. We need to put the context metadata into request headers with the prefix **ce-**. Then we put the data into the body.
 
 ## Implementing CloudEvents
 
-<img src="{{site.baseurl}}/CE-12.png"/>
+<img src="{{site.baseurl}}/CE-13.png"/>
 
 Here's a simple implementation by David Barkol to help you get started with Cloudevents [here](https://madeofstrings.com/2018/05/06/publish-and-consume-events-with-cloudevents-and-azure-event-grid/).
 
 Additionally, if you want to handle legacy producers, this is what it would most likely look like:
 
-<img src="{{site.baseurl}}/CE-13.png"/>
+<img src="{{site.baseurl}}/CE-14.png"/>
 
 ## Conclusion
 
-<img src="{{site.baseurl}}/CE-14.png"/>
+<img src="{{site.baseurl}}/CE-15.png"/>
 
 By adopting CloudEvents and leveraging Azure Event Grid, organizations can build highly interoperable and scalable event-driven systems. Standardizing event formats with CloudEvents promotes consistency, accessibility, and portability, enabling seamless communication and integration across diverse environments. With the power of CloudEvents, .NET, and Azure, you can architect event-driven solutions that drive innovation and business agility.
 
