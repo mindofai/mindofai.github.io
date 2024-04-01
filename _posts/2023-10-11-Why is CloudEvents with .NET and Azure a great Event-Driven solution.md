@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Why is CloudEvents with .NET and Azure Event Grid a great Event-Driven solution?
 author: mindofai
-date: 2023-10-11 12:00
+date: 2024-02-11 12:00
 tags: [Azure, CloudEvents, Event Grid, Events, Messaging, .NET, Event-driven]
 ---
 
