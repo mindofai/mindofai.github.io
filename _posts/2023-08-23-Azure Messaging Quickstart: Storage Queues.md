@@ -7,7 +7,8 @@ date: 2023-08-23 12:00
 tags: [Azure, Messaging, Storage Queue, Integration, Events, Service Bus]
 ---
 
-## Introduction
+<img src="{{site.baseurl}}/SQ.png"/>
+
 
 Welcome to my blog post on Azure Messaging Services! In these articles, I'll delve into the intricacies of various messaging solutions offered by Azure, exploring why and when you should use them, and how to make the most out of each service.
 
@@ -49,17 +50,56 @@ Before we delve into specific services, let's familiarize ourselves with some ke
 - Supported by various SDKs.
 - Accessible via standard HTTP with SAS Token/Shared Key.
 
+## Creating a Storage Queue in Azure
+
+Creating a Storage Queue in Azure is a straightforward process. Follow these steps to set up your Storage Queue using the Azure portal:
+
+**Step 1: Sign in to the Azure Portal**
+Navigate to the [Azure Portal](https://portal.azure.com/) and sign in with your Azure account credentials.
+
+**Step 2: Create a Storage Account**
+If you haven't already created a Storage Account, follow these steps:
+
+- Click on the "Create a resource" button (+) in the Azure portal.
+- Search for "Storage account" and select it from the results.
+- Click on the "Create" button.
+- Fill in the required details for your Storage Account, such as subscription, resource group, storage account name, location, and performance.
+- Click on the "Review + create" button and then "Create" to provision the Storage Account.
+
+**Step 3: Navigate to Storage Account**
+Once your Storage Account is created, navigate to it by selecting it from the list of resources in the Azure portal.
+
+**Step 4: Create a Queue**
+Within your Storage Account, locate the "Queues" option in the left-hand menu under the "Data storage" section.
+
+- Click on "Queues" to view existing queues or create a new one.
+- Click on the "+ Queue" button to create a new queue.
+- Enter a unique name for your queue.
+- Optionally, configure additional settings such as metadata and access policies.
+- Click on the "Create" button to create the queue.
+
+**Step 5: Access and Manage Your Queue**
+Once your queue is created, you can start using it to send and receive messages. You can manage your queue settings, monitor queue metrics, and configure access policies as needed.
+
+To get the connection string for your Storage Queue, follow these steps:
+
+- Navigate to your Storage Account in the Azure portal.
+- Under "Settings," select "Access keys."
+- Copy the connection string from either of the two key options provided.
+
+Congratulations! You have successfully created a Storage Queue in Azure.
+
 ## Sample code
 
-Here's the link to the sample .NET code for Storage Queues: [https://github.com/mindofai/StorageQueueDemo](https://github.com/mindofai/StorageQueueDemo/)
+Here's the link to the sample .NET code for Storage Queues. You can paste the copied connection string on the connectionString field: [https://github.com/mindofai/StorageQueueDemo](https://github.com/mindofai/StorageQueueDemo/)
 
+You should be able to test sending messages using storage queues. I sugges you add breakpoints, so you'll see the message lifecycle on a Storage Queue.
 
 ## Further Exploration
 
 References:
 
 - **Storage Queue**: [Get started with Azure Storage Queue using .NET](https://bit.ly/3pU7R4q)
-
 
 If you have any questions or wish to explore specific topics further, feel free to reach out to me:
 
