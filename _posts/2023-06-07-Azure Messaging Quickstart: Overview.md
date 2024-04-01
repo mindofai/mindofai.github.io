@@ -11,7 +11,7 @@ tags: [Azure, Messaging, Integration, Events, Service Bus]
 
 ## Introduction
 
-Welcome to my blog post on Azure Messaging Services! In this article, I'll delve into the intricacies of various messaging solutions offered by Azure, exploring why and when you should use them, and how to make the most out of each service. I'm Bryan Anthony Garcia, Senior Developer at XAM, and I'll guide you through the essentials.
+Welcome to my blog post on Azure Messaging Services! In this article, I'll delve into the intricacies of various messaging solutions offered by Azure, exploring why and when you should use them, and how to make the most out of each service.
 
 ## Why Messaging?
 
