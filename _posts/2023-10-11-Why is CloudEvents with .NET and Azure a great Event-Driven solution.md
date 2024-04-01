@@ -116,7 +116,7 @@ If we are to use the http protocol, let’s say we’re sending an event and we 
 
 <img src="{{site.baseurl}}/CE-12.png"/>
 
-Here's a simple implementation by David Barkol to help you get started with Cloudevents: https://madeofstrings.com/2018/05/06/publish-and-consume-events-with-cloudevents-and-azure-event-grid/
+Here's a simple implementation by David Barkol to help you get started with Cloudevents [here](https://madeofstrings.com/2018/05/06/publish-and-consume-events-with-cloudevents-and-azure-event-grid/).
 
 Additionally, if you want to handle legacy producers, this is what it would most likely look like:
 
