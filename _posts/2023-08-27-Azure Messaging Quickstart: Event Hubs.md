@@ -84,9 +84,9 @@ Congratulations! You have successfully created an Event Hub and connected it to 
 
 ## Sample code
 
-Here's the link to the sample .NET code for Storage Queues. You can paste the copied connection string on the connectionString field: (https://github.com/mindofai/EventHubDemo)[https://github.com/mindofai/EventHubDemo]
+Here's the link to the sample .NET code for Event Grid. You can paste the copied event hub connection string on the event hub connection string and the blob storage connection string field: (https://github.com/mindofai/EventHubDemo)[https://github.com/mindofai/EventHubDemo]
 
-You should be able to test sending events using event hub and blob storage. I sugges you add breakpoints, so you'll see the events lifecycle on an Event Hub.
+You should be able to test sending events using event hub and blob storage. I suggest you add breakpoints, so you'll see the events lifecycle on an Event Hub.
 
 ## Further Exploration
 
