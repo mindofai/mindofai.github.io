@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Azure Messaging Services Quickstart - Event Hubs
 author: mindofai
-date: 2023-08-23 12:00
+date: 2023-08-27 12:00
 tags: [Azure, Messaging, Event Hub, Storage Account, Blob, Integration, Events, Service Bus]
 ---
 
