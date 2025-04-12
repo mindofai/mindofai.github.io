@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Azure Virtual Desktop (AVD): Revolutionizing Remote Work and Hybrid Environments
+title: Azure Virtual Desktop (AVD) - Revolutionizing Remote Work and Hybrid Environments
 author: bryananthonygarcia
 date: 2024-07-27 12:00
 tags: [Azure, Virtual Desktop, AVD, Remote Work, Hybrid Work, Cloud, VDI]
