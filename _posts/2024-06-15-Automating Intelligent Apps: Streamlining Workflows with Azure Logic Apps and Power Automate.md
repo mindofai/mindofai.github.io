@@ -1,9 +1,9 @@
 ---
 published: true
 layout: post
-title: Automating Intelligent Apps: Streamlining Workflows with Azure Logic Apps and Power Automate
+title: Automating Intelligent Apps with Streamlining Workflows with Azure Logic Apps and Power Automate
 author: bryananthonygarcia
-date: 2024-04-25 12:00
+date: 2024-06-15 12:00
 tags: [Azure, Logic Apps, Power Automate, Automation, Intelligent Apps, Workflow, Cloud]
 ---
 
