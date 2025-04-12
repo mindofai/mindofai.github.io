@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Handling Real-Time Data with Azure: Building Data-Driven Intelligent Apps
+title: Handling Real-Time Data with Azure Building Data-Driven Intelligent Apps
 author: bryananthonygarcia
 date: 2024-06-10 12:00
 tags: [Azure, Real-Time Data, Data Analytics, Azure Synapse, Azure SQL, Event Grid, Intelligent Apps]
