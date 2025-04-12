@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Azure Durable Functions for Event-Driven Serverless Workflows
 author: bryananthonygarcia
-date: 2024-01-23 12:00
+date: 2025-01-23 12:00
 tags: [Azure, Durable Functions, Serverless, Event-Driven, Cloud, Azure Functions, Orchestration]
 ---
 
