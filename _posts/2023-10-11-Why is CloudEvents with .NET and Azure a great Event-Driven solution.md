@@ -1,100 +1,142 @@
 ---
 published: true
 layout: post
-title: Why Azure Intelligent Apps are Essential for Modern Cloud-Native Solutions
-author: bryananthonygarcia
-date: 2024-05-14 12:00
-tags: [Azure, Intelligent Apps, Cloud, AI, Machine Learning, .NET, Cloud-Native]
+title: Why is CloudEvents with .NET and Azure Event Grid a great Event-Driven solution?
+author: mindofai
+date: 2024-02-11 12:00
+tags: [Azure, CloudEvents, Event Grid, Events, Messaging, .NET, Event-driven]
 ---
 
-<img src="{{site.baseurl}}/azure-intelligent-apps-banner.jpg"/>
+<img src="{{site.baseurl}}/CE-1.png"/>
 
-Today, we’ll dive into how Azure Intelligent Apps are transforming modern application development by embedding artificial intelligence, machine learning, and real-time data processing. Whether you are a developer or an architect, understanding how to leverage Azure’s powerful AI and data services will help you create intelligent apps that deliver amazing user experiences.
+Today, we'll explore how you can leverage CloudEvents, Azure services, and the .NET framework to architect robust and scalable event-driven applications. But before we dive into the technical details, let's first understand the concept of events and why CloudEvents play a crucial role in modern event-driven architectures.
 
-## What Are Azure Intelligent Apps?
+## What are Events?
 
-Azure Intelligent Apps are applications that integrate AI and machine learning into their core functionality. These apps use data-driven insights, real-time processing, and automation to provide users with smarter, personalized experiences. Built on top of Azure’s robust cloud infrastructure, intelligent apps are scalable, flexible, and secure.
+Before we talk about CloudEvents, let me give you a bit of a refresher of what event-driven architecture is, by starting off with events. 
 
-### Key Features of Azure Intelligent Apps
+So events are a notification that something happened. A change of state. As an example in real world. Maybe, a light was turned on. From a state of a turned off light, to a turned on light, a football match has just finished, or a baby was born. These are all events.
 
-- **AI-Powered Insights**: Use Azure AI services like Cognitive Services, Custom Vision, and Azure Machine Learning to integrate predictive and real-time insights.
-- **Real-Time Data Processing**: With Azure's cloud-native data solutions like Azure SQL Database and Azure Synapse Analytics, intelligent apps process large datasets efficiently.
-- **Personalized Experiences**: Build apps that learn from user behaviors and adapt to their needs using Azure's personalization models.
-- **Automation**: Use Azure Logic Apps and Power Automate to automate workflows and decision-making processes within your applications.
+Now, in the tech world, you might hear of things like:
 
-<img src="{{site.baseurl}}/azure-intelligent-apps-ai.jpg"/>
+- A button was pressed
+- A file was uploaded
+- The data has been updated
 
-## Why Are Azure Intelligent Apps Important?
+All these are events. It says that something happened. A change of state.
 
-### 1. **Enhanced User Experience**
+So, that means that an Event-Driven Architecture is…
 
-Azure Intelligent Apps enable developers to create more interactive, dynamic, and personalized user experiences. For example, retail apps can offer personalized shopping recommendations, while healthcare apps can provide real-time diagnostic suggestions.
+## Event-Driven Architecture
 
-### 2. **Automation of Repetitive Tasks**
+Event-driven architecture is a design approach centered around event data. It enables distributed applications to react to these events in real-time, facilitating seamless communication and coordination between various components. This architecture is commonly employed in modern applications built with microservices, enabling agility and scalability.
 
-One of the most significant advantages of intelligent apps is the automation of tasks that would otherwise require manual input. Azure’s machine learning models and cognitive services can reduce human error, optimize workflows, and increase operational efficiency.
+Anyway, there are three key players of an event-driven system. One of them is the event producer.
 
-### 3. **Scalability and Flexibility**
+### Event Producers
 
-Azure’s cloud infrastructure ensures that your intelligent apps can scale as needed, whether you're serving a handful of users or millions. The flexibility provided by Azure allows developers to start with minimal resources and scale as demand increases, without worrying about the underlying infrastructure.
+<img src="{{site.baseurl}}/CE-2.png"/>
 
-<img src="{{site.baseurl}}/azure-intelligent-apps-scaling.jpg"/>
+So, what it does is it produces the event data. As for our first example, let’s say we have an Arduino IoT that’s used to monitor the weather. It produces the coordinates, time, and the weather details, etc. And the other is when users use an application, when a user navigates from one page to another, we’ll see patterns from the event data sent on every navigation. These event producers don’t expect anything, though. They will send the data, but that’s just what they do. To send, they don’t care if anyone receives it or not. That’s it’s only job.
 
-## How to Build an Azure Intelligent App
+### Event Consumers
 
-### Step 1: **Set Up Your Azure Environment**
+<img src="{{site.baseurl}}/CE-3.png"/>
 
-Start by setting up your Azure subscription if you don’t already have one. You can sign up for a free trial if you are just starting. 
+On the other end is the consumer. What the event consumer does is it handles the event data sent by a event producer. It can act on whatever the event data wants it to do, or just create a report from it. Maybe something that visualizes all the event data sent or whatever. The thing with event consumers and producers is that they’re not partners. There can be multiple producers and there can also be multiple consumers.
 
-- [Sign up for a free Azure account](https://azure.microsoft.com/free/)
-- Create a project in Azure DevOps for CI/CD or GitHub for continuous integration.
+So, okay we have this on both ends, so what’s in the middle? Who does all the facilitating?
 
-### Step 2: **Leverage AI and Machine Learning**
+### Event Brokers
 
-Azure provides a wide range of services to add intelligence to your app:
+<img src="{{site.baseurl}}/CE-4.png"/>
 
-- **Azure Cognitive Services**: Use pre-built APIs to add capabilities such as speech recognition, image analysis, and natural language processing.
-- **Azure Machine Learning**: Build custom machine learning models for more advanced, personalized experiences.
-- **Azure Bot Services**: Develop intelligent chatbots to interact with users in real-time.
+It’s the event broker. It is the module that decouples both producer and consumer. It is responsible for receiving, validating, retaining, and routing the events sent by the producer to the appropriate consumer.
 
-<img src="{{site.baseurl}}/azure-cognitive-services.jpg"/>
+There are lots of event brokers out there and they have different capabilities, but we’re reppin Microsoft and they got exactly what we need here and it’s called Azure Event Grid.
 
-### Step 3: **Process Real-Time Data**
 
-Intelligent apps rely heavily on data. Azure’s powerful data services can help process and analyze data in real-time:
+## Azure Event Grid: A Fully-Managed Event Routing Service
 
-- **Azure SQL Database**: Managed relational database service with built-in AI and performance optimization.
-- **Azure Synapse Analytics**: Integrate big data analytics into your applications.
-- **Azure Data Lake Storage**: Store and manage large datasets for deep analytics.
+<img src="{{site.baseurl}}/CE-5.png"/>
 
-### Step 4: **Automate Workflows**
+Azure Event Grid is a fully-managed event routing service that supports both Azure and non-Azure services. It operates on a pub-sub model, allowing seamless event consumption across environments. Azure Event Grid provides built-in event connectors for Azure services and supports custom event models, offering flexibility and scalability.
 
-Azure Logic Apps and Power Automate can automate everything from simple notifications to complex decision-making processes, making your app smarter and more efficient.
+## Challenges in Event-Driven Systems
 
-## Real-World Applications of Azure Intelligent Apps
+While event-driven architectures offer numerous benefits, managing event data across hybrid, edge, and multi-cloud environments poses significant challenges. Events often traverse multiple stages and use different protocols, requiring complex handling and integration.
 
-- **Healthcare**: Apps that predict patient outcomes, assist with diagnosis, or track medical conditions.
-- **Retail**: Personalized shopping experiences that provide recommendations based on past behavior.
-- **Finance**: Fraud detection and predictive analytics to assist in investment strategies.
+<img src="{{site.baseurl}}/CE-6.png"/>
 
-<img src="{{site.baseurl}}/azure-healthcare-app.jpg"/>
+For this example, we got data coming from an IoT and that sends out data to an IoT gateway, then to the broker, functions, and then finally a datalake and stream analytics that eventually creates a visualization report.
+
+So, you can see that the event data goes thru a lot. It goes thru a lot of componentry and middleware, and it may be transported thru different protocols. The pain here is that on each of these blue boxes, we have to cater these protocols and event data. It has to understand the syntax of the data coming across.
+
+And it’s not easy to handle, coz there are multiple producers maybe coming from multiple cloud providers producing multiple events with multiple formats, and there’s little to no commonality.
+
+<img src="{{site.baseurl}}/CE-7.png"/>
+
+For me, that’s a problem that needs some fixing. So yeah, in conclusion:
+
+<img src="{{site.baseurl}}/CE-8.png"/>
+
+## Introducing CloudEvents
+
+<img src="{{site.baseurl}}/CE-9.png"/>
+
+CloudEvents is a standardized format designed to address the challenges of event data interoperability. Developed by the Cloud Native Computing Foundation (CNCF), CloudEvents provides a common schema for describing event data, ensuring consistency, accessibility, and portability across diverse environments.
+
+So, why cloud events? It’s because events are everywhere. The best thing they could’ve done is to make it easier for us to deal with events. Here are 3 main reasons why:
+
+- **Consistency** - The lack of a common way of describing events means developers have to write new event handling logic for each event source.
+- **Accessibility** - No common event format means no common libraries, tooling, and infrastructure for delivering event data across environments.
+- **Portability** - The portability and productivity we can achieve from event data is hindered overall.
+
+As I’ve mentioned, CloudEvents is just mainly specifications. That’s mainly it. It standardizes the event format by providing a core specification and the good thing about it is it supports all these protocols. 
+
+<img src="{{site.baseurl}}/CE-10.png"/>
+
+CloudEvents have bindings to support JSON, HTTP, AMQP, Kafka, Websockets and more to maximize cross-platform interopability.
+
+### CloudEvents Core Spec sample
+
+<img src="{{site.baseurl}}/CE-11.png"/>
+
+So this is the core specifications of a CloudEvent schema. Nothing special here, right? Just a normal schema, and that’s by design. Mainly because they wanted it to have flexible event semantics. You can easily adjust. So it was purposely made to be dumb, but in reality, this is bare minimum that works for most if not all event formats out there. So there are two parts here. 
+
+First is the context metadata, it’s in the name, it provides context to the event data. The specversion, the event type, the source, the subject, time, etc. and even the content type which can by xml, json, or whatever.
+
+And ofcourse we have the actual data that needs to be sent and processed by the target handler.
+
+### CloudEvents HTTP Binding Spec sample
+
+<img src="{{site.baseurl}}/CE-12.png"/>
+
+If we are to use the http protocol, let’s say we’re sending an event and we want it to abide with the CloudEvent specs. We need to put the context metadata into request headers with the prefix **ce-**. Then we put the data into the body.
+
+## Implementing CloudEvents
+
+<img src="{{site.baseurl}}/CE-13.png"/>
+
+Here's a simple implementation by David Barkol to help you get started with Cloudevents [here](https://madeofstrings.com/2018/05/06/publish-and-consume-events-with-cloudevents-and-azure-event-grid/).
+
+Additionally, if you want to handle legacy producers, this is what it would most likely look like:
+
+<img src="{{site.baseurl}}/CE-14.png"/>
 
 ## Conclusion
 
-Azure Intelligent Apps combine the power of AI, real-time data processing, and cloud scalability to create applications that are smarter, more efficient, and better at meeting user needs. By leveraging Azure's rich ecosystem of services, developers can build highly scalable, intelligent applications that stand out in the competitive tech landscape.
+<img src="{{site.baseurl}}/CE-15.png"/>
 
-Start building your own Azure Intelligent App today, and harness the full power of the cloud to deliver cutting-edge solutions to your users.
-
----
+By adopting CloudEvents and leveraging Azure Event Grid, organizations can build highly interoperable and scalable event-driven systems. Standardizing event formats with CloudEvents promotes consistency, accessibility, and portability, enabling seamless communication and integration across diverse environments. With the power of CloudEvents, .NET, and Azure, you can architect event-driven solutions that drive innovation and business agility.
 
 ## Additional Resources
 
-- [Azure Cognitive Services Overview](https://learn.microsoft.com/en-us/azure/cognitive-services/)
-- [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/)
-- [Azure Bot Services](https://learn.microsoft.com/en-us/azure/bot-services/)
-- [Azure Synapse Analytics](https://learn.microsoft.com/en-us/azure/synapse-analytics/)
+- [Azure Event Grid Overview]([https://cosmos.azure.com/capacitycalculator/](https://learn.microsoft.com/en-us/azure/event-grid/overview))
+- [Cloud Event Specifications](https://github.com/cloudevents/spec)
+- [Azure Event Grid CloudEvents Demo](https://github.com/justinyoo/azure-event-grid-cloudevents-sample)
 
-Feel free to reach out to me for more insights and discussions:
+If you have any questions or wish to explore specific topics further, feel free to reach out to me:
 
 - Bryan Anthony Garcia
 - @mindofai
