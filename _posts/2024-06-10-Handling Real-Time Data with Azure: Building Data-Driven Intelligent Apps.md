@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Handling Real-Time Data with Azure Building Data-Driven Intelligent Apps
+title: Handling Real-Time Data with Azure with Building Data-Driven Intelligent Apps
 author: bryananthonygarcia
 date: 2024-06-10 12:00
 tags: [Azure, Real-Time Data, Data Analytics, Azure Synapse, Azure SQL, Event Grid, Intelligent Apps]
@@ -31,18 +31,67 @@ Azure offers a variety of tools to process real-time data efficiently and at sca
 
 Azure SQL Database is a fully managed relational database service that supports real-time data processing. With features like in-memory OLTP (Online Transaction Processing), automatic tuning, and scaling, it can handle real-time transactional workloads and analytical queries without compromising performance.
 
+#### Example Use Case:
+An e-commerce app can store user purchase data in Azure SQL Database and use it to provide personalized product recommendations in real time.
+
+```csharp
+using (var connection = new SqlConnection(connectionString))
+{
+    connection.Open();
+    var command = new SqlCommand("SELECT * FROM Orders WHERE OrderDate = @today", connection);
+    command.Parameters.AddWithValue("@today", DateTime.Today);
+    var reader = command.ExecuteReader();
+    while (reader.Read())
+    {
+        Console.WriteLine(reader["OrderID"]);
+    }
+}
+```
 
 ### 2. **Azure Synapse Analytics for Real-Time Analytics**
 
 Azure Synapse Analytics is a cloud-based analytics platform that integrates big data and data warehousing capabilities. By combining data lakes, data warehouses, and real-time analytics, Synapse enables developers to query, visualize, and analyze data at scale.
 
+#### Example Use Case:
+In a financial app, real-time market data can be ingested into Azure Synapse to provide up-to-the-minute analysis of stock prices, portfolio performance, and risk assessment.
+
+```sql
+-- Sample real-time data query in Synapse Analytics
+SELECT TOP 10 StockSymbol, Price, Volume
+FROM StockMarketData
+WHERE Timestamp > DATEADD(MINUTE, -5, GETDATE())
+ORDER BY Timestamp DESC;
+```
+
 ### 3. **Azure Event Grid for Event-Driven Data**
 
 Azure Event Grid allows you to build event-driven architectures by enabling your apps to react to changes in real time. It supports multiple event sources like Azure services, custom events, and third-party services, and routes these events to event handlers like Azure Functions or Logic Apps.
 
+#### Example Use Case:
+You can use Event Grid to trigger an Azure Function whenever a new file is uploaded to Azure Blob Storage, processing the file and updating the app with new content.
+
+```csharp
+public static async Task Run(EventGridEvent eventGridEvent, ILogger log)
+{
+    var fileName = eventGridEvent.Data.ToObjectFromJson<BlobCreatedEventData>().Url;
+    log.LogInformation($"New file uploaded: {fileName}");
+}
+```
+
 ### 4. **Azure Stream Analytics for Real-Time Data Streams**
 
 Azure Stream Analytics is a fully managed real-time analytics service that ingests and processes streaming data from various sources like IoT devices, social media, or financial markets. It can deliver real-time insights with low latency, which is crucial for applications that need instant data analysis.
+
+#### Example Use Case:
+For an IoT app, you can use Azure Stream Analytics to process temperature sensor data in real time and trigger alerts if the temperature crosses a predefined threshold.
+
+```sql
+-- Sample Stream Analytics query
+SELECT DeviceId, Temperature, EventTime
+INTO AlertOutput
+FROM IoTDataStream
+WHERE Temperature > 80
+```
 
 ## How to Build a Real-Time Data Processing Pipeline
 
