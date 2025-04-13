@@ -24,8 +24,6 @@ In this post, we’ll explore how to automate processes within intelligent apps 
 - **Connect to External Services**: Integrate with hundreds of third-party services like Salesforce, Office 365, Google Services, and more.
 - **Trigger Actions**: Automatically trigger actions in your app or other services based on events or conditions.
 
-<img src="{{site.baseurl}}/azure-automation.jpg"/>
-
 ## Benefits of Automation in Intelligent Apps
 
 ### 1. **Increased Efficiency**
@@ -122,8 +120,6 @@ Imagine you're building a customer support app that receives tickets from users.
 5. **Action 3**: If the ticket hasn’t been updated for 24 hours, Logic Apps sends a reminder to the support team.
 
 This end-to-end automation streamlines the support process, ensuring that tickets are addressed efficiently and customers are kept informed.
-
-<img src="{{site.baseurl}}/customer-support-automation.jpg"/>
 
 ## Conclusion
 
