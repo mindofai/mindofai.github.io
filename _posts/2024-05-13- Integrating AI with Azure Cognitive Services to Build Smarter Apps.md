@@ -21,7 +21,6 @@ Azure Cognitive Services are a set of cloud-based APIs, SDKs, and services that 
 - **Language**: Understand and analyze text, detect languages, and use models like Text Analytics and Language Understanding (LUIS).
 - **Decision**: Enable apps to make informed decisions using services like Personalizer and Content Moderator.
 
-<img src="{{site.baseurl}}/azure-cognitive-services-ai.jpg"/>
 
 ## How to Leverage Cognitive Services in Your Intelligent App
 
