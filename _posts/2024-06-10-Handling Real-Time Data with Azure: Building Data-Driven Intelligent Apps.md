@@ -21,8 +21,6 @@ Real-time data enables apps to respond to changes as they happen, making them sm
 - **Predictive Insights**: Deliver real-time predictions and forecasts based on current data.
 - **Operational Efficiency**: Detect issues early and take corrective actions without delay.
 
-<img src="{{site.baseurl}}/azure-real-time-data-analytics.jpg"/>
-
 ## Key Azure Services for Real-Time Data Processing
 
 Azure offers a variety of tools to process real-time data efficiently and at scale:
@@ -119,8 +117,6 @@ A smart city app that monitors traffic patterns in real time could use Azure's r
 2. **Data Processing**: **Stream Analytics** analyzes the data and detects heavy traffic.
 3. **Event Handling**: **Event Grid** triggers an alert to the app, informing users of the traffic jam.
 4. **Action**: **Azure Functions** send a real-time notification to users advising them of alternative routes.
-
-<img src="{{site.baseurl}}/real-time-monitoring.jpg"/>
 
 ## Conclusion
 
