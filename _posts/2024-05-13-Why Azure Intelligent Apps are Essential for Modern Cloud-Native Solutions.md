@@ -38,7 +38,6 @@ One of the most significant advantages of intelligent apps is the automation of 
 
 Azure’s cloud infrastructure ensures that your intelligent apps can scale as needed, whether you're serving a handful of users or millions. The flexibility provided by Azure allows developers to start with minimal resources and scale as demand increases, without worrying about the underlying infrastructure.
 
-<img src="{{site.baseurl}}/azure-intelligent-apps-scaling.jpg"/>
 
 ## How to Build an Azure Intelligent App
 
@@ -56,8 +55,6 @@ Azure provides a wide range of services to add intelligence to your app:
 - **Azure Cognitive Services**: Use pre-built APIs to add capabilities such as speech recognition, image analysis, and natural language processing.
 - **Azure Machine Learning**: Build custom machine learning models for more advanced, personalized experiences.
 - **Azure Bot Services**: Develop intelligent chatbots to interact with users in real-time.
-
-<img src="{{site.baseurl}}/azure-cognitive-services.jpg"/>
 
 ### Step 3: **Process Real-Time Data**
 
@@ -77,7 +74,6 @@ Azure Logic Apps and Power Automate can automate everything from simple notifica
 - **Retail**: Personalized shopping experiences that provide recommendations based on past behavior.
 - **Finance**: Fraud detection and predictive analytics to assist in investment strategies.
 
-<img src="{{site.baseurl}}/azure-healthcare-app.jpg"/>
 
 ## Conclusion
 
