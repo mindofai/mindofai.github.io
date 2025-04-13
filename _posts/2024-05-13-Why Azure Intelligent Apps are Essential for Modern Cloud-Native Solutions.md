@@ -22,8 +22,6 @@ Azure Intelligent Apps are applications that integrate AI and machine learning i
 - **Personalized Experiences**: Build apps that learn from user behaviors and adapt to their needs using Azure's personalization models.
 - **Automation**: Use Azure Logic Apps and Power Automate to automate workflows and decision-making processes within your applications.
 
-<img src="{{site.baseurl}}/azure-intelligent-apps-ai.jpg"/>
-
 ## Why Are Azure Intelligent Apps Important?
 
 ### 1. **Enhanced User Experience**
