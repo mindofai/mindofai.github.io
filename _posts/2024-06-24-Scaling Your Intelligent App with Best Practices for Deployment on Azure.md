@@ -23,7 +23,6 @@ By leveraging **Azure's scalable cloud infrastructure**, you can ensure that you
 - **Cost Efficiency**: Pay only for the resources you use, scaling up or down as needed to match demand.
 - **Resilience**: Distribute workloads across multiple servers or regions to ensure high availability.
 
-<img src="{{site.baseurl}}/azure-scaling-cloud.jpg"/>
 
 ## Key Azure Services for Scaling Intelligent Apps
 
@@ -119,8 +118,6 @@ Imagine you're building an e-commerce app that experiences significant traffic f
 4. **Azure Monitor**: Continuously monitor the performance and set up alerts for anomalies (e.g., high CPU usage or failed transactions).
 
 This approach ensures that the app remains fast, responsive, and available, even as demand increases.
-
-<img src="{{site.baseurl}}/global-ecommerce-scaling.jpg"/>
 
 ## Conclusion
 
