@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Designing Scalable AI Systems in Azure (Performance, Cost, and Reliability)
 author: bryananthonygarcia
-date: 2025-01-25 12:00
+date: 2026-01-25 12:00
 tags: [Azure, AI, Architecture, Cloud, Scalability, Performance, Cost, Reliability]
 ---
 
