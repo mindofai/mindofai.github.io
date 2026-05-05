@@ -7,8 +7,6 @@ date: 2026-01-25 12:00
 tags: [Azure, AI, Architecture, Cloud, Scalability, Performance, Cost, Reliability]
 ---
 
-# Designing Scalable AI Systems in Azure (Performance, Cost, and Reliability)
-
 Over the past few blogs, we’ve covered a lot.
 
 - Azure Front Door  
