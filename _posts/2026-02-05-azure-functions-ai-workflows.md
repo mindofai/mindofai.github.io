@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Using Azure Functions for AI Workflows (When It Works and When It Doesn’t)
 author: bryananthonygarcia
-date: 2025-02-05 12:00
+date: 2026-02-05 12:00
 tags: [Azure, Functions, AI, Serverless, Cloud, Architecture, Event-Driven]
 ---
 
