@@ -7,7 +7,7 @@ date: 2026-02-05 12:00
 tags: [Azure, Functions, AI, Serverless, Cloud, Architecture, Event-Driven]
 ---
 
-# Using Azure Functions for AI Workflows (When It Works and When It Doesn’t)
+<img src="{{site.baseurl}}/2026-02-05.png"/>
 
 Azure Functions is usually the first thing people reach for when building event-driven systems in Azure.
 
@@ -31,7 +31,7 @@ It allows you to:
 
 This makes it a great candidate for AI workflows.
 
-![Functions Overview](./images/functions-overview.png)
+<img src="{{site.baseurl}}/2026-02-05-1.png"/>
 
 ## When It Works Really Well
 
@@ -52,7 +52,7 @@ This pattern works really well because:
 - You only pay for execution  
 - It integrates easily with messaging  
 
-![Event Driven AI](./images/functions-event-ai.png)
+<img src="{{site.baseurl}}/2026-02-05-2.png"/>
 
 ### 2. Short-Lived AI Tasks
 
@@ -100,7 +100,7 @@ You might hit execution time limits.
 
 Even with Durable Functions, this can get messy.
 
-![Long Running Tasks](./images/functions-long-running.png)
+<img src="{{site.baseurl}}/2026-02-05-3.png"/>
 
 ### 2. Cold Starts
 
@@ -158,7 +158,7 @@ Sometimes the best solution is combining services:
 - Functions → event handling  
 - Container Apps → heavy AI processing  
 
-![Hybrid Architecture](./images/functions-hybrid.png)
+<img src="{{site.baseurl}}/2026-02-05-4.png"/>
 
 ## A Simple Decision Guide
 
