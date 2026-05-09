@@ -7,7 +7,7 @@ date: 2026-01-31 12:00
 tags: [Azure, AI, Architecture, Patterns, Azure AI Foundry, Cloud, Messaging]
 ---
 
-# Common Azure AI Patterns I Actually Use in Real Projects
+<img src="{{site.baseurl}}/2026-01-31.png"/>
 
 AI is powerful, but most of the value doesn’t come from the models themselves.
 
@@ -36,7 +36,7 @@ This works well because:
 - It scales easily  
 - It removes manual work  
 
-![Event AI Action](./images/pattern-event-ai-action.png)
+<img src="{{site.baseurl}}/2026-01-31-1.png"/>
 
 ## Pattern 2: API → AI → Response
 
@@ -60,7 +60,7 @@ But be careful:
 - It introduces latency  
 - It can get expensive at scale  
 
-![API AI Response](./images/pattern-api-ai.png)
+<img src="{{site.baseurl}}/2026-01-31-2.png"/>
 
 ## Pattern 3: Batch → AI → Insights
 
@@ -82,7 +82,7 @@ This is useful when:
 - Real-time is not required  
 - You want to control costs  
 
-![Batch AI](./images/pattern-batch-ai.png)
+<img src="{{site.baseurl}}/2026-01-31-3.png"/>
 
 ## Pattern 4: Stream → AI → Analytics
 
@@ -102,7 +102,7 @@ This pattern is powerful, but:
 - More complex to build  
 - Requires careful scaling  
 
-![Stream AI](./images/pattern-stream-ai.png)
+<img src="{{site.baseurl}}/2026-01-31-4.png"/>
 
 ## Pattern 5: AI as an Enrichment Layer
 
@@ -120,7 +120,7 @@ Example:
 
 This is one of the safest ways to introduce AI.
 
-![AI Enrichment](./images/pattern-ai-enrichment.png)
+<img src="{{site.baseurl}}/2026-01-31-5.png"/>
 
 ## Pattern 6: AI + Messaging (Decoupled Intelligence)
 
@@ -142,7 +142,7 @@ Example:
 
 This is one of my go-to patterns.
 
-![AI Messaging](./images/pattern-ai-messaging.png)
+<img src="{{site.baseurl}}/2026-01-31-6.png"/>
 
 ## Choosing the Right Pattern
 
