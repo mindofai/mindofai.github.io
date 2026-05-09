@@ -45,7 +45,7 @@ Azure Front Door is responsible for routing requests based on:
 
 Instead of exposing multiple domains, everything goes through Front Door and gets routed internally.
 
-![Azure Front Door Architecture](./images/2025-07-23-1.png)
+<img src="{{site.baseurl}}/2025-07-23-1.png"/>
 
 ## Routing Strategy
 
@@ -62,7 +62,7 @@ For example:
 
 This works well for most cases and is the foundation of the routing.
 
-![Routing Configuration](./images/2025-07-23-2.png)
+<img src="{{site.baseurl}}/2025-07-23-2.png"/>
 
 ### 2. Handling Authenticated Users
 
@@ -84,7 +84,7 @@ If it does not:
 
 This allows the same URL to behave differently depending on the user state.
 
-![Header-Based Routing](./images/2025-07-23-3.png)
+<img src="{{site.baseurl}}/2025-07-23-3.png"/>
 
 ### 3. Marketing Access for Logged-In Users
 
@@ -114,9 +114,9 @@ When accessed via the Front Door domain `example.com`, I started getting CORS er
 
 **Fix:**
 - Make sure all assets and API calls use the Front Door domain  
-- Avoid hardcoded staging URLs in WordPress  
-
-![CORS Error Example](./images/2025-07-23-4.png)
+- Avoid hardcoded staging URLs in WordPress
+-  
+<img src="{{site.baseurl}}/2025-07-23-4.png"/>
 
 ### 2. Staging URLs Leaking
 
@@ -159,7 +159,7 @@ If not, API calls might accidentally go to WordPress.
 - Always define specific routes first  
 - Keep `/*` as the fallback  
 
-![Route Order](./images/2025-07-23-5.png)
+<img src="{{site.baseurl}}/2025-07-23-5.png"/>
 
 ## Key Takeaways
 
