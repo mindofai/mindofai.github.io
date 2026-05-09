@@ -3,7 +3,7 @@ published: true
 layout: post
 title: When to Use Azure Container Apps for AI Workloads (Instead of Functions)
 author: bryananthonygarcia
-date: 2026-06-11 12:00
+date: 2026-03-11 12:00
 tags: [Azure, Container Apps, AI, Cloud, Architecture, Serverless, Microservices]
 ---
 
