@@ -8,8 +8,6 @@ tags: [Azure, Front Door, Architecture, Cloud, Web, Routing, DevOps]
 ---
 <img src="{{site.baseurl}}/2025-07-23.png"/>
 
-# What Actually Happens When You Put WordPress and an App Behind Azure Front Door
-
 I recently worked on a setup where I had to serve both a marketing site and an authenticated application under the same domain. Sounds simple at first, but once you start implementing it using Azure Front Door, you’ll quickly realize there are a lot of moving parts.
 
 In this blog, I’ll walk through what actually happens in this kind of setup, the decisions you need to make, and some of the real issues I encountered along the way.
