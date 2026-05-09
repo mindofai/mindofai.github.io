@@ -7,7 +7,7 @@ date: 2025-07-30 12:00
 tags: [Azure, Front Door, Routing, Cloud, Architecture, DevOps]
 ---
 
-# Azure Front Door Routing Rules Explained (Without the Confusion)
+<img src="{{site.baseurl}}/2025-07-30.png"/>
 
 Azure Front Door routing looks simple on the surface. You define some paths, point them to origins, and you're done.
 
@@ -56,7 +56,7 @@ Think of it this way:
 - Routes decide **where**
 - Rule sets decide **how**
 
-![Routes vs Rule Sets](./images/afd-routes-vs-rules.png)
+<img src="{{site.baseurl}}/2025-07-30-1.png"/>
 
 ## How Routing Actually Works
 
@@ -73,7 +73,7 @@ That’s the flow.
 
 If you don’t understand this order, debugging becomes very hard.
 
-![Routing Flow](./images/afd-routing-flow.png)
+<img src="{{site.baseurl}}/2025-07-30-2.png"/>
 
 ## Route Matching Priority
 
@@ -97,7 +97,7 @@ If you place `/*` first, it will catch everything and your other routes won’t 
 
 This is one of the most common mistakes.
 
-![Route Priority](./images/afd-route-priority.png)
+<img src="{{site.baseurl}}/2025-07-30-3.png"/>
 
 ## Header-Based Routing
 
@@ -122,7 +122,7 @@ Then in the rule set:
 
 This allows you to dynamically control routing without changing URLs.
 
-![Header Routing](./images/afd-header-routing.png)
+<img src="{{site.baseurl}}/2025-07-30-4.png"/>
 
 ## Common Mistakes
 
@@ -154,7 +154,7 @@ They don’t.
 
 Routes match first, then rule sets are applied.
 
-![Common Mistakes](./images/afd-mistakes.png)
+<img src="{{site.baseurl}}/2025-07-30-5.png"/>
 
 ## Debugging Tips
 
@@ -169,7 +169,7 @@ Here’s what I usually do:
 
 Sometimes, creating a temporary route just for testing helps a lot.
 
-![Debugging](./images/afd-debugging.png)
+<img src="{{site.baseurl}}/2025-07-30-6.png"/>
 
 ## Key Takeaways
 
