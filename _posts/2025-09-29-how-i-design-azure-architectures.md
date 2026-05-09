@@ -7,7 +7,7 @@ date: 2025-09-29 12:00
 tags: [Azure, Architecture, Cloud, Design, DevOps, AI, Messaging]
 ---
 
-# How I Design Azure Architectures (My Thought Process)
+<img src="{{site.baseurl}}/2025-09-29.png"/>
 
 When people start working with Azure, one of the biggest questions is:
 
@@ -50,7 +50,7 @@ At a high level, most systems look like this:
 
 Input → Processing → Output
 
-![Architecture Flow](./images/architecture-flow.png)
+<img src="{{site.baseurl}}/2025-09-29-1.png"/>
 
 Once I understand the flow, everything else becomes easier.
 
@@ -81,7 +81,7 @@ Example:
 
 If it’s asynchronous, I almost always introduce messaging.
 
-![Sync vs Async](./images/sync-vs-async.png)
+<img src="{{site.baseurl}}/2025-09-29-2.png"/>
 
 ## Step 3: Introduce Messaging When Needed
 
@@ -98,9 +98,9 @@ Depending on the scenario:
 Messaging gives you:
 - Reliability  
 - Scalability  
-- Flexibility  
-
-![Messaging Architecture](./images/messaging-architecture.png)
+- Flexibility
+- 
+<img src="{{site.baseurl}}/2025-09-29-4.png"/>
 
 ## Step 4: Decide Where AI Fits (If At All)
 
@@ -118,7 +118,7 @@ If not, I keep it simple.
 
 AI should enhance your system, not complicate it.
 
-![AI Decision](./images/ai-decision.png)
+<img src="{{site.baseurl}}/2025-09-29-5.png"/>
 
 ## Step 5: Choose the Right Compute
 
@@ -153,7 +153,7 @@ Examples:
 - Cosmos DB → flexible, scalable  
 - Blob Storage → files and documents  
 
-![Data Layer](./images/data-layer.png)
+<img src="{{site.baseurl}}/2025-09-29-6.png"/>
 
 ## Step 7: Plan for Failure
 
@@ -170,7 +170,7 @@ So I design for:
 
 If you don’t plan for failure, your system will break in production.
 
-![Failure Handling](./images/failure-handling.png)
+<img src="{{site.baseurl}}/2025-09-29-7.png"/>
 
 ## Step 8: Keep It Simple First
 
@@ -199,7 +199,7 @@ Here’s how it usually flows for me:
 7. Plan for failure  
 8. Keep it simple  
 
-![Full Architecture](./images/full-architecture.png)
+<img src="{{site.baseurl}}/2025-09-29-8.png"/>
 
 ## Key Takeaways
 
