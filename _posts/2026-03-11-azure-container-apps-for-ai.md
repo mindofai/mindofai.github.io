@@ -7,7 +7,7 @@ date: 2026-06-11 12:00
 tags: [Azure, Container Apps, AI, Cloud, Architecture, Serverless, Microservices]
 ---
 
-# When to Use Azure Container Apps for AI Workloads (Instead of Functions)
+<img src="{{site.baseurl}}/2026-03-11.png"/>
 
 In the previous blog, I talked about using Azure Functions for AI workflows, and where it starts to struggle.
 
@@ -36,7 +36,7 @@ You get:
 
 It’s basically a sweet spot for modern applications.
 
-![Container Apps Overview](./images/container-apps-overview.png)
+<img src="{{site.baseurl}}/2026-03-11-1.png"/>
 
 ## Where Azure Functions Starts to Break Down
 
@@ -62,7 +62,7 @@ Examples:
 
 Unlike Functions, you don’t have strict execution limits.
 
-![Long Running Workloads](./images/container-long-running.png)
+<img src="{{site.baseurl}}/2026-03-11-2.png"/>
 
 ### 2. Custom Environments
 
@@ -92,7 +92,7 @@ Functions can do this, but it gets messy.
 
 Container Apps handles this more naturally.
 
-![Multi Step AI](./images/container-multi-step.png)
+<img src="{{site.baseurl}}/2026-03-11-3.png"/>
 
 ### 4. Consistent Performance
 
@@ -125,7 +125,7 @@ Because:
 - You can keep it always warm  
 - You avoid cold starts  
 
-![AI API](./images/container-ai-api.png)
+<img src="{{site.baseurl}}/2026-03-11-4.png"/>
 
 ## Hybrid Approach (Best of Both Worlds)
 
@@ -147,7 +147,7 @@ Flow:
 This gives you:
 - Simplicity + Power  
 
-![Hybrid Architecture](./images/container-hybrid.png)
+<img src="{{site.baseurl}}/2026-03-11-5.png"/>
 
 ## Quick Comparison
 
