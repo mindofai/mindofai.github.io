@@ -7,7 +7,7 @@ date: 2025-09-12 12:00
 tags: [Azure, AI, Messaging, Event-Driven, Cloud, Azure AI Foundry, Architecture]
 ---
 
-# Building Intelligent Event-Driven Applications with Azure Messaging and Azure AI Foundry
+<img src="{{site.baseurl}}/2025-09-12.png"/>
 
 Modern applications are no longer just about handling requests and returning responses.
 
@@ -42,7 +42,7 @@ Here’s the high-level flow:
 
 That’s your intelligent pipeline.
 
-![Event Driven AI Architecture](./images/ai-messaging-architecture.png)
+<img src="{{site.baseurl}}/2025-09-12-1.png"/>
 
 ## Azure Messaging Services in the Mix
 
@@ -84,7 +84,7 @@ Perfect for:
 - Real-time dashboards  
 - Large-scale ingestion  
 
-![Azure Messaging Services](./images/azure-messaging-services.png)
+<img src="{{site.baseurl}}/2025-09-12-2.png"/>
 
 ## Where Azure AI Foundry Comes In
 
@@ -103,7 +103,7 @@ For example:
 - A document is uploaded → AI extracts data  
 - A message is received → AI generates a reply  
 
-![Azure AI Foundry Flow](./images/ai-foundry-flow.png)
+<img src="{{site.baseurl}}/2025-09-12-3.png"/>
 
 ## Example Scenario
 
@@ -122,8 +122,7 @@ Here’s how it could work:
 6. The system routes the ticket automatically  
 
 No manual triage needed.
-
-![Support System Flow](./images/ai-support-system.png)
+<img src="{{site.baseurl}}/2025-09-12-4.png"/>
 
 ## Another Scenario: File Processing
 
@@ -138,7 +137,7 @@ This is powerful for:
 - Data pipelines  
 - Automation workflows  
 
-![File Processing Flow](./images/ai-file-processing.png)
+<img src="{{site.baseurl}}/2025-09-12-5.png"/>
 
 ## Common Patterns
 
