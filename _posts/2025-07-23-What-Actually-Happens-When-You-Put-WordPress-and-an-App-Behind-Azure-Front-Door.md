@@ -6,6 +6,7 @@ author: bryananthonygarcia
 date: 2025-07-23 12:00
 tags: [Azure, Front Door, Architecture, Cloud, Web, Routing, DevOps]
 ---
+<img src="{{site.baseurl}}/2025-07-23.png"/>
 
 # What Actually Happens When You Put WordPress and an App Behind Azure Front Door
 
