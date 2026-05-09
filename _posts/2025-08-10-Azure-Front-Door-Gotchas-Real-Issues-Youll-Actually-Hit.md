@@ -7,7 +7,7 @@ date: 2025-08-10 12:00
 tags: [Azure, Front Door, Cloud, DevOps, Architecture, Troubleshooting]
 ---
 
-# Azure Front Door Gotchas (Real Issues You’ll Actually Hit)
+<img src="{{site.baseurl}}/2025-08-10.png"/>
 
 Azure Front Door is powerful. Once you get it working, it feels clean, scalable, and flexible.
 
@@ -39,7 +39,7 @@ The browser blocks this because the origins don’t match.
 - Avoid hardcoded URLs in your backend  
 - Check your CMS configs (WordPress is a common culprit)  
 
-![CORS Issue](./images/afd-cors.png)
+<img src="{{site.baseurl}}/2025-08-10-1.png"/>
 
 ## 2. Route Priority Breaking Everything
 
@@ -65,7 +65,7 @@ Always define routes from most specific to least specific:
 3. `/home`  
 4. `/*`  
 
-![Route Priority](./images/afd-priority.png)
+<img src="{{site.baseurl}}/2025-08-10-2.png"/>
 
 ## 3. 404 Pages Acting Weird
 
@@ -82,7 +82,7 @@ This happens because Front Door sometimes handles the request instead of forward
 - Make sure unmatched paths are still forwarded to your origin  
 - Test both direct origin and Front Door behavior  
 
-![404 Issue](./images/afd-404.png)
+<img src="{{site.baseurl}}/2025-08-10-3.png"/>
 
 ## 4. Headers Not Showing Where You Expect
 
@@ -102,7 +102,7 @@ That’s because:
 - Make sure you explicitly add headers as **request headers** in rule sets  
 - Don’t rely on response headers for backend logic  
 
-![Headers](./images/afd-headers.png)
+<img src="{{site.baseurl}}/2025-08-10-4.png"/>
 
 ## 5. WordPress (and Other CMS) Fighting Your Setup
 
@@ -120,7 +120,7 @@ Common issues:
 - Check plugins (especially SEO plugins)  
 - Avoid using staging URLs in production configs  
 
-![WordPress Issue](./images/afd-wordpress.png)
+<img src="{{site.baseurl}}/2025-08-10-5.png"/>
 
 ## 6. Debugging Is Not Straightforward
 
@@ -143,7 +143,7 @@ So when something breaks, it’s not always clear where the issue is.
 
 Sometimes the fastest way to debug is to remove complexity and build it back step by step.
 
-![Debugging](./images/afd-debug.png)
+<img src="{{site.baseurl}}/2025-08-10-6.png"/>
 
 ## Key Takeaways
 
