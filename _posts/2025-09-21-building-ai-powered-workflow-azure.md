@@ -7,7 +7,7 @@ date: 2025-09-21 12:00
 tags: [Azure, AI, Azure AI Foundry, Messaging, Event-Driven, Cloud, Architecture]
 ---
 
-# Building Your First AI-Powered Workflow in Azure (Step-by-Step)
+<img src="{{site.baseurl}}/2025-09-21.png"/>
 
 By this point, we’ve talked about Azure Front Door, messaging services, and Azure AI Foundry.
 
@@ -36,7 +36,7 @@ Here’s the high-level flow:
 4. AI analyzes the data  
 5. System performs an action  
 
-![AI Workflow Architecture](./images/ai-workflow-architecture.png)
+<img src="{{site.baseurl}}/2025-09-21-1.png"/>
 
 ## Step 1: Choose Your Trigger
 
@@ -68,7 +68,7 @@ Flow:
 - API receives request  
 - Message is pushed to Service Bus  
 
-![Service Bus Flow](./images/service-bus-flow.png)
+<img src="{{site.baseurl}}/2025-09-21-2.png"/>
 
 ## Step 3: Process the Message
 
@@ -86,7 +86,7 @@ What it does:
 - Picks up messages  
 - Prepares data for AI processing  
 
-![Function Processing](./images/azure-function-processing.png)
+<img src="{{site.baseurl}}/2025-09-21-3.png"/>
 
 ## Step 4: Send Data to Azure AI Foundry
 
@@ -109,7 +109,7 @@ AI Output:
 - Priority: High  
 - Suggested response: Reset password instructions  
 
-![AI Processing](./images/ai-processing.png)
+<img src="{{site.baseurl}}/2025-09-21-4.png"/>
 
 ## Step 5: Take Action
 
@@ -123,7 +123,7 @@ Examples:
 
 This is where your system becomes automated.
 
-![Action Step](./images/ai-action.png)
+<img src="{{site.baseurl}}/2025-09-21-5.png"/>
 
 ## Putting It All Together
 
@@ -137,7 +137,7 @@ Here’s the full flow again:
 
 This is your first AI-powered workflow.
 
-![Full Workflow](./images/ai-full-workflow.png)
+<img src="{{site.baseurl}}/2025-09-21-6.png"/>
 
 ## Real Example
 
