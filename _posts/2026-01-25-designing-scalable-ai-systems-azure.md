@@ -7,6 +7,8 @@ date: 2026-01-25 12:00
 tags: [Azure, AI, Architecture, Cloud, Scalability, Performance, Cost, Reliability]
 ---
 
+<img src="{{site.baseurl}}/2026-01-25.png"/>
+
 Over the past few blogs, we’ve covered a lot.
 
 - Azure Front Door  
@@ -34,7 +36,7 @@ When designing AI systems, I always focus on three things:
 
 Everything else is secondary.
 
-![AI System Pillars](./images/ai-pillars.png)
+<img src="{{site.baseurl}}/2026-01-25-1.png"/>
 
 ---
 
@@ -71,7 +73,7 @@ If the same request happens often:
 - Cache AI outputs  
 - Avoid repeated calls  
 
-![Performance Optimization](./images/ai-performance.png)
+<img src="{{site.baseurl}}/2026-01-25-2.png"/>
 
 ---
 
@@ -112,7 +114,7 @@ For non-real-time workloads:
 - Set alerts  
 - Understand where cost spikes happen  
 
-![Cost Optimization](./images/ai-cost.png)
+<img src="{{site.baseurl}}/2026-01-25-3.png"/>
 
 ---
 
@@ -149,7 +151,7 @@ If you don’t design for this, your system will break.
 - Metrics  
 - Alerts  
 
-![Reliability](./images/ai-reliability.png)
+<img src="{{site.baseurl}}/2026-01-25-4.png"/>
 
 ---
 
@@ -168,7 +170,7 @@ Flow:
 7. Results are stored and acted upon  
 8. Failures are handled gracefully  
 
-![Full Scalable Architecture](./images/ai-scalable-architecture.png)
+<img src="{{site.baseurl}}/2026-01-25-5.png"/>
 
 ---
 
